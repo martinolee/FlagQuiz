@@ -10,19 +10,78 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var leftTopButton: UIButton!
     @IBOutlet weak var rightTopButton: UIButton!
     @IBOutlet weak var leftBottomButton: UIButton!
     @IBOutlet weak var rightBottomButton: UIButton!
+    @IBOutlet weak var correctOrInaccurateLabel: UILabel!
     
     var buttonArray: Array<UIButton> = []
     
-    @IBAction func checkAnswer(_ sender: Any) {
-        //정담 확인
+    @IBAction func leftTopCheckAnswer(_ sender: Any) {
+        guard let text = leftTopButton.titleLabel?.text else {
+            return
+        }
         
+        if text == nameLabel.text {
+            correctOrInaccurateLabel.text = "정답"
+        } else {
+            correctOrInaccurateLabel.text = "오답"
+        }
+        
+        print("\(text)")
+    }
+    
+    @IBAction func rightTopCheckAnswer(_ sender: Any) {
+        guard let text = rightTopButton.titleLabel?.text else {
+            return
+        }
+        
+        if text == nameLabel.text {
+            correctOrInaccurateLabel.text = "정답"
+        } else {
+            correctOrInaccurateLabel.text = "오답"
+        }
+        
+        print("\(text)")
+    }
+    
+    @IBAction func leftButtonCheckAnswer(_ sender: Any) {
+        guard let text = leftBottomButton.titleLabel?.text else {
+            return
+        }
+        
+        if text == nameLabel.text {
+            correctOrInaccurateLabel.text = "정답"
+        } else {
+            correctOrInaccurateLabel.text = "오답"
+        }
+        
+        print("\(text)")
+    }
+    
+    @IBAction func rightButtonCheckAnswer(_ sender: Any) {
+        guard let text = rightBottomButton.titleLabel?.text else {
+            return
+        }
+        
+        if text == nameLabel.text {
+            correctOrInaccurateLabel.text = "정답"
+        } else {
+            correctOrInaccurateLabel.text = "오답"
+        }
+        
+        print("\(text)")
+    }
+
+    
+    @IBAction func nextQuiz(_ sender: Any) {
+        correctOrInaccurateLabel.text = ""
         makeQuestion()
     }
+    
     
     func makeQuestion() {
         var answerList: Array<Int> = [0, 0, 0, 0]
@@ -47,6 +106,7 @@ class ViewController: UIViewController {
         
         let correctAnswer = Int(arc4random_uniform(UInt32(4)))
         flagImageView.image = UIImage(named: countryList[answerList[correctAnswer]])
+        nameLabel.text = String(countryList[answerList[correctAnswer]].characters.dropLast(4))
         for i in 0...3 {
             buttonArray[i].setTitle(String(countryList[answerList[i]].characters.dropLast(4)), for: .normal)
         }
@@ -55,19 +115,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                buttonArray.append(leftTopButton)
-                buttonArray.append(rightTopButton)
-                buttonArray.append(leftBottomButton)
-                buttonArray.append(rightBottomButton)
+        correctOrInaccurateLabel.text = ""
+        buttonArray.append(leftTopButton)
+        buttonArray.append(rightTopButton)
+        buttonArray.append(leftBottomButton)
+        buttonArray.append(rightBottomButton)
         
         makeQuestion()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
