@@ -20,63 +20,18 @@ class ViewController: UIViewController {
     
     var buttonArray: Array<UIButton> = []
     
-    @IBAction func leftTopCheckAnswer(_ sender: Any) {
-        guard let text = leftTopButton.titleLabel?.text else {
+    @IBAction func checkAnswer(_ btn: UIButton) {
+        guard let btnText = btn.titleLabel?.text else {
             return
         }
         
-        if text == nameLabel.text {
+        if nameLabel.text == btnText {
             correctOrInaccurateLabel.text = "정답"
         } else {
             correctOrInaccurateLabel.text = "오답"
         }
-        
-        print("\(text)")
     }
-    
-    @IBAction func rightTopCheckAnswer(_ sender: Any) {
-        guard let text = rightTopButton.titleLabel?.text else {
-            return
-        }
         
-        if text == nameLabel.text {
-            correctOrInaccurateLabel.text = "정답"
-        } else {
-            correctOrInaccurateLabel.text = "오답"
-        }
-        
-        print("\(text)")
-    }
-    
-    @IBAction func leftButtonCheckAnswer(_ sender: Any) {
-        guard let text = leftBottomButton.titleLabel?.text else {
-            return
-        }
-        
-        if text == nameLabel.text {
-            correctOrInaccurateLabel.text = "정답"
-        } else {
-            correctOrInaccurateLabel.text = "오답"
-        }
-        
-        print("\(text)")
-    }
-    
-    @IBAction func rightButtonCheckAnswer(_ sender: Any) {
-        guard let text = rightBottomButton.titleLabel?.text else {
-            return
-        }
-        
-        if text == nameLabel.text {
-            correctOrInaccurateLabel.text = "정답"
-        } else {
-            correctOrInaccurateLabel.text = "오답"
-        }
-        
-        print("\(text)")
-    }
-
-    
     @IBAction func nextQuiz(_ sender: Any) {
         correctOrInaccurateLabel.text = ""
         makeQuestion()
@@ -122,6 +77,8 @@ class ViewController: UIViewController {
         buttonArray.append(rightBottomButton)
         
         makeQuestion()
+        
+        nameLabel.alpha = 0.0
     }
     
     override func didReceiveMemoryWarning() {
@@ -131,4 +88,3 @@ class ViewController: UIViewController {
     
     
 }
-
