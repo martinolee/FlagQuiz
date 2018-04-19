@@ -17,9 +17,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var leftBottomButton: UIButton!
     @IBOutlet weak var rightBottomButton: UIButton!
     @IBOutlet weak var correctOrInaccurateLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     
     var buttonArray: Array<UIButton> = []
-    
+    var selectAnswer: Bool = false
+
     @IBAction func checkAnswer(_ btn: UIButton) {
         guard let btnText = btn.titleLabel?.text else {
             return
@@ -30,6 +32,8 @@ class ViewController: UIViewController {
         } else {
             correctOrInaccurateLabel.text = "오답"
         }
+        
+        nextButton.isEnabled = true
     }
         
     @IBAction func nextQuiz(_ sender: Any) {
@@ -39,6 +43,8 @@ class ViewController: UIViewController {
     
     
     func makeQuestion() {
+        nextButton.isEnabled = false
+        
         var answerList: Array<Int> = [0, 0, 0, 0]
         answerList[0] = Int(arc4random_uniform(UInt32(countryList.count)))
         print(answerList[0])
