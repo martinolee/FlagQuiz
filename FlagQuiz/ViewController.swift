@@ -21,6 +21,18 @@ class ViewController: UIViewController {
     
     var buttonArray: Array<UIButton> = []
     var selectAnswer: Bool = false
+    
+    var selectedButton: UIButton!
+    
+    func setButtonStyle(button: UIButton, isSelected: Bool) {
+        if isSelected {
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+            button.setTitleColor(UIColor.black, for: .normal)
+        } else {
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .thin)
+            button.setTitleColor(UIColor(red: 246/255, green: 226/255, blue: 159/255, alpha: 1), for: .normal)
+        }
+    }
 
     @IBAction func checkAnswer(_ btn: UIButton) {
         guard let btnText = btn.titleLabel?.text else {
@@ -33,11 +45,19 @@ class ViewController: UIViewController {
             correctOrInaccurateLabel.text = "오답"
         }
         
+        setButtonStyle(button: btn, isSelected: true)
+
+        if selectedButton != nil && btn != selectedButton {
+            setButtonStyle(button: selectedButton, isSelected: false)
+        }
+
         nextButton.isEnabled = true
+        selectedButton = btn
     }
         
     @IBAction func nextQuiz(_ sender: Any) {
         correctOrInaccurateLabel.text = ""
+        setButtonStyle(button: selectedButton, isSelected: false)
         makeQuestion()
     }
     
