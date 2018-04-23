@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var leftTopButton: UIButton!
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
     
     var buttonArray: Array<UIButton> = []
     var selectAnswer: Bool = false
+    var score: Int = 0
     
     var selectedButton: UIButton!
     
@@ -41,8 +43,10 @@ class ViewController: UIViewController {
         
         if nameLabel.text == btnText {
             correctOrInaccurateLabel.text = "정답"
+            score += 1
         } else {
             correctOrInaccurateLabel.text = "오답"
+            score -= 1
         }
         
         setButtonStyle(button: btn, isSelected: true)
@@ -51,6 +55,7 @@ class ViewController: UIViewController {
             setButtonStyle(button: selectedButton, isSelected: false)
         }
 
+        scoreLabel.text = "\(score)"
         nextButton.isEnabled = true
         selectedButton = btn
     }
@@ -104,6 +109,7 @@ class ViewController: UIViewController {
         
         makeQuestion()
         
+        scoreLabel.text = "\(score)"
         nameLabel.alpha = 0.0
     }
     
