@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .regular)
             button.setTitleColor(UIColor.black, for: .normal)
         } else {
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .thin)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .light)
             button.setTitleColor(UIColor(red: 246/255, green: 226/255, blue: 159/255, alpha: 1), for: .normal)
         }
     }
@@ -43,10 +43,15 @@ class ViewController: UIViewController {
         
         if nameLabel.text == btnText {
             correctOrInaccurateLabel.text = "정답"
-            score += 1
+            if selectedButton != btn {
+                score += 1
+            }
+            
         } else {
             correctOrInaccurateLabel.text = "오답"
-            score -= 1
+            if score >= 1 && selectedButton != btn {
+                score -= 1
+            }
         }
         
         setButtonStyle(button: btn, isSelected: true)
