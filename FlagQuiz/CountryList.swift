@@ -8,6 +8,18 @@
 
 import Foundation
 
+struct FlagInfo {
+    var name: String
+    var fulllName: String
+    var imageName: String
+}
+
+let flagInfo = [
+    FlagInfo(name: "Afghanistan",fulllName: "Afghanistan",imageName: "Afghanistan.png"),
+    FlagInfo(name: "Albania",fulllName: "Albania",imageName: "Albania.png"),
+    FlagInfo(name: "Bosnia",fulllName: "Bosnia and Herzegovina",imageName: "Bosnia_and_Herzegovina.png")
+]
+
 let countryList = [
     "Afghanistan.png",
     "Albania.png",
