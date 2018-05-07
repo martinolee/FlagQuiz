@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yab-va-LhT">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Quiz-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -171,6 +172,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Quiz" id="uvj-AF-WNh"/>
                     <connections>
                         <outlet property="correctOrInaccurateLabel" destination="7T9-Lh-yQU" id="0we-zh-PWM"/>
                         <outlet property="flagImageView" destination="Ttb-c9-IF9" id="oIg-dF-eac"/>
@@ -185,7 +187,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="132"/>
+            <point key="canvasLocation" x="1118" y="-176"/>
+        </scene>
+        <!--Country-->
+        <scene sceneID="Mpi-qi-scb">
+            <objects>
+                <viewController id="ZDF-Xd-ySc" customClass="FlagViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Adp-kp-ubH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zcA-eQ-psM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="flagCell" rowHeight="100" id="nxL-if-qxd" customClass="FlagTableViewCell" customModule="FlagQuiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nxL-if-qxd" id="DVP-ok-FPK">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sPQ-ex-E2c">
+                                                    <rect key="frame" x="15" y="11" width="130" height="78"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="130" id="ib5-AE-QU8"/>
+                                                        <constraint firstAttribute="height" constant="78" id="zSx-XN-Iml"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ido-38-Mx2">
+                                                    <rect key="frame" x="153" y="39" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ido-38-Mx2" secondAttribute="bottom" constant="29" id="1ko-O6-A8X"/>
+                                                <constraint firstItem="Ido-38-Mx2" firstAttribute="top" secondItem="DVP-ok-FPK" secondAttribute="topMargin" constant="28" id="Dkh-9j-p8b"/>
+                                                <constraint firstItem="sPQ-ex-E2c" firstAttribute="leading" secondItem="DVP-ok-FPK" secondAttribute="leadingMargin" id="Ols-I4-iyo"/>
+                                                <constraint firstItem="sPQ-ex-E2c" firstAttribute="bottom" secondItem="DVP-ok-FPK" secondAttribute="bottomMargin" id="bOF-Px-rCZ"/>
+                                                <constraint firstItem="sPQ-ex-E2c" firstAttribute="top" secondItem="DVP-ok-FPK" secondAttribute="topMargin" id="baM-CE-85o"/>
+                                                <constraint firstItem="Ido-38-Mx2" firstAttribute="leading" secondItem="sPQ-ex-E2c" secondAttribute="trailing" constant="8" id="tpz-fC-lGe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countryNameLabel" destination="Ido-38-Mx2" id="VAe-gN-lOl"/>
+                                            <outlet property="flagImage" destination="sPQ-ex-E2c" id="syB-7L-EYM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZDF-Xd-ySc" id="sIF-4A-Ec9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zcA-eQ-psM" firstAttribute="trailing" secondItem="JiH-sZ-IbU" secondAttribute="trailing" id="Lel-i6-ZSt"/>
+                            <constraint firstAttribute="bottom" secondItem="zcA-eQ-psM" secondAttribute="bottom" id="cd6-6Q-Vl8"/>
+                            <constraint firstItem="zcA-eQ-psM" firstAttribute="leading" secondItem="JiH-sZ-IbU" secondAttribute="leading" id="lYH-kW-RmF"/>
+                            <constraint firstItem="zcA-eQ-psM" firstAttribute="top" secondItem="Adp-kp-ubH" secondAttribute="top" id="xTx-Yw-ZtK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JiH-sZ-IbU"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Country" id="IVl-WZ-YoF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DxY-du-sX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117.5" y="504.92957746478874"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gzk-2b-wV9">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yab-va-LhT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tUp-7R-JUK">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="pBT-yb-3S1"/>
+                        <segue destination="ZDF-Xd-ySc" kind="relationship" relationship="viewControllers" id="ldr-mG-caA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJp-CL-5XM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="130.98591549295776"/>
         </scene>
     </scenes>
 </document>

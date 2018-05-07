@@ -76,15 +76,18 @@ class ViewController: UIViewController {
         nextButton.isEnabled = false
         
         var answerList: Array<Int> = [0, 0, 0, 0]
-        answerList[0] = Int(arc4random_uniform(UInt32(countryList.count)))
+//        answerList[0] = Int(arc4random_uniform(UInt32(countryList.count)))
+        answerList[0] = Int(arc4random_uniform(UInt32(flagInfo.count)))
         print(answerList[0])
         for i in 1...3 {
-            answerList[i] = Int(arc4random_uniform(UInt32(countryList.count)))
+//            answerList[i] = Int(arc4random_uniform(UInt32(countryList.count)))
+            answerList[i] = Int(arc4random_uniform(UInt32(flagInfo.count)))
             var isDuplicated = false
             repeat {
                 for j in  0...i-1 {
                     if answerList[i] == answerList[j] {
-                        answerList[i] = Int(arc4random_uniform(UInt32(countryList.count)))
+//                        answerList[i] = Int(arc4random_uniform(UInt32(countryList.count)))
+                        answerList[i] = Int(arc4random_uniform(UInt32(flagInfo.count)))
                         isDuplicated = true
                         break
                     }
@@ -92,14 +95,19 @@ class ViewController: UIViewController {
                 
             } while isDuplicated
             
-            print(answerList[i])
+//            print(answerList[i])
+            print(flagInfo[i].name)
         }
         
         let correctAnswer = Int(arc4random_uniform(UInt32(4)))
-        flagImageView.image = UIImage(named: countryList[answerList[correctAnswer]])
-        nameLabel.text = String(countryList[answerList[correctAnswer]].characters.dropLast(4))
+//        flagImageView.image = UIImage(named: countryList[answerList[correctAnswer]])
+        flagImageView.image = UIImage(named: flagInfo[answerList[correctAnswer]].imageName)
+//        nameLabel.text = String(countryList[answerList[correctAnswer]].characters.dropLast(4))
+        nameLabel.text = flagInfo[answerList[correctAnswer]].name
+        
         for i in 0...3 {
-            buttonArray[i].setTitle(String(countryList[answerList[i]].characters.dropLast(4)), for: .normal)
+//            buttonArray[i].setTitle(String(countryList[ answerList[i] ].characters.dropLast(4)), for: .normal)
+            buttonArray[i].setTitle(flagInfo[answerList[i]].name, for: .normal)
         }
         
     }
