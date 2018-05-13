@@ -69,6 +69,7 @@ class ViewController: UIViewController {
         correctOrInaccurateLabel.text = ""
         setButtonStyle(button: selectedButton, isSelected: false)
         makeQuestion()
+        selectedButton = nil
     }
     
     
@@ -78,12 +79,15 @@ class ViewController: UIViewController {
         var answerList: Array<Int> = [0, 0, 0, 0]
 //        answerList[0] = Int(arc4random_uniform(UInt32(countryList.count)))
         answerList[0] = Int(arc4random_uniform(UInt32(flagInfo.count)))
-        print(answerList[0])
+//        print(answerList[0])
+        print(flagInfo[answerList[0]].name)
         for i in 1...3 {
 //            answerList[i] = Int(arc4random_uniform(UInt32(countryList.count)))
             answerList[i] = Int(arc4random_uniform(UInt32(flagInfo.count)))
             var isDuplicated = false
+            
             repeat {
+                isDuplicated = false
                 for j in  0...i-1 {
                     if answerList[i] == answerList[j] {
 //                        answerList[i] = Int(arc4random_uniform(UInt32(countryList.count)))
@@ -94,9 +98,8 @@ class ViewController: UIViewController {
                 }
                 
             } while isDuplicated
-            
 //            print(answerList[i])
-            print(flagInfo[i].name)
+            print(flagInfo[answerList[i]].name)
         }
         
         let correctAnswer = Int(arc4random_uniform(UInt32(4)))
