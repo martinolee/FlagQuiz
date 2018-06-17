@@ -1,15 +1,15 @@
 //
-//  FlagTableViewCell.swift
+//  CountryInfoTableViewCell.swift
 //  FlagQuiz
 //
-//  Created by 이수한 on 2018. 5. 7..
+//  Created by 이수한 on 2018. 6. 16..
 //  Copyright © 2018년 이수한. All rights reserved.
 //
 
 import UIKit
 
-class FlagTableViewCell: UITableViewCell {
-    @IBOutlet weak var flagImage: UIImageView!
+class CountryInfoTableViewCell: UITableViewCell {
+    @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var countryNameLabel: UILabel!
     
     override func awakeFromNib() {
