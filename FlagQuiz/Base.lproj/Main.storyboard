@@ -202,14 +202,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="pBT-yb-3S1"/>
-                        <segue destination="8nd-0n-t3d" kind="relationship" relationship="viewControllers" id="cqb-bj-aho"/>
+                        <segue destination="EZo-2U-ZJu" kind="relationship" relationship="viewControllers" id="cqb-bj-aho"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJp-CL-5XM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="130.98591549295776"/>
         </scene>
-        <!--Item-->
+        <!--Country Info View Controller-->
         <scene sceneID="5Xm-ZB-MHc">
             <objects>
                 <viewController id="8nd-0n-t3d" customClass="CountryInfoViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -257,9 +257,11 @@
                                                 <constraint firstItem="Itn-Ph-GCv" firstAttribute="leading" secondItem="PcR-gR-xyG" secondAttribute="leadingMargin" id="vFS-E5-WwF"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.72549019607843135" green="0.81176470588235294" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="countryNameLabel" destination="RJj-ej-ToN" id="6YG-zh-iCG"/>
                                             <outlet property="flagImageView" destination="Itn-Ph-GCv" id="eCA-bi-npB"/>
+                                            <segue destination="6VU-EU-cPX" kind="show" id="0iW-Kf-gJI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -280,13 +282,46 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PmB-3i-Dg0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="t1W-8f-gDM"/>
+                    <navigationItem key="navigationItem" id="CcV-9P-3h8"/>
                     <connections>
                         <outlet property="countryTableView" destination="TFM-Zp-jVK" id="3o8-vz-Ewn"/>
                         <outlet property="searchBar" destination="VYO-0P-qRk" id="syw-bg-k5u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMv-2f-lBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2056.8000000000002" y="501.49925037481262"/>
+        </scene>
+        <!--Detail Country View Controller-->
+        <scene sceneID="VVl-zQ-FLB">
+            <objects>
+                <viewController id="6VU-EU-cPX" customClass="DetailCountryViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ved-nq-oVv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4Nr-jz-d7o"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ec1-HV-hYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2798" y="501"/>
+        </scene>
+        <!--Country-->
+        <scene sceneID="6PO-Hf-duH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="EZo-2U-ZJu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Country" id="t1W-8f-gDM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HSx-GD-nDN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8nd-0n-t3d" kind="relationship" relationship="rootViewController" id="U1b-IA-lal"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSZ-aN-SoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1117.5999999999999" y="501.49925037481262"/>
         </scene>
