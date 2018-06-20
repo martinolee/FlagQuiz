@@ -32,7 +32,7 @@ class ViewController: UIViewController {
             button.setTitleColor(UIColor.black, for: .normal)
         } else {
             button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .light)
-            button.setTitleColor(UIColor(red: 246/255, green: 226/255, blue: 159/255, alpha: 1), for: .normal)
+            button.setTitleColor(UIColor.blue, for: .normal)
         }
     }
 
@@ -43,12 +43,14 @@ class ViewController: UIViewController {
         
         if nameLabel.text == btnText {
             correctOrInaccurateLabel.text = "정답"
+            correctOrInaccurateLabel.textColor = UIColor.blue
             if selectedButton != btn {
                 score += 1
             }
             
         } else {
             correctOrInaccurateLabel.text = "오답"
+            correctOrInaccurateLabel.textColor = UIColor.red
             if score >= 1 && selectedButton != btn {
                 score -= 1
             }

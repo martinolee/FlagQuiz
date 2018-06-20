@@ -26,14 +26,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2j-9X-hY8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.6470588235294118" green="0.7803921568627451" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오답" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7T9-Lh-yQU">
                                 <rect key="frame" x="161.5" y="28" width="52" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                <color key="textColor" red="0.96470588235294119" green="0.88627450980392153" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npF-XF-DIB">
@@ -77,9 +73,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgM-ff-OIW">
                                         <rect key="frame" x="0.0" y="59" width="183" height="48"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" red="0.96470588235294119" green="0.88627450980392153" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="49N-LF-ag2"/>
                                         </connections>
@@ -87,9 +81,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC1-nd-XqD">
                                         <rect key="frame" x="0.0" y="0.0" width="183" height="49"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" red="0.96470588235294119" green="0.88627450980392153" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v3B-er-1xl"/>
                                         </connections>
@@ -97,9 +89,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbz-eW-Oep">
                                         <rect key="frame" x="193" y="59" width="182" height="48"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" red="0.96470588235294119" green="0.88627450980392153" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rwA-kh-uCe"/>
                                         </connections>
@@ -107,9 +97,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prm-1p-ikg">
                                         <rect key="frame" x="193" y="0.0" width="182" height="49"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" red="0.96470588235294119" green="0.88627450980392153" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xnn-6m-sp6"/>
                                         </connections>
@@ -144,21 +132,18 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKo-Ix-Ctv">
                                 <rect key="frame" x="8" y="28" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.96470588235294119" green="0.88627450980392153" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="t2j-9X-hY8" secondAttribute="bottom" id="8Ej-xd-z2u"/>
                             <constraint firstItem="juO-cl-qr9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8ba-Hp-59F"/>
-                            <constraint firstItem="t2j-9X-hY8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8fV-kN-4Io"/>
                             <constraint firstItem="z0j-VE-mPf" firstAttribute="top" secondItem="Ttb-c9-IF9" secondAttribute="bottom" constant="50" id="BQE-kV-gMA"/>
                             <constraint firstItem="Ttb-c9-IF9" firstAttribute="top" secondItem="juO-cl-qr9" secondAttribute="bottom" constant="50" id="Hck-Gc-gfh"/>
                             <constraint firstAttribute="trailing" secondItem="juO-cl-qr9" secondAttribute="trailing" id="I0B-fT-cWK"/>
                             <constraint firstItem="z0j-VE-mPf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JaQ-wg-U8H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="npF-XF-DIB" secondAttribute="trailing" constant="16" id="Jeh-Yx-FuO"/>
-                            <constraint firstAttribute="trailing" secondItem="t2j-9X-hY8" secondAttribute="trailing" id="PwY-Ar-3kV"/>
                             <constraint firstItem="7T9-Lh-yQU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QuP-bw-FPJ"/>
                             <constraint firstItem="npF-XF-DIB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="TZ6-0G-Npj"/>
                             <constraint firstAttribute="bottom" secondItem="z0j-VE-mPf" secondAttribute="bottom" constant="50" id="VIs-gT-lYO"/>
@@ -169,7 +154,6 @@
                             <constraint firstItem="MKo-Ix-Ctv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="dRk-az-bkh"/>
                             <constraint firstItem="MKo-Ix-Ctv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="m7K-mx-CPP"/>
                             <constraint firstItem="7T9-Lh-yQU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="tbL-6p-ZT9"/>
-                            <constraint firstItem="t2j-9X-hY8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yVz-kr-7wT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -257,7 +241,6 @@
                                                 <constraint firstItem="Itn-Ph-GCv" firstAttribute="leading" secondItem="PcR-gR-xyG" secondAttribute="leadingMargin" id="vFS-E5-WwF"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.72549019607843135" green="0.81176470588235294" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="countryNameLabel" destination="RJj-ej-ToN" id="6YG-zh-iCG"/>
                                             <outlet property="flagImageView" destination="Itn-Ph-GCv" id="eCA-bi-npB"/>
