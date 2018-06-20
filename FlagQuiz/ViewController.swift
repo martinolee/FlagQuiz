@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var leftTopButton: UIButton!
     @IBOutlet weak var rightTopButton: UIButton!
@@ -21,7 +20,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     var buttonArray: Array<UIButton> = []
-    var selectAnswer: Bool = false
+    var answerList: Array<Int> = [0, 0, 0, 0]
+    var correctAnswer = Int(arc4random_uniform(UInt32(4)))
+    var correctCountry: String = ""
     var score: Int = 0
     
     var selectedButton: UIButton!
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
             return
         }
         
-        if nameLabel.text == btnText {
+        if correctCountry == btnText {
             correctOrInaccurateLabel.text = "정답"
             correctOrInaccurateLabel.textColor = UIColor.blue
             if selectedButton != btn {
@@ -78,7 +79,6 @@ class ViewController: UIViewController {
     func makeQuestion() {
         nextButton.isEnabled = false
         
-        var answerList: Array<Int> = [0, 0, 0, 0]
         answerList[0] = Int(arc4random_uniform(UInt32(flagInfo.count)))
         print(flagInfo[answerList[0]].name)
         for i in 1...3 {
@@ -99,9 +99,9 @@ class ViewController: UIViewController {
             print(flagInfo[answerList[i]].name)
         }
         
-        let correctAnswer = Int(arc4random_uniform(UInt32(4)))
+        correctAnswer = Int(arc4random_uniform(UInt32(4)))
         flagImageView.image = UIImage(named: flagInfo[answerList[correctAnswer]].imageName)
-        nameLabel.text = flagInfo[answerList[correctAnswer]].name
+        correctCountry = flagInfo[answerList[correctAnswer]].name
         
         for i in 0...3 {
             buttonArray[i].setTitle(flagInfo[answerList[i]].name, for: .normal)
@@ -120,7 +120,6 @@ class ViewController: UIViewController {
         makeQuestion()
         
         scoreLabel.text = "\(score)"
-        nameLabel.alpha = 0.0
     }
     
     override func didReceiveMemoryWarning() {

@@ -19,13 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwI-zv-WYh">
-                                <rect key="frame" x="125" y="323" width="124" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오답" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7T9-Lh-yQU">
                                 <rect key="frame" x="161.5" y="28" width="52" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
@@ -163,7 +156,6 @@
                         <outlet property="flagImageView" destination="Ttb-c9-IF9" id="oIg-dF-eac"/>
                         <outlet property="leftBottomButton" destination="HgM-ff-OIW" id="OQD-0N-N21"/>
                         <outlet property="leftTopButton" destination="pC1-nd-XqD" id="JGS-dg-IHi"/>
-                        <outlet property="nameLabel" destination="IwI-zv-WYh" id="tlB-Wb-yVj"/>
                         <outlet property="nextButton" destination="npF-XF-DIB" id="nlO-fA-txA"/>
                         <outlet property="rightBottomButton" destination="Nbz-eW-Oep" id="EaH-ND-jbX"/>
                         <outlet property="rightTopButton" destination="prm-1p-ikg" id="vmq-kd-Znf"/>
