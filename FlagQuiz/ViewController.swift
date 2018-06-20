@@ -33,7 +33,7 @@ class ViewController: UIViewController {
             button.setTitleColor(UIColor.black, for: .normal)
         } else {
             button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .light)
-            button.setTitleColor(UIColor.blue, for: .normal)
+            button.setTitleColor(self.view.tintColor, for: .normal)
         }
     }
 
