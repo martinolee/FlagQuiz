@@ -122,10 +122,4 @@ class ViewController: UIViewController {
         scoreLabel.text = "\(score)"
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
 }
