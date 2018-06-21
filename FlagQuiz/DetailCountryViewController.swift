@@ -9,6 +9,9 @@
 import UIKit
 
 class DetailCountryViewController: UIViewController {
+    @IBOutlet weak var detailFlagImageView: UIImageView!
+    
+    var imageName: String?
     
     @IBAction func moveToBack(_ sender: Any) {
         navigationController?.popViewController(animated: true)
@@ -17,6 +20,7 @@ class DetailCountryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        detailFlagImageView.image = UIImage(named: imageName!)
     }
 
 }

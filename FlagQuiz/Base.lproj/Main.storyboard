@@ -224,6 +224,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlx-B4-dpM">
+                                                    <rect key="frame" x="223" y="83" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Itn-Ph-GCv" secondAttribute="bottom" constant="4" id="1rV-t0-Wq2"/>
@@ -236,8 +243,9 @@
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="countryNameLabel" destination="RJj-ej-ToN" id="6YG-zh-iCG"/>
+                                            <outlet property="flagImageNameLabel" destination="tlx-B4-dpM" id="SnP-yR-n6U"/>
                                             <outlet property="flagImageView" destination="Itn-Ph-GCv" id="eCA-bi-npB"/>
-                                            <segue destination="6VU-EU-cPX" kind="show" id="0iW-Kf-gJI"/>
+                                            <segue destination="6VU-EU-cPX" kind="show" identifier="detailSegue" id="0iW-Kf-gJI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -284,10 +292,17 @@
                                     <action selector="moveToBack:" destination="6VU-EU-cPX" eventType="touchUpInside" id="m3P-bZ-rjs"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFZ-vu-wSN">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4Nr-jz-d7o"/>
                     </view>
+                    <connections>
+                        <outlet property="detailFlagImageView" destination="KFZ-vu-wSN" id="JcV-Gs-hoD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ec1-HV-hYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
