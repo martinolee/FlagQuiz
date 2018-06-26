@@ -185,7 +185,7 @@
             </objects>
             <point key="canvasLocation" x="135" y="130.98591549295776"/>
         </scene>
-        <!--Country Info View Controller-->
+        <!--Flags-->
         <scene sceneID="5Xm-ZB-MHc">
             <objects>
                 <viewController id="8nd-0n-t3d" customClass="CountryInfoViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -193,15 +193,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VYO-0P-qRk">
-                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="8nd-0n-t3d" id="OeJ-GI-b5H"/>
-                                </connections>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TFM-Zp-jVK">
-                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CountryCell" rowHeight="130" id="8AS-Oo-3sl" customClass="CountryInfoTableViewCell" customModule="FlagQuiz" customModuleProvider="target">
@@ -253,28 +246,42 @@
                                     <outlet property="dataSource" destination="8nd-0n-t3d" id="D1y-MQ-rJJ"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYO-0P-qRk">
+                                <rect key="frame" x="0.0" y="305" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8nd-0n-t3d" id="OeJ-GI-b5H"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VYO-0P-qRk" firstAttribute="top" secondItem="PmB-3i-Dg0" secondAttribute="top" id="GgT-28-4NN"/>
                             <constraint firstItem="TFM-Zp-jVK" firstAttribute="leading" secondItem="YBQ-aX-Vzv" secondAttribute="leading" id="Ncb-As-LXs"/>
                             <constraint firstAttribute="bottom" secondItem="TFM-Zp-jVK" secondAttribute="bottom" id="T6n-A4-Xg2"/>
                             <constraint firstAttribute="trailing" secondItem="TFM-Zp-jVK" secondAttribute="trailing" id="p1r-2t-SDl"/>
-                            <constraint firstItem="TFM-Zp-jVK" firstAttribute="top" secondItem="VYO-0P-qRk" secondAttribute="bottom" id="t4d-aO-fH3"/>
-                            <constraint firstItem="VYO-0P-qRk" firstAttribute="leading" secondItem="YBQ-aX-Vzv" secondAttribute="leading" id="w2p-LI-HoT"/>
-                            <constraint firstAttribute="trailing" secondItem="VYO-0P-qRk" secondAttribute="trailing" id="zhv-1z-eQ4"/>
+                            <constraint firstItem="TFM-Zp-jVK" firstAttribute="top" secondItem="YBQ-aX-Vzv" secondAttribute="top" id="szB-i7-7f4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PmB-3i-Dg0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="CcV-9P-3h8"/>
+                    <navigationItem key="navigationItem" title="Flags" id="CcV-9P-3h8"/>
                     <connections>
                         <outlet property="countryTableView" destination="TFM-Zp-jVK" id="3o8-vz-Ewn"/>
                         <outlet property="searchBar" destination="VYO-0P-qRk" id="syw-bg-k5u"/>
+                        <outlet property="searchDisplayController" destination="xbj-NE-lAf" id="r0x-6F-ffe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMv-2f-lBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="xbj-NE-lAf">
+                    <connections>
+                        <outlet property="delegate" destination="8nd-0n-t3d" id="uEU-0k-Buf"/>
+                        <outlet property="searchContentsController" destination="8nd-0n-t3d" id="hlv-hg-Cmf"/>
+                        <outlet property="searchResultsDataSource" destination="8nd-0n-t3d" id="z9O-MN-Jq1"/>
+                        <outlet property="searchResultsDelegate" destination="8nd-0n-t3d" id="PVQ-JH-Aqb"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1884" y="501"/>
+            <point key="canvasLocation" x="1884" y="500.59970014992507"/>
         </scene>
         <!--Detail Country View Controller-->
         <scene sceneID="VVl-zQ-FLB">
@@ -284,18 +291,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFZ-vu-wSN">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJl-b7-YLk">
-                                <rect key="frame" x="16" y="44" width="46" height="30"/>
+                                <rect key="frame" x="27" y="124" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="moveToBack:" destination="6VU-EU-cPX" eventType="touchUpInside" id="m3P-bZ-rjs"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFZ-vu-wSN">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4Nr-jz-d7o"/>
@@ -311,10 +318,11 @@
         <!--Country-->
         <scene sceneID="6PO-Hf-duH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="EZo-2U-ZJu" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EZo-2U-ZJu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Country" id="t1W-8f-gDM"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HSx-GD-nDN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="HSx-GD-nDN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

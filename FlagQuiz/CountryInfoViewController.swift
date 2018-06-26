@@ -13,11 +13,23 @@ class CountryInfoViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var currentFlagInfo:Array<FlagInfo> = flagInfo
+    let searchController: UISearchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         
+        if #available(iOS 11.0, *) {
+            self.navigationItem.searchController = UISearchController(searchResultsController: searchController)
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        if #available(iOS 11.0, *) {
+            self.navigationItem.hidesSearchBarWhenScrolling = false
+        } else {
+            // Fallback on earlier versions
+        }
         searchBar.placeholder = "Search Flag by Country Name"
     }
     
@@ -74,7 +86,7 @@ extension CountryInfoViewController: UISearchBarDelegate {
         }
         
         currentFlagInfo = flagInfo.filter({ (flag:FlagInfo) -> Bool in
-            flag.name.contains(searchBar.text!) || flag.fullName.contains(searchBar.text! )
+            flag.name.contains(searchBar.text!) || flag.fullName.contains(searchBar.text!)
         })
         countryTableView.reloadData()
     }
