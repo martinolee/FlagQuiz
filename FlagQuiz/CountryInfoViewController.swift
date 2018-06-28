@@ -21,15 +21,11 @@ class CountryInfoViewController: UIViewController {
         
         if #available(iOS 11.0, *) {
             self.navigationItem.searchController = UISearchController(searchResultsController: searchController)
-        } else {
-            // Fallback on earlier versions
-        }
-        
-        if #available(iOS 11.0, *) {
             self.navigationItem.hidesSearchBarWhenScrolling = false
         } else {
             // Fallback on earlier versions
         }
+
         searchBar.placeholder = "Search Flag by Country Name"
     }
     
@@ -91,3 +87,23 @@ extension CountryInfoViewController: UISearchBarDelegate {
         countryTableView.reloadData()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
