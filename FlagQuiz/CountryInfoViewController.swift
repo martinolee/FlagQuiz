@@ -10,23 +10,25 @@ import UIKit
 
 class CountryInfoViewController: UIViewController {
     @IBOutlet weak var countryTableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
     
     var currentFlagInfo:Array<FlagInfo> = flagInfo
     let searchController: UISearchController = UISearchController(searchResultsController: nil)
+    var searchBar: UISearchBar?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         
         if #available(iOS 11.0, *) {
-            self.navigationItem.searchController = UISearchController(searchResultsController: searchController)
+            self.navigationItem.searchController = searchController
             self.navigationItem.hidesSearchBarWhenScrolling = false
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+            self.navigationItem.searchController?.searchBar.delegate = self
+            searchBar = self.navigationItem.searchController?.searchBar
         } else {
             // Fallback on earlier versions
         }
 
-        searchBar.placeholder = "Search Flag by Country Name"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -86,6 +88,7 @@ extension CountryInfoViewController: UISearchBarDelegate {
         })
         countryTableView.reloadData()
     }
+    
 }
 
 
