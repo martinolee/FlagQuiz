@@ -13,10 +13,6 @@ class DetailCountryViewController: UIViewController {
     
     var imageName: String?
     
-    @IBAction func moveToBack(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
