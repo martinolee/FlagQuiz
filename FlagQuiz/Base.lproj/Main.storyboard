@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -282,12 +283,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFZ-vu-wSN">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KFZ-vu-wSN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="187.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KFZ-vu-wSN" secondAttribute="height" multiplier="2:1" id="q7M-xT-g1l"/>
+                                </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4en-pi-z2P">
+                                <rect key="frame" x="0.0" y="259" width="375" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOk-94-tB1">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2T4-oj-clX">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0I-vv-vWI">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="G3d-lW-4mm"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4en-pi-z2P" secondAttribute="trailing" id="1Ua-OS-oq7"/>
+                            <constraint firstItem="KFZ-vu-wSN" firstAttribute="top" secondItem="4Nr-jz-d7o" secondAttribute="top" id="AlV-vQ-zd4"/>
+                            <constraint firstItem="KFZ-vu-wSN" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="Btl-HF-qqJ"/>
+                            <constraint firstAttribute="trailing" secondItem="KFZ-vu-wSN" secondAttribute="trailing" id="Ufm-9U-m12"/>
+                            <constraint firstItem="4en-pi-z2P" firstAttribute="top" secondItem="KFZ-vu-wSN" secondAttribute="bottom" constant="8" id="evr-QB-4eH"/>
+                            <constraint firstItem="4en-pi-z2P" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="olN-fs-UKG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4Nr-jz-d7o"/>
                     </view>
                     <connections>
@@ -296,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ec1-HV-hYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2634" y="501"/>
+            <point key="canvasLocation" x="2632.8000000000002" y="500.59970014992507"/>
         </scene>
         <!--Country-->
         <scene sceneID="6PO-Hf-duH">
