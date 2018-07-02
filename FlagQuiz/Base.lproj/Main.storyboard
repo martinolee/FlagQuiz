@@ -283,7 +283,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KFZ-vu-wSN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KFZ-vu-wSN">
                                 <rect key="frame" x="0.0" y="64" width="375" height="187.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KFZ-vu-wSN" secondAttribute="height" multiplier="2:1" id="q7M-xT-g1l"/>
