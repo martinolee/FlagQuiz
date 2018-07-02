@@ -11,10 +11,21 @@ import UIKit
 class DetailCountryViewController: UIViewController {
     @IBOutlet weak var detailFlagImageView: UIImageView!
     
+    @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var mapButton: UIButton!
+    @IBOutlet weak var etcButton: UIButton!
+    
+    @IBOutlet weak var moverWidth: NSLayoutConstraint!
+    @IBOutlet weak var infoButtonCenter: NSLayoutConstraint!
+    @IBOutlet weak var mapButtonCenter: NSLayoutConstraint!
+    @IBOutlet weak var etcButtonCenter: NSLayoutConstraint!
+    
     var imageName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        selectMenu(infoButton)
 
         detailFlagImageView.image = UIImage(named: imageName!)
     }
@@ -37,6 +48,26 @@ class DetailCountryViewController: UIViewController {
         } else {
             // Fallback on earlier versions
         }
+    }
+    
+    @IBAction func selectMenu(_ sender: Any) {
+        infoButtonCenter.isActive = (sender as AnyObject).tag == 100
+        mapButtonCenter.isActive = (sender as AnyObject).tag == 200
+        etcButtonCenter.isActive = (sender as AnyObject).tag == 300
+        
+        infoButton.setTitleColor(infoButtonCenter.isActive ? UIColor.black : UIColor.lightGray, for: .normal)
+        mapButton.setTitleColor(mapButtonCenter.isActive ? UIColor.black : UIColor.lightGray, for: .normal)
+        etcButton.setTitleColor(etcButtonCenter.isActive ? UIColor.black : UIColor.lightGray, for: .normal)
+        
+        if let title = (sender as AnyObject).title(for: .normal), let font = (sender as AnyObject).titleLabel??.font {
+            let attr = [NSAttributedStringKey.font: font]
+            let width = (title as NSString).size(withAttributes: attr).width
+            moverWidth.constant = width + 10
+        }
+        
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: { [weak self] in
+            self?.view.layoutIfNeeded()
+            }, completion: nil)
     }
 
 }
