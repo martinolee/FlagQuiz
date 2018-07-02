@@ -36,7 +36,6 @@ class CountryInfoViewController: UIViewController {
         let indexPath = countryTableView.indexPathForSelectedRow
         let currentCell = countryTableView.cellForRow(at: indexPath!) as! CountryInfoTableViewCell
         let imageName = currentCell.flagImageNameLabel.text
-        print(currentCell.flagImageView.description)
         
         detailView?.imageName = imageName
     }
@@ -67,7 +66,7 @@ extension CountryInfoViewController: UITableViewDataSource {
         
         cell.flagImageView.image = UIImage(named: target.imageName)
         cell.countryNameLabel.text = target.name
-        cell.flagImageNameLabel.text = target.fullName
+        cell.flagImageNameLabel.text = target.imageName
         
         return cell
     }
