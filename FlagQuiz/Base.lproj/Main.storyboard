@@ -334,6 +334,13 @@
                                 <rect key="frame" x="0.0" y="289" width="375" height="378"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YuF-O9-F71">
+                                <rect key="frame" x="0.0" y="289" width="375" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="efg-OB-eSo"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaC-f6-TI8">
                                 <rect key="frame" x="0.0" y="289" width="375" height="378"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -344,6 +351,7 @@
                             <constraint firstAttribute="trailing" secondItem="4en-pi-z2P" secondAttribute="trailing" id="1Ua-OS-oq7"/>
                             <constraint firstItem="9Vp-Rd-Jyp" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="1nh-se-NOu"/>
                             <constraint firstAttribute="trailing" secondItem="9Vp-Rd-Jyp" secondAttribute="trailing" id="2Pw-aT-22B"/>
+                            <constraint firstItem="YuF-O9-F71" firstAttribute="top" secondItem="4en-pi-z2P" secondAttribute="bottom" id="6SS-eR-BMZ"/>
                             <constraint firstItem="KFZ-vu-wSN" firstAttribute="top" secondItem="4Nr-jz-d7o" secondAttribute="top" id="AlV-vQ-zd4"/>
                             <constraint firstItem="KFZ-vu-wSN" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="Btl-HF-qqJ"/>
                             <constraint firstItem="Sjk-B5-Lvc" firstAttribute="centerX" secondItem="2T4-oj-clX" secondAttribute="centerX" id="G6s-tt-3hG"/>
@@ -357,7 +365,9 @@
                             <constraint firstItem="FaC-f6-TI8" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="Yzl-2g-GgQ"/>
                             <constraint firstAttribute="trailing" secondItem="FaC-f6-TI8" secondAttribute="trailing" id="ep4-Jr-CMj"/>
                             <constraint firstItem="4en-pi-z2P" firstAttribute="top" secondItem="KFZ-vu-wSN" secondAttribute="bottom" constant="8" id="evr-QB-4eH"/>
+                            <constraint firstAttribute="trailing" secondItem="YuF-O9-F71" secondAttribute="trailing" id="nnO-wC-yFj"/>
                             <constraint firstItem="4en-pi-z2P" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="olN-fs-UKG"/>
+                            <constraint firstItem="YuF-O9-F71" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="q7i-P5-5hZ"/>
                             <constraint firstAttribute="bottom" secondItem="9Vp-Rd-Jyp" secondAttribute="bottom" id="wUS-6c-Ckh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Nr-jz-d7o"/>
