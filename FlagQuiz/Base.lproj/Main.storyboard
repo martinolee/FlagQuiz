@@ -326,19 +326,39 @@
                                     <constraint firstAttribute="height" constant="30" id="G3d-lW-4mm"/>
                                 </constraints>
                             </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tqy-QR-nDd">
+                                <rect key="frame" x="0.0" y="289" width="375" height="378"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Vp-Rd-Jyp">
+                                <rect key="frame" x="0.0" y="289" width="375" height="378"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaC-f6-TI8">
+                                <rect key="frame" x="0.0" y="289" width="375" height="378"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="4en-pi-z2P" secondAttribute="trailing" id="1Ua-OS-oq7"/>
+                            <constraint firstItem="9Vp-Rd-Jyp" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="1nh-se-NOu"/>
+                            <constraint firstAttribute="trailing" secondItem="9Vp-Rd-Jyp" secondAttribute="trailing" id="2Pw-aT-22B"/>
                             <constraint firstItem="KFZ-vu-wSN" firstAttribute="top" secondItem="4Nr-jz-d7o" secondAttribute="top" id="AlV-vQ-zd4"/>
                             <constraint firstItem="KFZ-vu-wSN" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="Btl-HF-qqJ"/>
                             <constraint firstItem="Sjk-B5-Lvc" firstAttribute="centerX" secondItem="2T4-oj-clX" secondAttribute="centerX" id="G6s-tt-3hG"/>
+                            <constraint firstItem="FaC-f6-TI8" firstAttribute="top" secondItem="4en-pi-z2P" secondAttribute="bottom" id="HPd-kT-UW3"/>
                             <constraint firstItem="Sjk-B5-Lvc" firstAttribute="centerX" secondItem="eOk-94-tB1" secondAttribute="centerX" priority="999" id="IC6-QI-0nF"/>
+                            <constraint firstAttribute="bottom" secondItem="FaC-f6-TI8" secondAttribute="bottom" id="LIm-Gr-nQO"/>
                             <constraint firstItem="Sjk-B5-Lvc" firstAttribute="bottom" secondItem="4en-pi-z2P" secondAttribute="bottom" id="Oe7-Yn-XKv"/>
                             <constraint firstAttribute="trailing" secondItem="KFZ-vu-wSN" secondAttribute="trailing" id="Ufm-9U-m12"/>
+                            <constraint firstItem="9Vp-Rd-Jyp" firstAttribute="top" secondItem="4en-pi-z2P" secondAttribute="bottom" id="UqJ-2R-3f8"/>
                             <constraint firstItem="Sjk-B5-Lvc" firstAttribute="centerX" secondItem="z0I-vv-vWI" secondAttribute="centerX" id="WBV-09-AZS"/>
+                            <constraint firstItem="FaC-f6-TI8" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="Yzl-2g-GgQ"/>
+                            <constraint firstAttribute="trailing" secondItem="FaC-f6-TI8" secondAttribute="trailing" id="ep4-Jr-CMj"/>
                             <constraint firstItem="4en-pi-z2P" firstAttribute="top" secondItem="KFZ-vu-wSN" secondAttribute="bottom" constant="8" id="evr-QB-4eH"/>
                             <constraint firstItem="4en-pi-z2P" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="olN-fs-UKG"/>
+                            <constraint firstAttribute="bottom" secondItem="9Vp-Rd-Jyp" secondAttribute="bottom" id="wUS-6c-Ckh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Nr-jz-d7o"/>
                         <variation key="default">
@@ -352,10 +372,13 @@
                         <outlet property="detailFlagImageView" destination="KFZ-vu-wSN" id="JcV-Gs-hoD"/>
                         <outlet property="etcButton" destination="z0I-vv-vWI" id="YkD-Ak-Xp3"/>
                         <outlet property="etcButtonCenter" destination="WBV-09-AZS" id="dCp-cf-3EF"/>
+                        <outlet property="etcView" destination="FaC-f6-TI8" id="zw9-aQ-mVH"/>
                         <outlet property="infoButton" destination="eOk-94-tB1" id="lBZ-hL-fMK"/>
                         <outlet property="infoButtonCenter" destination="IC6-QI-0nF" id="bQY-h3-zcK"/>
+                        <outlet property="infoView" destination="9Vp-Rd-Jyp" id="e6Z-Dr-5aB"/>
                         <outlet property="mapButton" destination="2T4-oj-clX" id="wdM-b4-KOo"/>
                         <outlet property="mapButtonCenter" destination="G6s-tt-3hG" id="Rix-Pa-oyN"/>
+                        <outlet property="mapView" destination="tqy-QR-nDd" id="6dh-pG-O73"/>
                         <outlet property="moverWidth" destination="aRS-RN-qkl" id="mkP-Ma-M2z"/>
                     </connections>
                 </viewController>

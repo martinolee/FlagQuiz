@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class DetailCountryViewController: UIViewController {
     @IBOutlet weak var detailFlagImageView: UIImageView!
@@ -19,6 +20,10 @@ class DetailCountryViewController: UIViewController {
     @IBOutlet weak var infoButtonCenter: NSLayoutConstraint!
     @IBOutlet weak var mapButtonCenter: NSLayoutConstraint!
     @IBOutlet weak var etcButtonCenter: NSLayoutConstraint!
+    
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var etcView: UIView!
     
     var imageName: String?
     
@@ -68,6 +73,26 @@ class DetailCountryViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: { [weak self] in
             self?.view.layoutIfNeeded()
             }, completion: nil)
+        
+        if sender as? UIButton == infoButton {
+            UIView.animate(withDuration: 0.5) {
+                self.infoView.alpha = 1
+                self.mapView.alpha = 0
+                self.etcView.alpha = 0
+            }
+        } else if sender as? UIButton == mapButton {
+            UIView.animate(withDuration: 0.5) {
+                self.infoView.alpha = 0
+                self.mapView.alpha = 1
+                self.etcView.alpha = 0
+            }
+        } else if sender as? UIButton == etcButton {
+            UIView.animate(withDuration: 0.5) {
+                self.infoView.alpha = 0
+                self.mapView.alpha = 0
+                self.etcView.alpha = 1
+            }
+        }
     }
 
 }
