@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		722565B920D72A3700343430 /* DetailCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722565B820D72A3700343430 /* DetailCountryViewController.swift */; };
 		72686780205E4B45000CD3FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7268677F205E4B45000CD3FB /* AppDelegate.swift */; };
 		72686782205E4B45000CD3FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72686781205E4B45000CD3FB /* ViewController.swift */; };
 		72686785205E4B45000CD3FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72686783205E4B45000CD3FB /* Main.storyboard */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		722565B820D72A3700343430 /* DetailCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCountryViewController.swift; sourceTree = "<group>"; };
 		7268677C205E4B45000CD3FB /* FlagQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlagQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7268677F205E4B45000CD3FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72686781205E4B45000CD3FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 				72686781205E4B45000CD3FB /* ViewController.swift */,
 				72D35BD320D4EB7200E7F1B6 /* CountryInfoViewController.swift */,
 				72D35BD520D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift */,
-				722565B820D72A3700343430 /* DetailCountryViewController.swift */,
 				72686783205E4B45000CD3FB /* Main.storyboard */,
 				72686786205E4B45000CD3FB /* Assets.xcassets */,
 				72686788205E4B45000CD3FB /* LaunchScreen.storyboard */,
@@ -151,7 +148,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				722565B920D72A3700343430 /* DetailCountryViewController.swift in Sources */,
 				72686782205E4B45000CD3FB /* ViewController.swift in Sources */,
 				72D35BD620D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift in Sources */,
 				72D35BD420D4EB7200E7F1B6 /* CountryInfoViewController.swift in Sources */,
