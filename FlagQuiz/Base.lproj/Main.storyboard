@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -239,7 +238,6 @@
                                             <outlet property="countryNameLabel" destination="RJj-ej-ToN" id="6YG-zh-iCG"/>
                                             <outlet property="flagImageNameLabel" destination="tlx-B4-dpM" id="SnP-yR-n6U"/>
                                             <outlet property="flagImageView" destination="Itn-Ph-GCv" id="eCA-bi-npB"/>
-                                            <segue destination="6VU-EU-cPX" kind="show" identifier="detailSegue" id="0iW-Kf-gJI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -274,127 +272,6 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1862" y="501"/>
-        </scene>
-        <!--Detail Country View Controller-->
-        <scene sceneID="VVl-zQ-FLB">
-            <objects>
-                <viewController id="6VU-EU-cPX" customClass="DetailCountryViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ved-nq-oVv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KFZ-vu-wSN">
-                                <rect key="frame" x="0.0" y="64" width="375" height="187.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="KFZ-vu-wSN" secondAttribute="height" multiplier="2:1" id="q7M-xT-g1l"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4en-pi-z2P">
-                                <rect key="frame" x="0.0" y="259" width="375" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOk-94-tB1">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
-                                        <state key="normal" title="국가 정보"/>
-                                        <connections>
-                                            <action selector="selectMenu:" destination="6VU-EU-cPX" eventType="touchUpInside" id="d93-N6-BSR"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2T4-oj-clX">
-                                        <rect key="frame" x="125" y="0.0" width="125" height="30"/>
-                                        <state key="normal" title="지도"/>
-                                        <connections>
-                                            <action selector="selectMenu:" destination="6VU-EU-cPX" eventType="touchUpInside" id="3gU-Sq-rWM"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="300" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0I-vv-vWI">
-                                        <rect key="frame" x="250" y="0.0" width="125" height="30"/>
-                                        <state key="normal" title="기타"/>
-                                        <connections>
-                                            <action selector="selectMenu:" destination="6VU-EU-cPX" eventType="touchUpInside" id="jL5-Cz-Zqu"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="G3d-lW-4mm"/>
-                                </constraints>
-                            </stackView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tqy-QR-nDd">
-                                <rect key="frame" x="0.0" y="289" width="375" height="378"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Vp-Rd-Jyp">
-                                <rect key="frame" x="0.0" y="289" width="375" height="378"/>
-                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaC-f6-TI8">
-                                <rect key="frame" x="0.0" y="289" width="375" height="378"/>
-                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YuF-O9-F71">
-                                <rect key="frame" x="0.0" y="289" width="375" height="3"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="3" id="efg-OB-eSo"/>
-                                </constraints>
-                            </view>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sjk-B5-Lvc">
-                                <rect key="frame" x="27" y="287" width="70" height="5"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="aRS-RN-qkl"/>
-                                    <constraint firstAttribute="height" constant="5" id="dkS-4E-khf"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="4en-pi-z2P" secondAttribute="trailing" id="1Ua-OS-oq7"/>
-                            <constraint firstItem="9Vp-Rd-Jyp" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="1nh-se-NOu"/>
-                            <constraint firstAttribute="trailing" secondItem="9Vp-Rd-Jyp" secondAttribute="trailing" id="2Pw-aT-22B"/>
-                            <constraint firstItem="YuF-O9-F71" firstAttribute="top" secondItem="4en-pi-z2P" secondAttribute="bottom" id="6SS-eR-BMZ"/>
-                            <constraint firstItem="KFZ-vu-wSN" firstAttribute="top" secondItem="4Nr-jz-d7o" secondAttribute="top" id="AlV-vQ-zd4"/>
-                            <constraint firstItem="KFZ-vu-wSN" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="Btl-HF-qqJ"/>
-                            <constraint firstItem="Sjk-B5-Lvc" firstAttribute="centerX" secondItem="2T4-oj-clX" secondAttribute="centerX" id="G6s-tt-3hG"/>
-                            <constraint firstItem="FaC-f6-TI8" firstAttribute="top" secondItem="4en-pi-z2P" secondAttribute="bottom" id="HPd-kT-UW3"/>
-                            <constraint firstItem="Sjk-B5-Lvc" firstAttribute="centerX" secondItem="eOk-94-tB1" secondAttribute="centerX" priority="999" id="IC6-QI-0nF"/>
-                            <constraint firstAttribute="bottom" secondItem="FaC-f6-TI8" secondAttribute="bottom" id="LIm-Gr-nQO"/>
-                            <constraint firstItem="Sjk-B5-Lvc" firstAttribute="bottom" secondItem="4en-pi-z2P" secondAttribute="bottom" constant="3" id="Oe7-Yn-XKv"/>
-                            <constraint firstAttribute="trailing" secondItem="KFZ-vu-wSN" secondAttribute="trailing" id="Ufm-9U-m12"/>
-                            <constraint firstItem="9Vp-Rd-Jyp" firstAttribute="top" secondItem="4en-pi-z2P" secondAttribute="bottom" id="UqJ-2R-3f8"/>
-                            <constraint firstItem="Sjk-B5-Lvc" firstAttribute="centerX" secondItem="z0I-vv-vWI" secondAttribute="centerX" id="WBV-09-AZS"/>
-                            <constraint firstItem="FaC-f6-TI8" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="Yzl-2g-GgQ"/>
-                            <constraint firstAttribute="trailing" secondItem="FaC-f6-TI8" secondAttribute="trailing" id="ep4-Jr-CMj"/>
-                            <constraint firstItem="4en-pi-z2P" firstAttribute="top" secondItem="KFZ-vu-wSN" secondAttribute="bottom" constant="8" id="evr-QB-4eH"/>
-                            <constraint firstAttribute="trailing" secondItem="YuF-O9-F71" secondAttribute="trailing" id="nnO-wC-yFj"/>
-                            <constraint firstItem="4en-pi-z2P" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="olN-fs-UKG"/>
-                            <constraint firstItem="YuF-O9-F71" firstAttribute="leading" secondItem="ved-nq-oVv" secondAttribute="leading" id="q7i-P5-5hZ"/>
-                            <constraint firstAttribute="bottom" secondItem="9Vp-Rd-Jyp" secondAttribute="bottom" id="wUS-6c-Ckh"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="4Nr-jz-d7o"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="G6s-tt-3hG"/>
-                                <exclude reference="WBV-09-AZS"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="detailFlagImageView" destination="KFZ-vu-wSN" id="JcV-Gs-hoD"/>
-                        <outlet property="etcButton" destination="z0I-vv-vWI" id="YkD-Ak-Xp3"/>
-                        <outlet property="etcButtonCenter" destination="WBV-09-AZS" id="dCp-cf-3EF"/>
-                        <outlet property="etcView" destination="FaC-f6-TI8" id="zw9-aQ-mVH"/>
-                        <outlet property="infoButton" destination="eOk-94-tB1" id="lBZ-hL-fMK"/>
-                        <outlet property="infoButtonCenter" destination="IC6-QI-0nF" id="bQY-h3-zcK"/>
-                        <outlet property="infoView" destination="9Vp-Rd-Jyp" id="e6Z-Dr-5aB"/>
-                        <outlet property="mapButton" destination="2T4-oj-clX" id="wdM-b4-KOo"/>
-                        <outlet property="mapButtonCenter" destination="G6s-tt-3hG" id="Rix-Pa-oyN"/>
-                        <outlet property="mapView" destination="tqy-QR-nDd" id="6dh-pG-O73"/>
-                        <outlet property="moverWidth" destination="aRS-RN-qkl" id="mkP-Ma-M2z"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ec1-HV-hYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2608.8000000000002" y="500.59970014992507"/>
         </scene>
         <!--Country-->
         <scene sceneID="6PO-Hf-duH">
