@@ -28,7 +28,15 @@ class CountryInfoViewController: UIViewController {
         } else {
             // Fallback on earlier versions
         }
-
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailView = segue.destination as? DetailCountryViewController
+        let indexPath = countryTableView.indexPathForSelectedRow
+        let currentCell = countryTableView.cellForRow(at: indexPath!) as! CountryInfoTableViewCell
+        let imageName = currentCell.flagImageNameLabel.text
+        
+        detailView?.imageName = imageName
     }
 
 }
