@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     var buttonArray: Array<UIButton> = []
-    var answerList: Array<Int> = [0, 0, 0, 0]
-    var correctAnswer = Int(arc4random_uniform(UInt32(4)))
+    var quizList: Array<Quiz> = Array<Quiz>()
+    var currentQuizIndex: Int = 0
     var correctCountry: String = ""
     var score: Int = 0
     
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             button.setTitleColor(self.view.tintColor, for: .normal)
         }
     }
-
+    
     @IBAction func checkAnswer(_ btn: UIButton) {
         guard let btnText = btn.titleLabel?.text else {
             return
@@ -58,16 +58,16 @@ class ViewController: UIViewController {
         }
         
         setButtonStyle(button: btn, isSelected: true)
-
+        
         if selectedButton != nil && btn != selectedButton {
             setButtonStyle(button: selectedButton, isSelected: false)
         }
-
+        
         scoreLabel.text = "\(score)"
         nextButton.isEnabled = true
         selectedButton = btn
     }
-        
+    
     @IBAction func nextQuiz(_ sender: Any) {
         correctOrInaccurateLabel.text = ""
         setButtonStyle(button: selectedButton, isSelected: false)
@@ -75,38 +75,82 @@ class ViewController: UIViewController {
         selectedButton = nil
     }
     
+    func isDupPrevExample(newExample: Int, prevExample: Array<Int>) -> Bool {
+        for index in 0 ..< prevExample.count {
+            if newExample == prevExample[index] {
+                return true
+            }
+        }
+        return false
+    }
     
-    func makeQuestion() {
-        nextButton.isEnabled = false
-        
-        answerList[0] = Int(arc4random_uniform(UInt32(flagInfo.count)))
-        print(flagInfo[answerList[0]].name)
-        for i in 1...3 {
-            answerList[i] = Int(arc4random_uniform(UInt32(flagInfo.count)))
-            var isDuplicated = false
-            
-            repeat {
-                isDuplicated = false
-                for j in  0...i-1 {
-                    if answerList[i] == answerList[j] {
-                        answerList[i] = Int(arc4random_uniform(UInt32(flagInfo.count)))
-                        isDuplicated = true
-                        break
-                    }
-                }
-                
-            } while isDuplicated
-            print(flagInfo[answerList[i]].name)
+    
+    func isDupQuiz(newExample: Int, isCorrectAnswer: Bool, quizList: Array<Quiz>) -> Bool {
+        // 이전 예시와 중복 확인
+        if quizList.count > 0 && isDupPrevExample(newExample: newExample, prevExample: quizList[quizList.count - 1].example) {
+            return true
         }
         
-        correctAnswer = Int(arc4random_uniform(UInt32(4)))
-        flagImageView.image = UIImage(named: flagInfo[answerList[correctAnswer]].imageName)
-        correctCountry = flagInfo[answerList[correctAnswer]].name
+        // 모든 정답과 중복 확인
+        if isCorrectAnswer && quizList.count > 0 {
+            for index in 0 ..< quizList.count - 1 {
+                if newExample == quizList[index].example[quizList[index].correctAnswerIndex] {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+    
+    func makeExample(inQuizList: Array<Quiz>, correctAnswerIndex: Int) -> [Int] {
+        var example: Array<Int> = Array<Int>()
+        let quizCount = 20
         
         for i in 0...3 {
-            buttonArray[i].setTitle(flagInfo[answerList[i]].name, for: .normal)
+            var newNumber:Int
+            var isDuplicated:Bool
+            repeat {
+                repeat {
+                    isDuplicated = false
+                    newNumber = Int(arc4random_uniform(UInt32(flagInfo.count)))
+                    for j in 0 ..< example.count {
+                        if example[j] == newNumber {
+                            isDuplicated = true
+                        }
+                    }
+                } while isDuplicated
+            } while isDupQuiz(newExample: newNumber, isCorrectAnswer: i == correctAnswerIndex, quizList: quizList)
+            
+            if quizList.count > quizCount {
+                quizList.remove(at: 0)
+            }
+            
+            example.append(newNumber)
         }
         
+        return example
+    }
+    
+    
+    func makeQuestion() {
+        var currentQuizIndex: Int
+        nextButton.isEnabled = false
+        
+        let correctAnswerIndex = Int(arc4random_uniform(4))
+        quizList.append(Quiz(example: makeExample(inQuizList: quizList, correctAnswerIndex: correctAnswerIndex), correctAnswerIndex: correctAnswerIndex))
+        
+         currentQuizIndex = quizList.count - 1
+        
+        flagImageView.image = UIImage(named: flagInfo[quizList[currentQuizIndex].example[quizList[currentQuizIndex].correctAnswerIndex]].imageName)
+        correctCountry = flagInfo[quizList[currentQuizIndex].example[quizList[currentQuizIndex].correctAnswerIndex]].name
+        
+        for i in 0...3 {
+            buttonArray[i].setTitle(flagInfo[quizList[currentQuizIndex].example[i]].name, for: .normal)
+        }
+        
+        for i in 0...3 {
+            print(flagInfo[quizList[currentQuizIndex].example[i]].name)
+        }
     }
     
     override func viewDidLoad() {

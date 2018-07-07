@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct Quiz {
+    var example: Array<Int>
+    var correctAnswerIndex: Int
+}
+
 struct FlagInfo {
     var name: String
     var fullName: String
