@@ -43,11 +43,11 @@
                                     <constraint firstAttribute="height" constant="5" id="9p5-gN-Mur"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Afghanistan" translatesAutoresizingMaskIntoConstraints="NO" id="Ttb-c9-IF9">
-                                <rect key="frame" x="0.0" y="75" width="375" height="342"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ttb-c9-IF9">
+                                <rect key="frame" x="0.0" y="75" width="375" height="343"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0j-VE-mPf">
-                                <rect key="frame" x="0.0" y="417" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="418" width="375" height="200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbA-7t-NnX">
                                         <rect key="frame" x="0.0" y="95" width="375" height="10"/>
@@ -140,7 +140,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="npF-XF-DIB" secondAttribute="trailing" constant="16" id="Jeh-Yx-FuO"/>
                             <constraint firstItem="7T9-Lh-yQU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QuP-bw-FPJ"/>
                             <constraint firstItem="npF-XF-DIB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="TZ6-0G-Npj"/>
-                            <constraint firstAttribute="bottom" secondItem="z0j-VE-mPf" secondAttribute="bottom" constant="50" id="VIs-gT-lYO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z0j-VE-mPf" secondAttribute="bottom" id="VIs-gT-lYO"/>
                             <constraint firstItem="juO-cl-qr9" firstAttribute="top" secondItem="npF-XF-DIB" secondAttribute="bottom" constant="6" id="XRF-AR-cdr"/>
                             <constraint firstItem="z0j-VE-mPf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Y9b-3N-Wed"/>
                             <constraint firstItem="Ttb-c9-IF9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a5z-vu-NOP"/>
@@ -294,7 +294,4 @@
             <point key="canvasLocation" x="1117.5999999999999" y="501.49925037481262"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Afghanistan" width="240" height="160"/>
-    </resources>
 </document>
