@@ -72,6 +72,7 @@ class ViewController: UIViewController {
         correctOrInaccurateLabel.text = ""
         setButtonStyle(button: selectedButton, isSelected: false)
         makeQuestion()
+        textFitInButton()
         selectedButton = nil
     }
     
@@ -153,6 +154,22 @@ class ViewController: UIViewController {
         }
     }
     
+    func textFitInButton() {
+        for i in 0..<buttonArray.count {
+            if let title = buttonArray[i].title(for: .normal), var font = buttonArray[i].titleLabel?.font {
+                var attr = [NSAttributedStringKey.font: font]
+                var fontSize:CGFloat = 31
+                repeat {
+                    fontSize = fontSize - 1
+                    buttonArray[i].titleLabel?.font = UIFont.systemFont(ofSize: fontSize, weight: .regular)
+                    font = (buttonArray[i].titleLabel?.font)!
+                    attr = [NSAttributedStringKey.font: font]
+
+                } while UIScreen.main.bounds.size.width/2 - 40 < (title as NSString).size(withAttributes: attr).width && fontSize > 8
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         correctOrInaccurateLabel.text = ""
@@ -162,6 +179,7 @@ class ViewController: UIViewController {
         buttonArray.append(rightBottomButton)
         
         makeQuestion()
+        textFitInButton()
         
         scoreLabel.text = "\(score)"
     }
