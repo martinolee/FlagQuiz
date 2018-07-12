@@ -29,10 +29,12 @@ class ViewController: UIViewController {
     
     func setButtonStyle(button: UIButton, isSelected: Bool) {
         if isSelected {
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .regular)
+            textFitInButton()
+            
             button.setTitleColor(UIColor.black, for: .normal)
         } else {
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .light)
+            textFitInButton()
+            
             button.setTitleColor(self.view.tintColor, for: .normal)
         }
     }
