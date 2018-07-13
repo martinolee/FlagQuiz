@@ -172,6 +172,13 @@ class ViewController: UIViewController {
         }
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animateAlongsideTransition(in: nil, animation: nil) { _ in
+            self.textFitInButton()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         correctOrInaccurateLabel.text = ""
