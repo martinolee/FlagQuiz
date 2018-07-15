@@ -27,15 +27,10 @@ class ViewController: UIViewController {
     
     var selectedButton: UIButton!
     
-    func setButtonStyle(button: UIButton, isSelected: Bool) {
-        if isSelected {
-            textFitInButton()
-            
-            button.setTitleColor(UIColor.black, for: .normal)
-        } else {
-            textFitInButton()
-            
-            button.setTitleColor(self.view.tintColor, for: .normal)
+    func setDefaultButtonStyle() {
+        for i in 0...3 {
+            buttonArray[i].setTitleColor(UIColor.black, for: .normal)
+            buttonArray[i].isEnabled = true
         }
     }
     
@@ -47,34 +42,43 @@ class ViewController: UIViewController {
         if correctCountry == btnText {
             correctOrInaccurateLabel.text = "정답"
             correctOrInaccurateLabel.textColor = UIColor.blue
+            
+            for i in 0...3 {
+                buttonArray[i].setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.4), for: .disabled)
+                buttonArray[i].isEnabled = false
+            }
+            
+            btn.setTitleColor(UIColor.blue, for: .disabled)
+            btn.isEnabled = false
+            
             if selectedButton != btn {
                 score += 1
             }
             
+            nextButton.isEnabled = true
+            
         } else {
             correctOrInaccurateLabel.text = "오답"
             correctOrInaccurateLabel.textColor = UIColor.red
+            
+            btn.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.4), for: .disabled)
+            btn.isEnabled = false
+            
+            
             if score >= 1 && selectedButton != btn {
                 score -= 1
             }
         }
         
-        setButtonStyle(button: btn, isSelected: true)
-        
-        if selectedButton != nil && btn != selectedButton {
-            setButtonStyle(button: selectedButton, isSelected: false)
-        }
-        
         scoreLabel.text = "\(score)"
-        nextButton.isEnabled = true
         selectedButton = btn
     }
     
     @IBAction func nextQuiz(_ sender: Any) {
         correctOrInaccurateLabel.text = ""
-        setButtonStyle(button: selectedButton, isSelected: false)
         makeQuestion()
         textFitInButton()
+        setDefaultButtonStyle()
         selectedButton = nil
     }
     
@@ -189,6 +193,7 @@ class ViewController: UIViewController {
         
         makeQuestion()
         textFitInButton()
+        setDefaultButtonStyle()
         
         scoreLabel.text = "\(score)"
     }
