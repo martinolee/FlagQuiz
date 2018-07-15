@@ -64,6 +64,11 @@ class ViewController: UIViewController {
             btn.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.4), for: .disabled)
             btn.isEnabled = false
             
+            if #available(iOS 10.0, *) {
+                UIImpactFeedbackGenerator(style: .heavy).impactOccurred() // 진동
+            } else {
+                // Fallback on earlier versions
+            }
             
             if score >= 1 && selectedButton != btn {
                 score -= 1
