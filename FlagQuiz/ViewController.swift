@@ -52,6 +52,8 @@ class ViewController: UIViewController {
             btn.setTitleColor(UIColor.blue, for: .disabled)
             btn.isEnabled = false
             
+            AudioServicesPlaySystemSound(1520)
+            
             if selectedButton != btn {
                 score += 1
             }
