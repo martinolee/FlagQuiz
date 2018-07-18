@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var leftBottomButton: UIButton!
     @IBOutlet weak var rightBottomButton: UIButton!
     @IBOutlet weak var correctOrInaccurateLabel: UILabel!
-    @IBOutlet weak var nextButton: UIButton!
     
     var buttonArray: Array<UIButton> = []
     var quizList: Array<Quiz> = Array<Quiz>()
@@ -58,7 +57,14 @@ class ViewController: UIViewController {
                 score += 1
             }
             
-            nextButton.isEnabled = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.correctOrInaccurateLabel.text = ""
+                self.makeQuestion()
+                self.textFitInButton()
+                self.setDefaultButtonStyle()
+                self.selectedButton = nil
+            }
+            
             
         } else {
             correctOrInaccurateLabel.text = "오답"
@@ -76,14 +82,6 @@ class ViewController: UIViewController {
         
         scoreLabel.text = "\(score)"
         selectedButton = btn
-    }
-    
-    @IBAction func nextQuiz(_ sender: Any) {
-        correctOrInaccurateLabel.text = ""
-        makeQuestion()
-        textFitInButton()
-        setDefaultButtonStyle()
-        selectedButton = nil
     }
     
     func isDupPrevExample(newExample: Int, prevExample: Array<Int>) -> Bool {
@@ -145,7 +143,6 @@ class ViewController: UIViewController {
     
     func makeQuestion() {
         var currentQuizIndex: Int
-        nextButton.isEnabled = false
         
         let correctAnswerIndex = Int(arc4random_uniform(4))
         quizList.append(Quiz(example: makeExample(inQuizList: quizList, correctAnswerIndex: correctAnswerIndex), correctAnswerIndex: correctAnswerIndex))
