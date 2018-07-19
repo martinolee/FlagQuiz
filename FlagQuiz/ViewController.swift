@@ -140,7 +140,6 @@ class ViewController: UIViewController {
         return example
     }
     
-    
     func makeQuestion() {
         var currentQuizIndex: Int
         
@@ -154,10 +153,6 @@ class ViewController: UIViewController {
         
         for i in 0...3 {
             buttonArray[i].setTitle(flagInfo[quizList[currentQuizIndex].example[i]].name, for: .normal)
-        }
-        
-        for i in 0...3 {
-            print(flagInfo[quizList[currentQuizIndex].example[i]].name)
         }
     }
     
