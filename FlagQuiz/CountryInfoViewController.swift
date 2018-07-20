@@ -73,12 +73,26 @@ extension CountryInfoViewController: UISearchBarDelegate {
             return
         }
         
-        currentFlagInfo = flagInfo.filter({ (flag:FlagInfo) -> Bool in
-            flag.name.contains(searchBar.text!) || flag.fullName.contains(searchBar.text!)
-        })
+        guard let countrys = searchBar.text?.split(separator: ",") else {
+            return
+        }
+        
+        var tempFlagInfo = [FlagInfo]()
+        
+        currentFlagInfo.removeAll()
+        for i in 0..<countrys.count {
+            let countryName = countrys[i].trimmingCharacters(in: .whitespaces)
+            
+            tempFlagInfo = flagInfo.filter { $0.name.contains(countryName) || $0.fullName.contains(countryName) }
+            
+            if !tempFlagInfo.isEmpty {
+                for j in 0..<tempFlagInfo.count {
+                    currentFlagInfo.append(tempFlagInfo[j])
+                }
+            }
+        }
         countryTableView.reloadData()
     }
-    
 }
 
 
