@@ -70,7 +70,7 @@ let flagInfo = [
     FlagInfo(name: "핀란드", fullName: "Finland", imageName: "Finland.png"),
     FlagInfo(name: "부룬디", fullName: "Burundi", imageName: "Burundi.png"),
     FlagInfo(name: "차드", fullName: "Chad", imageName: "Chad.png"),
-    FlagInfo(name: "코트디부아르", fullName: "Côte d'Ivoire", imageName: "Côte_d'Ivoire.png"),
+    FlagInfo(name: "코트디부아르", fullName: "Ivory Coast", imageName: "Ivory_Coast.png"),
     FlagInfo(name: "적도기니", fullName: "Equatorial Guinea", imageName: "Equatorial_Guinea.png"),
     FlagInfo(name: "모리셔스", fullName: "Mauritius", imageName: "Mauritius.png"),
     FlagInfo(name: "모잠비크", fullName: "Mozambique", imageName: "Mozambique.png"),
