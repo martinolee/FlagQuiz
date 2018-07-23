@@ -25,8 +25,6 @@ class ViewController: UIViewController {
     var correctCountry: String = ""
     var score: Int = 0
     
-    var selectedButton: UIButton!
-    
     func setDefaultButtonStyle() {
         for i in 0...3 {
             buttonArray[i].setTitleColor(UIColor.black, for: .normal)
@@ -53,16 +51,13 @@ class ViewController: UIViewController {
             
             AudioServicesPlaySystemSound(1520)
             
-            if selectedButton != btn {
-                score += 1
-            }
+            score += 1
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.correctOrInaccurateLabel.text = ""
                 self.makeQuestion()
                 self.textFitInButton()
                 self.setDefaultButtonStyle()
-                self.selectedButton = nil
             }
             
             
@@ -75,13 +70,12 @@ class ViewController: UIViewController {
             
             AudioServicesPlaySystemSound(1521)
             
-            if score >= 1 && selectedButton != btn {
+            if score > 0 {
                 score -= 1
             }
         }
         
         scoreLabel.text = "\(score)"
-        selectedButton = btn
     }
     
     func isDupPrevExample(newExample: Int, prevExample: Array<Int>) -> Bool {
