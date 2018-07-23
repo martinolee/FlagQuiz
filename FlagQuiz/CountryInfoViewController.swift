@@ -13,7 +13,6 @@ class CountryInfoViewController: UIViewController {
     
     var currentFlagInfo:Array<FlagInfo> = flagInfo
     let searchController: UISearchController = UISearchController(searchResultsController: nil)
-    var searchBar: UISearchBar?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +23,6 @@ class CountryInfoViewController: UIViewController {
             self.navigationItem.hidesSearchBarWhenScrolling = false
             self.navigationController?.navigationBar.prefersLargeTitles = true
             self.navigationItem.searchController?.searchBar.delegate = self
-            searchBar = self.navigationItem.searchController?.searchBar
         } else {
             // Fallback on earlier versions
         }
