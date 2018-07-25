@@ -43,14 +43,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nf-Tj-qMa">
-                                        <rect key="frame" x="182.5" y="0.0" width="10" height="200"/>
+                                        <rect key="frame" x="183" y="0.0" width="10" height="200"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="10" id="0Rw-w0-iv4"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgM-ff-OIW">
-                                        <rect key="frame" x="0.0" y="105" width="182.5" height="95"/>
+                                        <rect key="frame" x="0.0" y="105" width="183" height="95"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -58,7 +58,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC1-nd-XqD">
-                                        <rect key="frame" x="0.0" y="0.0" width="182.5" height="95"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="95"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -66,7 +66,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbz-eW-Oep">
-                                        <rect key="frame" x="192.5" y="105" width="182.5" height="95"/>
+                                        <rect key="frame" x="193" y="105" width="182" height="95"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -74,7 +74,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prm-1p-ikg">
-                                        <rect key="frame" x="192.5" y="0.0" width="182.5" height="95"/>
+                                        <rect key="frame" x="193" y="0.0" width="182" height="95"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
