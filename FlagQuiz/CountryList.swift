@@ -169,7 +169,7 @@ let flagInfo = [
     FlagInfo(name: "슬로바키아", fullName: "Slovakia", imageName: "Slovakia.png"),
     FlagInfo(name: "슬로베니아", fullName: "Slovenia", imageName: "Slovenia.png"),
     FlagInfo(name: "소말리아", fullName: "Somalia", imageName: "Somalia.png"),
-    FlagInfo(name: "남아프리카", fullName: "South Africa", imageName: "South_Africa.png"),
+    FlagInfo(name: "남아공", fullName: "South Africa", imageName: "South_Africa.png"),
     FlagInfo(name: "대한민국", fullName: "South Korea", imageName: "South_Korea.png"),
     FlagInfo(name: "스페인", fullName: "Spain", imageName: "Spain.png"),
     FlagInfo(name: "스리랑카", fullName: "Sri Lanka", imageName: "Sri_Lanka.png"),
