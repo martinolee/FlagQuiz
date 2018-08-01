@@ -22,32 +22,30 @@ class ViewController: UIViewController {
     var buttonArray: Array<UIButton> = []
     var quizList: Array<Quiz> = Array<Quiz>()
     var currentQuizIndex: Int = 0
-    var correctCountry: String = ""
     var score: Int = 0
     
     func setDefaultButtonStyle() {
         for i in 0...3 {
             buttonArray[i].setTitleColor(UIColor.black, for: .normal)
+        }
+
+        for i in 0...3 {
             buttonArray[i].isEnabled = true
         }
     }
     
     @IBAction func checkAnswer(_ btn: UIButton) {
-        guard let btnText = btn.titleLabel?.text else {
-            return
-        }
-        
-        if correctCountry == btnText {
-            correctOrInaccurateLabel.text = "정답"
-            correctOrInaccurateLabel.textColor = UIColor.blue
-            
+        if quizList[currentQuizIndex].correctAnswerIndex == btn.tag {
             for i in 0...3 {
-                buttonArray[i].setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.4), for: .disabled)
                 buttonArray[i].isEnabled = false
             }
-            
+            for i in 0...3 {
+                buttonArray[i].setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.4), for: .disabled)
+            }
             btn.setTitleColor(UIColor.blue, for: .disabled)
-            btn.isEnabled = false
+            
+            correctOrInaccurateLabel.text = "정답"
+            correctOrInaccurateLabel.textColor = UIColor.blue
             
             AudioServicesPlaySystemSound(1520)
             
@@ -60,13 +58,12 @@ class ViewController: UIViewController {
                 self.setDefaultButtonStyle()
             }
             
-            
         } else {
+            btn.isEnabled = false
+            btn.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.4), for: .disabled)
+            
             correctOrInaccurateLabel.text = "오답"
             correctOrInaccurateLabel.textColor = UIColor.red
-            
-            btn.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.4), for: .disabled)
-            btn.isEnabled = false
             
             AudioServicesPlaySystemSound(1521)
             
@@ -135,18 +132,15 @@ class ViewController: UIViewController {
     }
     
     func makeQuestion() {
-        var currentQuizIndex: Int
-        
         let correctAnswerIndex = Int(arc4random_uniform(4))
         quizList.append(Quiz(example: makeExample(inQuizList: quizList, correctAnswerIndex: correctAnswerIndex), correctAnswerIndex: correctAnswerIndex))
-        
-         currentQuizIndex = quizList.count - 1
+        currentQuizIndex = quizList.count - 1
         
         flagImageView.image = UIImage(named: flagInfo[quizList[currentQuizIndex].example[quizList[currentQuizIndex].correctAnswerIndex]].imageName)
-        correctCountry = flagInfo[quizList[currentQuizIndex].example[quizList[currentQuizIndex].correctAnswerIndex]].name
         
         for i in 0...3 {
             buttonArray[i].setTitle(flagInfo[quizList[currentQuizIndex].example[i]].name, for: .normal)
+            buttonArray[i].setTitle(flagInfo[quizList[currentQuizIndex].example[i]].name, for: .disabled)
         }
     }
     
