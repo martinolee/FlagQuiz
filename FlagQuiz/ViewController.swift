@@ -180,6 +180,7 @@ class ViewController: UIViewController {
         setDefaultButtonStyle()
         
         scoreLabel.text = "\(score)"
+        UIView.appearance().isExclusiveTouch = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
