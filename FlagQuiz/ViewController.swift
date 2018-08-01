@@ -72,7 +72,7 @@ class ViewController: UIViewController {
             }
         }
         
-        scoreLabel.text = "\(score)"
+        scoreLabel.text = "점수: \(score)"
     }
     
     func isDupPrevExample(newExample: Int, prevExample: Array<Int>) -> Bool {
@@ -179,7 +179,7 @@ class ViewController: UIViewController {
         textFitInButton()
         setDefaultButtonStyle()
         
-        scoreLabel.text = "\(score)"
+        scoreLabel.text = "점수: \(score)"
         UIView.appearance().isExclusiveTouch = true
     }
     
