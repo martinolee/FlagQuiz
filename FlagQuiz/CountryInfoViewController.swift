@@ -11,7 +11,7 @@ import UIKit
 class CountryInfoViewController: UIViewController {
     @IBOutlet weak var countryTableView: UITableView!
     
-    var currentFlagInfo:Array<FlagInfo> = flagInfo.sorted(by: { $0.name < $1.name })
+    var currentFlagInfo: Array<FlagInfo> = flagInfo.sorted(by: { $0.name < $1.name })
     let searchController: UISearchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -51,7 +51,7 @@ extension CountryInfoViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell") as! CountryInfoTableViewCell
-        let target = currentFlagInfo[indexPath.row]
+        let target = currentFlagInfo.sorted(by: { $0.name < $1.name })[indexPath.row]
         
         cell.flagImageView.image = UIImage(named: target.imageName)
         cell.countryNameLabel.text = target.name
@@ -66,7 +66,7 @@ extension CountryInfoViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         guard !searchText.isEmpty else {
-            currentFlagInfo = flagInfo
+            currentFlagInfo = flagInfo.sorted(by: { $0.name < $1.name })
             countryTableView.reloadData()
             return
         }
