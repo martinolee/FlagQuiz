@@ -11,7 +11,7 @@ import UIKit
 class CountryInfoViewController: UIViewController {
     @IBOutlet weak var countryTableView: UITableView!
     
-    var currentFlagInfo:Array<FlagInfo> = flagInfo
+    var currentFlagInfo:Array<FlagInfo> = flagInfo.sorted(by: { $0.name < $1.name })
     let searchController: UISearchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
