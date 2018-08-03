@@ -11,11 +11,14 @@ import UIKit
 class CountryInfoViewController: UIViewController {
     @IBOutlet weak var countryTableView: UITableView!
     
-    var currentFlagInfo: Array<FlagInfo> = flagInfo.sorted(by: { $0.name < $1.name })
+    var currentFlagInfo: Array<FlagInfo> = Array()
     let searchController: UISearchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        currentFlagInfo = flagInfo
+        
         self.hideKeyboardWhenTappedAround()
         
         if #available(iOS 11.0, *) {
@@ -51,7 +54,7 @@ extension CountryInfoViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell") as! CountryInfoTableViewCell
-        let target = currentFlagInfo.sorted(by: { $0.name < $1.name })[indexPath.row]
+        let target = currentFlagInfo[indexPath.row]
         
         cell.flagImageView.image = UIImage(named: target.imageName)
         cell.countryNameLabel.text = target.name
@@ -66,7 +69,7 @@ extension CountryInfoViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         guard !searchText.isEmpty else {
-            currentFlagInfo = flagInfo.sorted(by: { $0.name < $1.name })
+            currentFlagInfo = flagInfo
             countryTableView.reloadData()
             return
         }

@@ -169,6 +169,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        flagInfo = flagInfo.sorted(by: { $0.name < $1.name })
+        
         correctOrInaccurateLabel.text = ""
         buttonArray.append(leftTopButton)
         buttonArray.append(rightTopButton)

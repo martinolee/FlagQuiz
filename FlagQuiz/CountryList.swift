@@ -19,7 +19,7 @@ struct FlagInfo {
     var imageName: String
 }
 
-let flagInfo = [
+var flagInfo = [
     FlagInfo(name: "아프가니스탄", fullName: "Afghanistan", imageName: "Afghanistan.png"),
     FlagInfo(name: "알바니아", fullName: "Albania", imageName: "Albania.png"),
     FlagInfo(name: "알제리", fullName: "Algeria", imageName: "Algeria.png"),
