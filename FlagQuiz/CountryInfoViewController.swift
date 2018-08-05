@@ -58,7 +58,6 @@ extension CountryInfoViewController: UITableViewDataSource {
         
         cell.flagImageView.image = UIImage(named: target.imageName)
         cell.countryNameLabel.text = target.name
-        cell.flagImageNameLabel.text = target.imageName
         
         return cell
     }
