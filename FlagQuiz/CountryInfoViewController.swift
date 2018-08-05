@@ -12,7 +12,6 @@ class CountryInfoViewController: UIViewController {
     @IBOutlet weak var countryTableView: UITableView!
     
     var currentFlagInfo: Array<FlagInfo> = Array()
-    let searchController: UISearchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +21,8 @@ class CountryInfoViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         
         if #available(iOS 11.0, *) {
+            let searchController: UISearchController = UISearchController(searchResultsController: nil)
+            
             self.navigationItem.searchController = searchController
             self.navigationItem.hidesSearchBarWhenScrolling = false
             self.navigationController?.navigationBar.prefersLargeTitles = true
