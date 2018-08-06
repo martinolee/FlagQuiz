@@ -23,6 +23,8 @@ class CountryInfoViewController: UIViewController {
         if #available(iOS 11.0, *) {
             let searchController: UISearchController = UISearchController(searchResultsController: nil)
             
+            searchController.obscuresBackgroundDuringPresentation = false
+            
             self.navigationItem.searchController = searchController
             self.navigationItem.hidesSearchBarWhenScrolling = false
             self.navigationController?.navigationBar.prefersLargeTitles = true
