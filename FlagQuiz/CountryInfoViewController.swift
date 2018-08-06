@@ -96,24 +96,9 @@ extension CountryInfoViewController: UISearchBarDelegate {
         }
         countryTableView.reloadData()
     }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        currentFlagInfo = flagInfo
+        countryTableView.reloadData()
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
