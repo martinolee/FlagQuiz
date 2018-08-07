@@ -223,6 +223,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="8nd-0n-t3d" id="D1y-MQ-rJJ"/>
+                                    <outlet property="delegate" destination="8nd-0n-t3d" id="lf4-yj-SfP"/>
                                 </connections>
                             </tableView>
                         </subviews>
