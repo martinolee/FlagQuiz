@@ -16,6 +16,7 @@ class CountryInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        flagInfo = flagInfo.sorted(by: { $0.name < $1.name })
         currentFlagInfo = flagInfo
         
         self.hideKeyboardWhenTappedAround()
