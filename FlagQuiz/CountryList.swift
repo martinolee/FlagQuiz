@@ -79,7 +79,7 @@ var flagInfo = [
     FlagInfo(name: "아랍에미레이트", fullName: "the United Arab Emirates", imageName: "the_United_Arab_Emirates.png"),
     FlagInfo(name: "프랑스", fullName: "France", imageName: "France.png"),
     FlagInfo(name: "가봉", fullName: "Gabon", imageName: "Gabon.png"),
-    FlagInfo(name: "그루지야", fullName: "Georgia", imageName: "Georgia.png"),
+    FlagInfo(name: "조지아", fullName: "Georgia", imageName: "Georgia.png"),
     FlagInfo(name: "독일", fullName: "Germany", imageName: "Germany.png"),
     FlagInfo(name: "가나", fullName: "Ghana", imageName: "Ghana.png"),
     FlagInfo(name: "그리스", fullName: "Greece", imageName: "Greece.png"),
