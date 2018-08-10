@@ -49,7 +49,7 @@ var flagInfo = [
     FlagInfo(name: "캄보디아", fullName: "Cambodia", imageName: "Cambodia.png"),
     FlagInfo(name: "카메룬", fullName: "Cameroon", imageName: "Cameroon.png"),
     FlagInfo(name: "캐나다", fullName: "Canada", imageName: "Canada.png"),
-    FlagInfo(name: "카보 베르데", fullName: "Cape Verde", imageName: "Cape_Verde.png"),
+    FlagInfo(name: "카보베르데", fullName: "Cape Verde", imageName: "Cape_Verde.png"),
     FlagInfo(name: "칠레", fullName: "Chile", imageName: "Chile.png"),
     FlagInfo(name: "콜롬비아", fullName: "Colombia", imageName: "Colombia.png"),
     FlagInfo(name: "코스타리카", fullName: "Costa Rica", imageName: "Costa_Rica.png"),
