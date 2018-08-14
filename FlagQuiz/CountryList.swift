@@ -40,7 +40,7 @@ var flagInfo = [
     FlagInfo(name: "베냉", fullName: "Benin", imageName: "Benin.png"),
     FlagInfo(name: "부탄", fullName: "Bhutan", imageName: "Bhutan.png"),
     FlagInfo(name: "볼리비아", fullName: "Bolivia", imageName: "Bolivia.png"),
-    FlagInfo(name: "보스니아 헤르체고비나", fullName: "Bosnia and Herzegovina", imageName: "Bosnia_and_Herzegovina.png"),
+    FlagInfo(name: "보스니아헤르체고비나", fullName: "Bosnia and Herzegovina", imageName: "Bosnia_and_Herzegovina.png"),
     FlagInfo(name: "보츠와나", fullName: "Botswana", imageName: "Botswana.png"),
     FlagInfo(name: "브라질", fullName: "Brazil", imageName: "Brazil.png"),
     FlagInfo(name: "브루나이", fullName: "Brunei", imageName: "Brunei.png"),
