@@ -11,7 +11,6 @@ import UIKit
 class CountryInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var countryNameLabel: UILabel!
-    @IBOutlet weak var flagImageNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
