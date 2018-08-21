@@ -25,7 +25,7 @@ var flagInfo = [
     FlagInfo(name: "알제리", fullName: "Algeria", imageName: "Algeria.png"),
     FlagInfo(name: "안도라", fullName: "Andorra", imageName: "Andorra.png"),
     FlagInfo(name: "앙골라", fullName: "Angola", imageName: "Angola.png"),
-    FlagInfo(name: "앤티가 바부다", fullName: "Antigua and Barbuda", imageName: "Antigua_and_Barbuda.png"),
+    FlagInfo(name: "앤티가바부다", fullName: "Antigua and Barbuda", imageName: "Antigua_and_Barbuda.png"),
     FlagInfo(name: "아르헨티나", fullName: "Argentina", imageName: "Argentina.png"),
     FlagInfo(name: "아르메니아", fullName: "Armenia", imageName: "Armenia.png"),
     FlagInfo(name: "호주", fullName: "Australia", imageName: "Australia.png"),
