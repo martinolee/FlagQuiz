@@ -164,11 +164,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="delegate" destination="o6F-HB-RPt" id="deI-Te-RPe"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="pBT-yb-3S1"/>
                         <segue destination="EZo-2U-ZJu" kind="relationship" relationship="viewControllers" id="cqb-bj-aho"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJp-CL-5XM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="o6F-HB-RPt" customClass="AnimUtils" customModule="FlagQuiz" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="135" y="130.98591549295776"/>
         </scene>
