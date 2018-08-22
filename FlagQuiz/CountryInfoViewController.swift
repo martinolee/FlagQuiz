@@ -26,7 +26,7 @@ class CountryInfoViewController: UIViewController {
             
             searchController.obscuresBackgroundDuringPresentation = false
             
-//            self.navigationItem.searchController = searchController
+            self.navigationItem.searchController = searchController
             self.navigationItem.hidesSearchBarWhenScrolling = false
             self.navigationController?.navigationBar.prefersLargeTitles = true
             self.navigationItem.searchController?.searchBar.delegate = self
