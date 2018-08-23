@@ -26,10 +26,6 @@ class ViewController: UIViewController {
     
     func setDefaultButtonStyle() {
         for i in 0...3 {
-            buttonArray[i].setTitleColor(UIColor.black, for: .normal)
-        }
-
-        for i in 0...3 {
             buttonArray[i].isEnabled = true
         }
     }
@@ -182,6 +178,10 @@ class ViewController: UIViewController {
         
         scoreLabel.text = "점수: \(score)"
         UIView.appearance().isExclusiveTouch = true
+        
+        for i in 0...3 {
+            buttonArray[i].setTitleColor(UIColor.black, for: .normal)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
