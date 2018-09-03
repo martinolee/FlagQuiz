@@ -154,6 +154,21 @@
             </objects>
             <point key="canvasLocation" x="1118" y="-176"/>
         </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="Ztb-7H-9Rx">
+            <objects>
+                <viewController id="6Dx-c5-Std" customClass="PopUpViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LQ4-cr-nYh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yyp-HI-m1N"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jH-CQ-pVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="-177"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gzk-2b-wV9">
             <objects>
