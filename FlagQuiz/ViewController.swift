@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     var quizList: Array<Quiz> = Array<Quiz>()
     var currentQuizIndex: Int = 0
     var score: Int = 0
+    var life: Int = 3
     
     func setDefaultButtonStyle() {
         for i in 0...3 {
@@ -63,8 +64,13 @@ class ViewController: UIViewController {
             
             AudioServicesPlaySystemSound(1521)
             
-            if score > 0 {
-                score -= 1
+            life -= 1
+            
+            if life == 0 {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let popUpView = storyboard.instantiateViewController(withIdentifier: "popUp") as! PopUpViewController
+                popUpView.score = self.score
+                self.present(popUpView, animated: true, completion: nil)
             }
         }
         

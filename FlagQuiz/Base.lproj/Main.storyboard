@@ -43,14 +43,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nf-Tj-qMa">
-                                        <rect key="frame" x="183" y="0.0" width="10" height="200"/>
+                                        <rect key="frame" x="182.5" y="0.0" width="10" height="200"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="10" id="0Rw-w0-iv4"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgM-ff-OIW">
-                                        <rect key="frame" x="0.0" y="105" width="183" height="95"/>
+                                        <rect key="frame" x="0.0" y="105" width="182.5" height="95"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -58,7 +58,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC1-nd-XqD">
-                                        <rect key="frame" x="0.0" y="0.0" width="183" height="95"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="182.5" height="95"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -66,7 +66,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbz-eW-Oep">
-                                        <rect key="frame" x="193" y="105" width="182" height="95"/>
+                                        <rect key="frame" x="192.5" y="105" width="182.5" height="95"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -74,7 +74,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prm-1p-ikg">
-                                        <rect key="frame" x="193" y="0.0" width="182" height="95"/>
+                                        <rect key="frame" x="192.5" y="0.0" width="182.5" height="95"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -157,7 +157,7 @@
         <!--Pop Up View Controller-->
         <scene sceneID="Ztb-7H-9Rx">
             <objects>
-                <viewController id="6Dx-c5-Std" customClass="PopUpViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="popUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="6Dx-c5-Std" customClass="PopUpViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LQ4-cr-nYh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,6 +170,9 @@
                                         <rect key="frame" x="97" y="90" width="46" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="closePopUp:" destination="6Dx-c5-Std" eventType="touchUpInside" id="pbz-Tc-x7F"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="205-XV-u8a">
                                         <rect key="frame" x="99" y="38" width="42" height="21"/>
@@ -189,7 +192,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.80142337328767121" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.69590111301369861" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yyp-HI-m1N"/>
                     </view>
                 </viewController>
