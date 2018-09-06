@@ -10,8 +10,7 @@ import UIKit
 import AudioToolbox
 
 class ViewController: UIViewController {
-    
-    @IBOutlet weak var scoreLabel: UILabel!
+
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var leftTopButton: UIButton!
     @IBOutlet weak var rightTopButton: UIButton!
@@ -73,8 +72,6 @@ class ViewController: UIViewController {
                 self.present(popUpView, animated: true, completion: nil)
             }
         }
-        
-        scoreLabel.text = "점수: \(score)"
     }
     
     func isDupPrevExample(newExample: Int, prevExample: Array<Int>) -> Bool {
@@ -182,7 +179,6 @@ class ViewController: UIViewController {
         textFitInButton()
         setDefaultButtonStyle()
         
-        scoreLabel.text = "점수: \(score)"
         UIView.appearance().isExclusiveTouch = true
         
         for i in 0...3 {
