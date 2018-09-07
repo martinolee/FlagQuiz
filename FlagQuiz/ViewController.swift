@@ -11,12 +11,17 @@ import AudioToolbox
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var correctOrInaccurateLabel: UILabel!
     @IBOutlet weak var flagImageView: UIImageView!
+    
     @IBOutlet weak var leftTopButton: UIButton!
     @IBOutlet weak var rightTopButton: UIButton!
     @IBOutlet weak var leftBottomButton: UIButton!
     @IBOutlet weak var rightBottomButton: UIButton!
-    @IBOutlet weak var correctOrInaccurateLabel: UILabel!
+    
+    @IBOutlet weak var firstLife: UIImageView!
+    @IBOutlet weak var secondLife: UIImageView!
+    @IBOutlet weak var thirdLife: UIImageView!
     
     var buttonArray: Array<UIButton> = []
     var quizList: Array<Quiz> = Array<Quiz>()

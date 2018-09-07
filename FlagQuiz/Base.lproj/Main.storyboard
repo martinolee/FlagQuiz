@@ -112,11 +112,49 @@
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ttb-c9-IF9">
                                 <rect key="frame" x="0.0" y="75" width="375" height="343"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brt-5H-chr" userLabel="Life View">
+                                <rect key="frame" x="6" y="23" width="120" height="40"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="life" translatesAutoresizingMaskIntoConstraints="NO" id="Abw-pj-8ZX">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="GlM-Bk-uN4"/>
+                                            <constraint firstAttribute="height" constant="40" id="Z3C-xY-54w"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="life" translatesAutoresizingMaskIntoConstraints="NO" id="CHr-sE-kAn">
+                                        <rect key="frame" x="40" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="cl3-ge-GHj"/>
+                                            <constraint firstAttribute="width" constant="40" id="k2c-PA-Y7R"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="life" translatesAutoresizingMaskIntoConstraints="NO" id="qui-8t-meu">
+                                        <rect key="frame" x="80" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="sex-4R-gAh"/>
+                                            <constraint firstAttribute="height" constant="40" id="tA7-Dw-NrG"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qui-8t-meu" firstAttribute="leading" secondItem="CHr-sE-kAn" secondAttribute="trailing" id="3P1-VN-wCv"/>
+                                    <constraint firstAttribute="height" constant="40" id="93u-z9-8ha"/>
+                                    <constraint firstItem="CHr-sE-kAn" firstAttribute="leading" secondItem="Abw-pj-8ZX" secondAttribute="trailing" id="9j4-Qz-vqi"/>
+                                    <constraint firstItem="Abw-pj-8ZX" firstAttribute="top" secondItem="brt-5H-chr" secondAttribute="top" id="F6T-6h-a4i"/>
+                                    <constraint firstAttribute="width" constant="120" id="MSK-t2-j5e"/>
+                                    <constraint firstItem="Abw-pj-8ZX" firstAttribute="leading" secondItem="brt-5H-chr" secondAttribute="leading" id="Xsp-fI-30I"/>
+                                    <constraint firstItem="qui-8t-meu" firstAttribute="top" secondItem="brt-5H-chr" secondAttribute="top" id="gaW-nQ-txG"/>
+                                    <constraint firstItem="CHr-sE-kAn" firstAttribute="top" secondItem="brt-5H-chr" secondAttribute="top" id="sWq-13-wc8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="juO-cl-qr9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8ba-Hp-59F"/>
                             <constraint firstItem="z0j-VE-mPf" firstAttribute="top" secondItem="Ttb-c9-IF9" secondAttribute="bottom" id="BQE-kV-gMA"/>
+                            <constraint firstItem="brt-5H-chr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="DUz-n4-7y8"/>
                             <constraint firstItem="Ttb-c9-IF9" firstAttribute="top" secondItem="juO-cl-qr9" secondAttribute="bottom" id="Hck-Gc-gfh"/>
                             <constraint firstAttribute="trailing" secondItem="juO-cl-qr9" secondAttribute="trailing" id="I0B-fT-cWK"/>
                             <constraint firstItem="z0j-VE-mPf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JaQ-wg-U8H"/>
@@ -125,6 +163,7 @@
                             <constraint firstItem="z0j-VE-mPf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Y9b-3N-Wed"/>
                             <constraint firstItem="Ttb-c9-IF9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a5z-vu-NOP"/>
                             <constraint firstItem="Ttb-c9-IF9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cjm-5H-DFX"/>
+                            <constraint firstItem="brt-5H-chr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="3" id="iv2-Zd-KGN"/>
                             <constraint firstItem="juO-cl-qr9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="mHb-04-pS0"/>
                             <constraint firstItem="7T9-Lh-yQU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="tbL-6p-ZT9"/>
                         </constraints>
@@ -133,16 +172,19 @@
                     <tabBarItem key="tabBarItem" title="Quiz" image="quizIcon_28" selectedImage="quizIcon_28" id="uvj-AF-WNh"/>
                     <connections>
                         <outlet property="correctOrInaccurateLabel" destination="7T9-Lh-yQU" id="0we-zh-PWM"/>
+                        <outlet property="firstLife" destination="Abw-pj-8ZX" id="0dM-nU-Qqh"/>
                         <outlet property="flagImageView" destination="Ttb-c9-IF9" id="oIg-dF-eac"/>
                         <outlet property="leftBottomButton" destination="HgM-ff-OIW" id="OQD-0N-N21"/>
                         <outlet property="leftTopButton" destination="pC1-nd-XqD" id="JGS-dg-IHi"/>
                         <outlet property="rightBottomButton" destination="Nbz-eW-Oep" id="EaH-ND-jbX"/>
                         <outlet property="rightTopButton" destination="prm-1p-ikg" id="vmq-kd-Znf"/>
+                        <outlet property="secondLife" destination="CHr-sE-kAn" id="BXL-Ox-SO7"/>
+                        <outlet property="thirdLife" destination="qui-8t-meu" id="i9c-tU-mXn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1118" y="-176"/>
+            <point key="canvasLocation" x="1117.5999999999999" y="-176.76161919040482"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="Ztb-7H-9Rx">
@@ -223,7 +265,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CountryCell" rowHeight="130" id="8AS-Oo-3sl" customClass="CountryInfoTableViewCell" customModule="FlagQuiz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CountryCell" rowHeight="130" id="8AS-Oo-3sl" customClass="CountryInfoTableViewCell" customModule="FlagQuiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8AS-Oo-3sl" id="PcR-gR-xyG">
@@ -315,6 +357,7 @@
     </scenes>
     <resources>
         <image name="flagListIcon_28" width="28" height="28"/>
+        <image name="life" width="100" height="100"/>
         <image name="quizIcon_28" width="28" height="28"/>
     </resources>
 </document>
