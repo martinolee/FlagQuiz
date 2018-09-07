@@ -10,6 +10,8 @@ import UIKit
 
 class PopUpViewController: UIViewController {
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     var score: Int?
 
     override func viewDidLoad() {
@@ -20,7 +22,7 @@ class PopUpViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("\(score ?? -1)")
+        scoreLabel.text = ("\(score ?? -1)")
     }
     
     @IBAction func closePopUp(_ sender: Any) {
