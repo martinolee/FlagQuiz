@@ -73,13 +73,11 @@ class ViewController: UIViewController {
             
             life -= 1
             
-            if life == 2 {
-                thirdLife.isHidden = true
-            } else if life == 1 {
-                secondLife.isHidden = true
-            } else if life == 0 {
-                firstLife.isHidden = true
-                
+            lifeArray[life].isHidden = true
+            
+            let isDie = life == 0 ? true : false
+            
+            if isDie {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let popUpView = storyboard.instantiateViewController(withIdentifier: "popUp") as! PopUpViewController
                 popUpView.score = self.score
