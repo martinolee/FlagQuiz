@@ -36,7 +36,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func checkAnswer(_ btn: UIButton) {
-        if quizList[currentQuizIndex].correctAnswerIndex == btn.tag {
+        let isCorrect = quizList[currentQuizIndex].correctAnswerIndex == btn.tag ? true : false
+        
+        if isCorrect {
             for i in 0...3 {
                 buttonArray[i].isEnabled = false
             }
