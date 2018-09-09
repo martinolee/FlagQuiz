@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var thirdLife: UIImageView!
     
     var buttonArray: Array<UIButton> = []
+    var lifeArray: Array<UIImageView> = []
     var quizList: Array<Quiz> = Array<Quiz>()
     var currentQuizIndex: Int = 0
     var score: Int = 0
@@ -183,10 +184,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         correctOrInaccurateLabel.text = ""
+        
         buttonArray.append(leftTopButton)
         buttonArray.append(rightTopButton)
         buttonArray.append(leftBottomButton)
         buttonArray.append(rightBottomButton)
+        
+        lifeArray.append(firstLife)
+        lifeArray.append(secondLife)
+        lifeArray.append(thirdLife)
         
         makeQuestion()
         textFitInButton()
