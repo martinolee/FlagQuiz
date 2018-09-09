@@ -12,7 +12,7 @@ class PopUpViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
-    var score: Int?
+    var viewController: ViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,18 @@ class PopUpViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        scoreLabel.text = ("\(score ?? -1)")
+        scoreLabel.text = ("\(viewController?.getScore() ?? -1)")
     }
     
     @IBAction func closePopUp(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true) {
+            self.viewController?.initScore()
+            self.viewController?.initLife()
+            self.viewController?.makeQuestion()
+            self.viewController?.textFitInButton()
+            self.viewController?.setDefaultButtonStyle()
+            self.viewController?.correctOrInaccurateLabel.text = ""
+        }
     }
     
 }

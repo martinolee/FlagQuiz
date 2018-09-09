@@ -27,8 +27,24 @@ class ViewController: UIViewController {
     var lifeArray: Array<UIImageView> = []
     var quizList: Array<Quiz> = Array<Quiz>()
     var currentQuizIndex: Int = 0
-    var score: Int = 0
-    var life: Int = 3
+    private var score: Int = 0
+    private var life: Int = 3
+    
+    func initScore() {
+        self.score = 0
+    }
+    
+    func getScore() -> Int {
+        return self.score
+    }
+    
+    func initLife() {
+        self.life = 3
+        
+        for i in 0..<lifeArray.count {
+            lifeArray[i].isHidden = false
+        }
+    }
     
     func setDefaultButtonStyle() {
         for i in 0...3 {
@@ -80,7 +96,8 @@ class ViewController: UIViewController {
             if isDie {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let popUpView = storyboard.instantiateViewController(withIdentifier: "popUp") as! PopUpViewController
-                popUpView.score = self.score
+                popUpView.viewController = self
+                
                 self.present(popUpView, animated: true, completion: nil)
             }
         }
