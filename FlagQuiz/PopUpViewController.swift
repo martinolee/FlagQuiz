@@ -29,11 +29,11 @@ class PopUpViewController: UIViewController {
         dismiss(animated: true) {
             self.viewController?.initScore()
             self.viewController?.initLife()
+            self.viewController?.initQuiz()
             self.viewController?.makeQuestion()
             self.viewController?.textFitInButton()
             self.viewController?.setDefaultButtonStyle()
             self.viewController?.correctOrInaccurateLabel.text = ""
-            self.viewController?.initQuiz()
         }
     }
     
