@@ -25,10 +25,15 @@ class ViewController: UIViewController {
     
     var buttonArray: Array<UIButton> = []
     var lifeArray: Array<UIImageView> = []
-    var quizList: Array<Quiz> = Array<Quiz>()
-    var currentQuizIndex: Int = 0
+    private var quizList: Array<Quiz> = Array<Quiz>()
+    private var currentQuizIndex: Int = 0
     private var score: Int = 0
     private var life: Int = 3
+    
+    func initQuiz() {
+        self.quizList.removeAll()
+        self.currentQuizIndex = 0
+    }
     
     func initScore() {
         self.score = 0
