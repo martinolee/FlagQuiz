@@ -33,7 +33,6 @@ class PopUpViewController: UIViewController {
             self.viewController?.makeQuestion()
             self.viewController?.textFitInButton()
             self.viewController?.setDefaultButtonStyle()
-            self.viewController?.correctOrInaccurateLabel.text = ""
         }
     }
     

@@ -19,12 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오답" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7T9-Lh-yQU">
-                                <rect key="frame" x="161.5" y="28" width="52" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juO-cl-qr9">
                                 <rect key="frame" x="0.0" y="70" width="375" height="5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -158,20 +152,17 @@
                             <constraint firstItem="Ttb-c9-IF9" firstAttribute="top" secondItem="juO-cl-qr9" secondAttribute="bottom" id="Hck-Gc-gfh"/>
                             <constraint firstAttribute="trailing" secondItem="juO-cl-qr9" secondAttribute="trailing" id="I0B-fT-cWK"/>
                             <constraint firstItem="z0j-VE-mPf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JaQ-wg-U8H"/>
-                            <constraint firstItem="7T9-Lh-yQU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QuP-bw-FPJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z0j-VE-mPf" secondAttribute="bottom" id="VIs-gT-lYO"/>
                             <constraint firstItem="z0j-VE-mPf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Y9b-3N-Wed"/>
                             <constraint firstItem="Ttb-c9-IF9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a5z-vu-NOP"/>
                             <constraint firstItem="Ttb-c9-IF9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cjm-5H-DFX"/>
                             <constraint firstItem="brt-5H-chr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="3" id="iv2-Zd-KGN"/>
                             <constraint firstItem="juO-cl-qr9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="mHb-04-pS0"/>
-                            <constraint firstItem="7T9-Lh-yQU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="tbL-6p-ZT9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Quiz" image="quizIcon_28" selectedImage="quizIcon_28" id="uvj-AF-WNh"/>
                     <connections>
-                        <outlet property="correctOrInaccurateLabel" destination="7T9-Lh-yQU" id="0we-zh-PWM"/>
                         <outlet property="firstLife" destination="Abw-pj-8ZX" id="0dM-nU-Qqh"/>
                         <outlet property="flagImageView" destination="Ttb-c9-IF9" id="oIg-dF-eac"/>
                         <outlet property="leftBottomButton" destination="HgM-ff-OIW" id="OQD-0N-N21"/>

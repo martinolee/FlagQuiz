@@ -11,7 +11,6 @@ import AudioToolbox
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var correctOrInaccurateLabel: UILabel!
     @IBOutlet weak var flagImageView: UIImageView!
     
     @IBOutlet weak var leftTopButton: UIButton!
@@ -69,15 +68,11 @@ class ViewController: UIViewController {
             }
             btn.setTitleColor(UIColor.blue, for: .disabled)
             
-            correctOrInaccurateLabel.text = "정답"
-            correctOrInaccurateLabel.textColor = UIColor.blue
-            
             AudioServicesPlaySystemSound(1520)
             
             score += 1
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.correctOrInaccurateLabel.text = ""
                 self.makeQuestion()
                 self.textFitInButton()
                 self.setDefaultButtonStyle()
@@ -86,9 +81,6 @@ class ViewController: UIViewController {
         } else {
             btn.isEnabled = false
             btn.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.4), for: .disabled)
-            
-            correctOrInaccurateLabel.text = "오답"
-            correctOrInaccurateLabel.textColor = UIColor.red
             
             AudioServicesPlaySystemSound(1521)
             
@@ -202,8 +194,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        correctOrInaccurateLabel.text = ""
         
         buttonArray.append(leftTopButton)
         buttonArray.append(rightTopButton)
