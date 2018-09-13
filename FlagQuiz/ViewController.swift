@@ -21,13 +21,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var firstLife: UIImageView!
     @IBOutlet weak var secondLife: UIImageView!
     @IBOutlet weak var thirdLife: UIImageView!
+    @IBOutlet weak var fourthLife: UIImageView!
+    @IBOutlet weak var fifthLife: UIImageView!
     
     var buttonArray: Array<UIButton> = []
     var lifeArray: Array<UIImageView> = []
     private var quizList: Array<Quiz> = Array<Quiz>()
     private var currentQuizIndex: Int = 0
     private var score: Int = 0
-    private var life: Int = 3
+    private var life: Int = 5
     
     func initQuiz() {
         self.quizList.removeAll()
@@ -43,7 +45,7 @@ class ViewController: UIViewController {
     }
     
     func initLife() {
-        self.life = 3
+        self.life = lifeArray.count
         
         for i in 0..<lifeArray.count {
             lifeArray[i].isHidden = false
@@ -203,6 +205,10 @@ class ViewController: UIViewController {
         lifeArray.append(firstLife)
         lifeArray.append(secondLife)
         lifeArray.append(thirdLife)
+        lifeArray.append(fourthLife)
+        lifeArray.append(fifthLife)
+        
+        self.life = lifeArray.count
         
         makeQuestion()
         textFitInButton()
