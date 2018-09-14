@@ -22,7 +22,7 @@ class PopUpViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        scoreLabel.text = ("\(viewController?.getScore() ?? -1)")
+        scoreLabel.text = ("\(viewController?.getScore() ?? -1) 점")
     }
     
     @IBAction func closePopUp(_ sender: Any) {

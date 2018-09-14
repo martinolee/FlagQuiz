@@ -207,28 +207,10 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBy-To-rzI">
                                 <rect key="frame" x="87.5" y="318.5" width="200" height="120"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="205-XV-u8a">
-                                        <rect key="frame" x="110" y="31" width="30" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="점수: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5E-kk-COy">
-                                        <rect key="frame" x="46" y="34" width="56" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="11M-Ng-xGN"/>
-                                    <constraint firstItem="q5E-kk-COy" firstAttribute="top" secondItem="rBy-To-rzI" secondAttribute="top" constant="34" id="1zX-U7-64A"/>
-                                    <constraint firstItem="q5E-kk-COy" firstAttribute="leading" secondItem="rBy-To-rzI" secondAttribute="leading" constant="46" id="aAF-8t-MmH"/>
-                                    <constraint firstItem="205-XV-u8a" firstAttribute="top" secondItem="rBy-To-rzI" secondAttribute="top" constant="31" id="rTK-Yt-4EY"/>
                                     <constraint firstAttribute="width" constant="200" id="sb9-e9-N3C"/>
-                                    <constraint firstItem="205-XV-u8a" firstAttribute="leading" secondItem="q5E-kk-COy" secondAttribute="trailing" constant="8" id="tgQ-Ii-U1G"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
@@ -241,10 +223,18 @@
                                     <action selector="closePopUp:" destination="6Dx-c5-Std" eventType="touchUpInside" id="pbz-Tc-x7F"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="205-XV-u8a">
+                                <rect key="frame" x="155.5" y="348.5" width="64" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="0.69590111301369861" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8M0-Q1-hT5" firstAttribute="centerX" secondItem="LQ4-cr-nYh" secondAttribute="centerX" id="CnI-b4-gMt"/>
+                            <constraint firstItem="rBy-To-rzI" firstAttribute="top" secondItem="205-XV-u8a" secondAttribute="top" constant="-30" id="SHL-3m-amW"/>
+                            <constraint firstItem="205-XV-u8a" firstAttribute="centerX" secondItem="LQ4-cr-nYh" secondAttribute="centerX" id="ZiK-lz-U12"/>
                             <constraint firstItem="8M0-Q1-hT5" firstAttribute="bottom" secondItem="rBy-To-rzI" secondAttribute="bottom" constant="-10" id="cGv-qX-WlB"/>
                             <constraint firstItem="rBy-To-rzI" firstAttribute="centerX" secondItem="LQ4-cr-nYh" secondAttribute="centerX" id="jV2-yb-hFG"/>
                             <constraint firstItem="rBy-To-rzI" firstAttribute="centerY" secondItem="LQ4-cr-nYh" secondAttribute="centerY" constant="45" id="kYP-F9-6oZ"/>
