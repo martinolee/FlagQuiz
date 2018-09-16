@@ -24,6 +24,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var fourthLife: UIImageView!
     @IBOutlet weak var fifthLife: UIImageView!
     
+    @IBOutlet weak var correctOrIncorrectView: UIView!
+    @IBOutlet weak var correctOrIncorrectLabel: UILabel!
+    
     var buttonArray: Array<UIButton> = []
     var lifeArray: Array<UIImageView> = []
     private var quizList: Array<Quiz> = Array<Quiz>()
@@ -58,6 +61,16 @@ class ViewController: UIViewController {
         }
     }
     
+    func showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor, message: String) {
+        correctOrIncorrectLabel.text = message
+        correctOrIncorrectView.backgroundColor = backgroundColor
+        correctOrIncorrectView.isHidden = false
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.correctOrIncorrectView.isHidden = true
+        }
+    }
+    
     @IBAction func checkAnswer(_ btn: UIButton) {
         let isCorrect = quizList[currentQuizIndex].correctAnswerIndex == btn.tag ? true : false
         
@@ -74,6 +87,8 @@ class ViewController: UIViewController {
             
             score += 1
             
+            showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor.blue, message: "정답")
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.makeQuestion()
                 self.textFitInButton()
@@ -87,6 +102,8 @@ class ViewController: UIViewController {
             AudioServicesPlaySystemSound(1521)
             
             life -= 1
+            
+            showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor.red, message: "오답")
             
             lifeArray[life].isHidden = true
             
@@ -207,6 +224,8 @@ class ViewController: UIViewController {
         lifeArray.append(thirdLife)
         lifeArray.append(fourthLife)
         lifeArray.append(fifthLife)
+        
+        correctOrIncorrectView.isHidden = true
         
         self.life = lifeArray.count
         

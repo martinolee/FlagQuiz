@@ -103,7 +103,7 @@
                                     <constraint firstItem="Nbz-eW-Oep" firstAttribute="top" secondItem="gbA-7t-NnX" secondAttribute="bottom" id="xx3-Pm-3y9"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ttb-c9-IF9">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Austria" translatesAutoresizingMaskIntoConstraints="NO" id="Ttb-c9-IF9">
                                 <rect key="frame" x="0.0" y="75" width="375" height="343"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brt-5H-chr" userLabel="Life View">
@@ -161,10 +161,32 @@
                                     <constraint firstItem="3XO-Sr-lNr" firstAttribute="top" secondItem="brt-5H-chr" secondAttribute="top" id="vbK-ze-X6s"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gU-nR-yJi">
+                                <rect key="frame" x="127.5" y="92" width="120" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jx-8N-Zu3">
+                                        <rect key="frame" x="32" y="11" width="57" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="6Jx-8N-Zu3" firstAttribute="top" secondItem="8gU-nR-yJi" secondAttribute="top" constant="10.5" id="U6X-Jk-lFy"/>
+                                    <constraint firstAttribute="height" constant="50" id="pk9-CJ-zl8"/>
+                                    <constraint firstItem="6Jx-8N-Zu3" firstAttribute="centerX" secondItem="8gU-nR-yJi" secondAttribute="centerX" id="wnb-Fx-NPD"/>
+                                    <constraint firstAttribute="width" constant="120" id="z8w-Gi-QWo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="juO-cl-qr9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8ba-Hp-59F"/>
+                            <constraint firstItem="8gU-nR-yJi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BDQ-Z7-FEm"/>
                             <constraint firstItem="z0j-VE-mPf" firstAttribute="top" secondItem="Ttb-c9-IF9" secondAttribute="bottom" id="BQE-kV-gMA"/>
                             <constraint firstItem="brt-5H-chr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="DUz-n4-7y8"/>
                             <constraint firstItem="Ttb-c9-IF9" firstAttribute="top" secondItem="juO-cl-qr9" secondAttribute="bottom" id="Hck-Gc-gfh"/>
@@ -176,11 +198,14 @@
                             <constraint firstItem="Ttb-c9-IF9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cjm-5H-DFX"/>
                             <constraint firstItem="brt-5H-chr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="3" id="iv2-Zd-KGN"/>
                             <constraint firstItem="juO-cl-qr9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="mHb-04-pS0"/>
+                            <constraint firstItem="8gU-nR-yJi" firstAttribute="top" secondItem="juO-cl-qr9" secondAttribute="bottom" constant="17" id="vXa-1X-bWb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Quiz" image="quizIcon_28" selectedImage="quizIcon_28" id="uvj-AF-WNh"/>
                     <connections>
+                        <outlet property="correctOrIncorrectLabel" destination="6Jx-8N-Zu3" id="NXh-es-ZyN"/>
+                        <outlet property="correctOrIncorrectView" destination="8gU-nR-yJi" id="wFJ-y3-O35"/>
                         <outlet property="fifthLife" destination="r8J-ea-nMO" id="qGN-kJ-nFb"/>
                         <outlet property="firstLife" destination="Abw-pj-8ZX" id="0dM-nU-Qqh"/>
                         <outlet property="flagImageView" destination="Ttb-c9-IF9" id="oIg-dF-eac"/>
@@ -195,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127" y="-178"/>
+            <point key="canvasLocation" x="1125.5999999999999" y="-178.56071964017991"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="Ztb-7H-9Rx">
@@ -282,7 +307,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CountryCell" rowHeight="130" id="8AS-Oo-3sl" customClass="CountryInfoTableViewCell" customModule="FlagQuiz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CountryCell" rowHeight="130" id="8AS-Oo-3sl" customClass="CountryInfoTableViewCell" customModule="FlagQuiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8AS-Oo-3sl" id="PcR-gR-xyG">
@@ -373,6 +398,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Austria" width="240" height="160"/>
         <image name="flagListIcon_28" width="28" height="28"/>
         <image name="life" width="100" height="100"/>
         <image name="quizIcon_28" width="28" height="28"/>
