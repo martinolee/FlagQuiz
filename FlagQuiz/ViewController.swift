@@ -64,10 +64,14 @@ class ViewController: UIViewController {
     func showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor, message: String) {
         correctOrIncorrectLabel.text = message
         correctOrIncorrectView.backgroundColor = backgroundColor
-        correctOrIncorrectView.isHidden = false
+        UIView.animate(withDuration: 0.3) {
+            self.correctOrIncorrectView.alpha = 1
+        }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            self.correctOrIncorrectView.isHidden = true
+            UIView.animate(withDuration: 0.3, animations: {
+                self.correctOrIncorrectView.alpha = 0
+            })
         }
     }
     
@@ -225,7 +229,7 @@ class ViewController: UIViewController {
         lifeArray.append(fourthLife)
         lifeArray.append(fifthLife)
         
-        correctOrIncorrectView.isHidden = true
+        correctOrIncorrectView.alpha = 0
         
         self.life = lifeArray.count
         
