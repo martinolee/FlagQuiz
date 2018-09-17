@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         self.life = lifeArray.count
         
         for i in 0..<lifeArray.count {
-            lifeArray[i].isHidden = false
+            lifeArray[i].alpha = 1
         }
     }
     
@@ -109,7 +109,9 @@ class ViewController: UIViewController {
             
             showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor.red, message: "오답")
             
-            lifeArray[life].isHidden = true
+            UIView.animate(withDuration: 0.3) {
+                self.lifeArray[self.life].alpha = 0
+            }
             
             let isDie = life == 0 ? true : false
             
