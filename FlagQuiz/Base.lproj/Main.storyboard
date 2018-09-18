@@ -103,7 +103,7 @@
                                     <constraint firstItem="Nbz-eW-Oep" firstAttribute="top" secondItem="gbA-7t-NnX" secondAttribute="bottom" id="xx3-Pm-3y9"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Austria" translatesAutoresizingMaskIntoConstraints="NO" id="Ttb-c9-IF9">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ttb-c9-IF9">
                                 <rect key="frame" x="0.0" y="75" width="375" height="343"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brt-5H-chr" userLabel="Life View">
@@ -307,7 +307,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CountryCell" rowHeight="130" id="8AS-Oo-3sl" customClass="CountryInfoTableViewCell" customModule="FlagQuiz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CountryCell" rowHeight="130" id="8AS-Oo-3sl" customClass="CountryInfoTableViewCell" customModule="FlagQuiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8AS-Oo-3sl" id="PcR-gR-xyG">
@@ -398,7 +398,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Austria" width="240" height="160"/>
         <image name="flagListIcon_28" width="28" height="28"/>
         <image name="life" width="100" height="100"/>
         <image name="quizIcon_28" width="28" height="28"/>
