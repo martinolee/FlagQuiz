@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "10 점"; ObjectID = "205-XV-u8a"; */
+"205-XV-u8a.text" = "10 점";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6Jx-8N-Zu3"; */
+"6Jx-8N-Zu3.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "다시시작"; ObjectID = "8M0-Q1-hT5"; */
+"8M0-Q1-hT5.normalTitle" = "다시시작";
+
+/* Class = "UINavigationItem"; title = "Flags"; ObjectID = "CcV-9P-3h8"; */
+"CcV-9P-3h8.title" = "Flags";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "HgM-ff-OIW"; */
+"HgM-ff-OIW.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Nbz-eW-Oep"; */
+"Nbz-eW-Oep.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RJj-ej-ToN"; */
+"RJj-ej-ToN.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "pC1-nd-XqD"; */
+"pC1-nd-XqD.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "prm-1p-ikg"; */
+"prm-1p-ikg.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Flag Search"; ObjectID = "t1W-8f-gDM"; */
+"t1W-8f-gDM.title" = "Flag Search";
+
+/* Class = "UITabBarItem"; title = "Quiz"; ObjectID = "uvj-AF-WNh"; */
+"uvj-AF-WNh.title" = "Quiz";
