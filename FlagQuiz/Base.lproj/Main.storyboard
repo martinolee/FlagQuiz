@@ -242,9 +242,9 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8M0-Q1-hT5">
-                                <rect key="frame" x="152.5" y="393" width="70" height="36"/>
+                                <rect key="frame" x="156" y="393" width="63" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="다시시작"/>
+                                <state key="normal" title="Restart"/>
                                 <connections>
                                     <action selector="closePopUp:" destination="6Dx-c5-Std" eventType="touchUpInside" id="pbz-Tc-x7F"/>
                                 </connections>
