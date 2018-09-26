@@ -91,7 +91,7 @@ class ViewController: UIViewController {
             
             score += 1
             
-            showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor.blue, message: "정답")
+            showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor.blue, message: NSLocalizedString("Correct", comment: ""))
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.makeQuestion()
@@ -107,7 +107,7 @@ class ViewController: UIViewController {
             
             life -= 1
             
-            showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor.red, message: "오답")
+            showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor.red, message: NSLocalizedString("Wrong", comment: ""))
             
             UIView.animate(withDuration: 0.3) {
                 self.lifeArray[self.life].alpha = 0
@@ -189,8 +189,8 @@ class ViewController: UIViewController {
         flagImageView.image = UIImage(named: flagInfo[quizList[currentQuizIndex].example[quizList[currentQuizIndex].correctAnswerIndex]].imageName)
         
         for i in 0...3 {
-            buttonArray[i].setTitle(flagInfo[quizList[currentQuizIndex].example[i]].name, for: .normal)
-            buttonArray[i].setTitle(flagInfo[quizList[currentQuizIndex].example[i]].name, for: .disabled)
+            buttonArray[i].setTitle(NSLocalizedString(flagInfo[quizList[currentQuizIndex].example[i]].name, comment: ""), for: .normal)
+            buttonArray[i].setTitle(NSLocalizedString(flagInfo[quizList[currentQuizIndex].example[i]].name, comment: ""), for: .disabled)
         }
     }
     
