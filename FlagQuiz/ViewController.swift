@@ -197,13 +197,13 @@ class ViewController: UIViewController {
     func textFitInButton() {
         for i in 0..<buttonArray.count {
             if let title = buttonArray[i].title(for: .normal), var font = buttonArray[i].titleLabel?.font {
-                var attr = [NSAttributedStringKey.font: font]
+                var attr = [NSAttributedString.Key.font: font]
                 var fontSize:CGFloat = 31
                 repeat {
                     fontSize = fontSize - 1
                     buttonArray[i].titleLabel?.font = UIFont.systemFont(ofSize: fontSize, weight: .regular)
                     font = (buttonArray[i].titleLabel?.font)!
-                    attr = [NSAttributedStringKey.font: font]
+                    attr = [NSAttributedString.Key.font: font]
 
                 } while UIScreen.main.bounds.size.width/2 - 40 < (title as NSString).size(withAttributes: attr).width && fontSize > 8
             }
