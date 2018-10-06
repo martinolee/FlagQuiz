@@ -20,22 +20,15 @@ class CountryInfoViewController: UIViewController {
         currentFlagInfo = flagInfo
         
         self.hideKeyboardWhenTappedAround()
+        let searchController: UISearchController = UISearchController(searchResultsController: nil)
         
-        if #available(iOS 11.0, *) {
-            let searchController: UISearchController = UISearchController(searchResultsController: nil)
-            
-            searchController.obscuresBackgroundDuringPresentation = false
-            
-            self.navigationItem.searchController = searchController
-            self.navigationItem.hidesSearchBarWhenScrolling = false
-            self.navigationController?.navigationBar.prefersLargeTitles = true
-            self.navigationItem.searchController?.searchBar.delegate = self
-        } else {
-            // Fallback on earlier versions
-        }
-
+        searchController.obscuresBackgroundDuringPresentation = false
+        
+        self.navigationItem.searchController = searchController
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.searchController?.searchBar.delegate = self
     }
-
 }
 
 extension UIViewController {

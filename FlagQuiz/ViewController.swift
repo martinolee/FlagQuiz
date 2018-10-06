@@ -10,7 +10,7 @@ import UIKit
 import AudioToolbox
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var flagImageView: UIImageView!
     
     @IBOutlet weak var leftTopButton: UIButton!
@@ -204,7 +204,7 @@ class ViewController: UIViewController {
                     buttonArray[i].titleLabel?.font = UIFont.systemFont(ofSize: fontSize, weight: .regular)
                     font = (buttonArray[i].titleLabel?.font)!
                     attr = [NSAttributedString.Key.font: font]
-
+                    
                 } while UIScreen.main.bounds.size.width/2 - 40 < (title as NSString).size(withAttributes: attr).width && fontSize > 8
             }
         }
@@ -249,21 +249,13 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if #available(iOS 11.0, *) {
-            self.navigationController?.navigationBar.prefersLargeTitles = true
-        } else {
-            // Fallback on earlier versions
-        }
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        if #available(iOS 11.0, *) {
-            self.navigationController?.navigationBar.prefersLargeTitles = false
-        } else {
-            // Fallback on earlier versions
-        }
+        self.navigationController?.navigationBar.prefersLargeTitles = false
     }
     
 }
