@@ -91,7 +91,7 @@ class ViewController: UIViewController {
             
             score += 1
             
-            showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor.blue, message: NSLocalizedString("Correct", comment: ""))
+            showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor(red: 80/255, green: 80/255, blue: 255/255, alpha: 1), message: NSLocalizedString("Correct", comment: ""))
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.makeQuestion()
@@ -107,7 +107,7 @@ class ViewController: UIViewController {
             
             life -= 1
             
-            showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor.red, message: NSLocalizedString("Wrong", comment: ""))
+            showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor(red: 255/255, green: 80/255, blue: 80/255, alpha: 1), message: NSLocalizedString("Wrong", comment: ""))
             
             UIView.animate(withDuration: 0.3) {
                 self.lifeArray[self.life].alpha = 0
