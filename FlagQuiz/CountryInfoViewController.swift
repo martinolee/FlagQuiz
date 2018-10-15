@@ -16,7 +16,7 @@ class CountryInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        flagInfo = flagInfo.sorted(by: { $0.name < $1.name })
+        flagInfo = flagInfo.sorted(by: { NSLocalizedString($0.name, comment: "") < NSLocalizedString($1.name, comment: "") })
         currentFlagInfo = flagInfo
         
         self.hideKeyboardWhenTappedAround()
@@ -80,7 +80,7 @@ extension CountryInfoViewController: UISearchBarDelegate {
         for i in 0..<countrys.count {
             let countryName = countrys[i].trimmingCharacters(in: .whitespaces).lowercased()
             
-            tempFlagInfo = flagInfo.filter { $0.name.lowercased().contains(countryName) }
+            tempFlagInfo = flagInfo.filter { $0.name.lowercased().contains(countryName) || NSLocalizedString($0.name, comment: "").contains(countryName) }
             
             if !tempFlagInfo.isEmpty {
                 for j in 0..<tempFlagInfo.count {
