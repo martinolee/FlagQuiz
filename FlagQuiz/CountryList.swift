@@ -214,6 +214,5 @@ var flagInfo = [
     FlagInfo(name: "the Solomon Islands", imageName: "the_Solomon_Islands.png"),
     FlagInfo(name: "the United Kingdom", imageName: "the_United_Kingdom.png"),
     FlagInfo(name: "the United States", imageName: "the_United_States.png"),
-    FlagInfo(name: "the Vatican City", imageName: "the_Vatican_City.png"),
+    FlagInfo(name: "the Vatican City", imageName: "the_Vatican_City.png")
 ]
-
