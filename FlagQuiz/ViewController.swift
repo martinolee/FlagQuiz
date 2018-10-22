@@ -220,6 +220,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let path = Bundle.main.path(forResource: "CountryList", ofType: "csv")
+        let url = URL(fileURLWithPath: path!)
+        let countryList = try! NSString(contentsOf: url, encoding: String.Encoding.utf8.rawValue)
+        var lines = countryList.components(separatedBy: "\r\n")
+        
+        // csv 파일 열 제목 삭제
+        lines.remove(at: 0)
+        
+        for line in lines {
+            let column = line.components(separatedBy: ",")
+            flagInfo.append(FlagInfo(name: column[0], imageName: column[1]))
+        }
+        
         buttonArray.append(leftTopButton)
         buttonArray.append(rightTopButton)
         buttonArray.append(leftBottomButton)
