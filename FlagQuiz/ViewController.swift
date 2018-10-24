@@ -223,7 +223,7 @@ class ViewController: UIViewController {
         let path = Bundle.main.path(forResource: "CountryList", ofType: "csv")
         let url = URL(fileURLWithPath: path!)
         let countryList = try! NSString(contentsOf: url, encoding: String.Encoding.utf8.rawValue)
-        var lines = countryList.components(separatedBy: "\r\n")
+        var lines = countryList.components(separatedBy: "\n")
         
         // csv 파일 열 제목 삭제
         lines.remove(at: 0)

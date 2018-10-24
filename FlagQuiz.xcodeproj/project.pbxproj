@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		721BBCAD217D76CF00C43E35 /* CountryList.csv in Resources */ = {isa = PBXBuildFile; fileRef = 721BBCAC217D76CF00C43E35 /* CountryList.csv */; };
 		724DA447212D9746000A96B2 /* AnimUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724DA446212D9746000A96B2 /* AnimUtils.swift */; };
 		72686780205E4B45000CD3FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7268677F205E4B45000CD3FB /* AppDelegate.swift */; };
 		72686782205E4B45000CD3FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72686781205E4B45000CD3FB /* ViewController.swift */; };
@@ -19,10 +18,10 @@
 		72C2572C213D71F9008C95CA /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2572B213D71F9008C95CA /* PopUpViewController.swift */; };
 		72D35BD420D4EB7200E7F1B6 /* CountryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D35BD320D4EB7200E7F1B6 /* CountryInfoViewController.swift */; };
 		72D35BD620D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D35BD520D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift */; };
+		72FDB0FA217FF90E00610D39 /* CountryList.csv in Resources */ = {isa = PBXBuildFile; fileRef = 72FDB0F9217FF90E00610D39 /* CountryList.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		721BBCAC217D76CF00C43E35 /* CountryList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CountryList.csv; sourceTree = "<group>"; };
 		724DA446212D9746000A96B2 /* AnimUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimUtils.swift; sourceTree = "<group>"; };
 		7268677C205E4B45000CD3FB /* FlagQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlagQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7268677F205E4B45000CD3FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		72C2572B213D71F9008C95CA /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		72D35BD320D4EB7200E7F1B6 /* CountryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoViewController.swift; sourceTree = "<group>"; };
 		72D35BD520D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoTableViewCell.swift; sourceTree = "<group>"; };
+		72FDB0F9217FF90E00610D39 /* CountryList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CountryList.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +77,10 @@
 				72686786205E4B45000CD3FB /* Assets.xcassets */,
 				72686788205E4B45000CD3FB /* LaunchScreen.storyboard */,
 				7268678B205E4B45000CD3FB /* Info.plist */,
+				72FDB0F9217FF90E00610D39 /* CountryList.csv */,
 				72686791205E5820000CD3FB /* CountryList.swift */,
 				724DA446212D9746000A96B2 /* AnimUtils.swift */,
 				72AF36A92153B90C00A40B55 /* Localizable.strings */,
-				721BBCAC217D76CF00C43E35 /* CountryList.csv */,
 			);
 			path = FlagQuiz;
 			sourceTree = "<group>";
@@ -145,7 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				721BBCAD217D76CF00C43E35 /* CountryList.csv in Resources */,
+				72FDB0FA217FF90E00610D39 /* CountryList.csv in Resources */,
 				7268678A205E4B45000CD3FB /* LaunchScreen.storyboard in Resources */,
 				72AF36A72153B90C00A40B55 /* Localizable.strings in Resources */,
 				72686787205E4B45000CD3FB /* Assets.xcassets in Resources */,
