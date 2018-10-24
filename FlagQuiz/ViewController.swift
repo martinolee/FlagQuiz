@@ -230,7 +230,7 @@ class ViewController: UIViewController {
         
         for line in lines {
             let column = line.components(separatedBy: ",")
-            flagInfo.append(FlagInfo(name: column[0], imageName: column[1]))
+            flagInfo.append(FlagInfo(name: column[0], imageName: column[1], GDP: Int(column[3]) ?? -1, area: Int(column[4]) ?? -1))
         }
         
         buttonArray.append(leftTopButton)

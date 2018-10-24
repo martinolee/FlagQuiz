@@ -16,6 +16,8 @@ struct Quiz {
 struct FlagInfo {
     var name: String
     var imageName: String
+    var GDP: Int
+    var area: Int
 }
 
 var flagInfo = Array<FlagInfo>()
