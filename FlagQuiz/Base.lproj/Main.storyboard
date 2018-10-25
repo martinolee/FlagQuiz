@@ -42,7 +42,7 @@
                                             <constraint firstAttribute="width" constant="10" id="0Rw-w0-iv4"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgM-ff-OIW">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="HgM-ff-OIW">
                                         <rect key="frame" x="0.0" y="105" width="182.5" height="95"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Button"/>
@@ -50,7 +50,7 @@
                                             <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="49N-LF-ag2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC1-nd-XqD">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="pC1-nd-XqD">
                                         <rect key="frame" x="0.0" y="0.0" width="182.5" height="95"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Button"/>
@@ -58,7 +58,7 @@
                                             <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v3B-er-1xl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbz-eW-Oep">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Nbz-eW-Oep">
                                         <rect key="frame" x="192.5" y="105" width="182.5" height="95"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Button"/>
@@ -66,7 +66,7 @@
                                             <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rwA-kh-uCe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prm-1p-ikg">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="prm-1p-ikg">
                                         <rect key="frame" x="192.5" y="0.0" width="182.5" height="95"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <state key="normal" title="Button"/>
@@ -322,7 +322,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJj-ej-ToN">
-                                                    <rect key="frame" x="173" y="54.5" width="124" height="20.5"/>
+                                                    <rect key="frame" x="173" y="54.5" width="179" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

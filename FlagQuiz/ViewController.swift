@@ -205,7 +205,7 @@ class ViewController: UIViewController {
                     font = (buttonArray[i].titleLabel?.font)!
                     attr = [NSAttributedString.Key.font: font]
                     
-                } while UIScreen.main.bounds.size.width/2 - 40 < (title as NSString).size(withAttributes: attr).width && fontSize > 8
+                } while UIScreen.main.bounds.size.width/2 - 40 < (title as NSString).size(withAttributes: attr).width && fontSize > 20
             }
         }
     }
@@ -256,6 +256,7 @@ class ViewController: UIViewController {
         
         for i in 0...3 {
             buttonArray[i].setTitleColor(UIColor.black, for: .normal)
+            buttonArray[i].titleLabel?.textAlignment = NSTextAlignment.center
         }
     }
     
