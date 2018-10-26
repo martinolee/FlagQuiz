@@ -13,7 +13,7 @@ struct Quiz {
     var correctAnswerIndex: Int
 }
 
-struct FlagInfo {
+struct FlagInfo: Hashable {
     var name: String
     var imageName: String
     var GDP: Int
