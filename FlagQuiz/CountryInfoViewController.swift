@@ -62,6 +62,7 @@ extension CountryInfoViewController: UITableViewDataSource {
 }
 
 extension CountryInfoViewController: UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         guard !searchText.isEmpty else {
@@ -88,6 +89,12 @@ extension CountryInfoViewController: UISearchBarDelegate {
                 }
             }
         }
+        
+        let sortOrderList = currentFlagInfo
+        
+        currentFlagInfo = Array(Set(currentFlagInfo))
+        currentFlagInfo = Array(NSOrderedSet(array: sortOrderList)) as! [FlagInfo]
+        
         countryTableView.reloadData()
     }
     
