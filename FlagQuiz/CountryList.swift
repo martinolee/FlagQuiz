@@ -18,6 +18,7 @@ struct FlagInfo: Hashable {
     var imageName: String
     var GDP: Int
     var area: Int
+    var difficulty: Int
 }
 
 var flagInfo = Array<FlagInfo>()
