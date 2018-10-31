@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  QuizViewController.swift
 //  FlagQuiz
 //
 //  Created by 이수한 on 2018. 3. 18..
@@ -9,7 +9,7 @@
 import UIKit
 import AudioToolbox
 
-class ViewController: UIViewController {
+class QuizViewController: UIViewController {
     
     @IBOutlet weak var flagImageView: UIImageView!
     

@@ -12,7 +12,7 @@ class PopUpViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
-    var viewController: ViewController?
+    var viewController: QuizViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
