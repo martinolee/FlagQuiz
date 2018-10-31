@@ -16,8 +16,7 @@ class CountryInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        flagInfo = flagInfo.sorted(by: { NSLocalizedString($0.name, comment: "") < NSLocalizedString($1.name, comment: "") })
-        currentFlagInfo = flagInfo
+        currentFlagInfo = flagInfo.sorted(by: { NSLocalizedString($0.name, comment: "") < NSLocalizedString($1.name, comment: "") })
         
         self.hideKeyboardWhenTappedAround()
         let searchController: UISearchController = UISearchController(searchResultsController: nil)
@@ -66,7 +65,7 @@ extension CountryInfoViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         guard !searchText.isEmpty else {
-            currentFlagInfo = flagInfo
+            currentFlagInfo = flagInfo.sorted(by: { NSLocalizedString($0.name, comment: "") < NSLocalizedString($1.name, comment: "") })
             countryTableView.reloadData()
             return
         }
@@ -99,7 +98,7 @@ extension CountryInfoViewController: UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        currentFlagInfo = flagInfo
+        currentFlagInfo = flagInfo.sorted(by: { NSLocalizedString($0.name, comment: "") < NSLocalizedString($1.name, comment: "") })
         countryTableView.reloadData()
     }
 }
