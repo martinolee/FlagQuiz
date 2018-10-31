@@ -230,8 +230,18 @@ class ViewController: UIViewController {
         
         for line in lines {
             let column = line.components(separatedBy: ",")
-            flagInfo.append(FlagInfo(name: column[0], imageName: column[1], GDP: Int(column[3]) ?? -1, area: Int(column[4]) ?? -1, difficulty: <#Int#>))
+            flagInfo.append(FlagInfo(name: column[0], imageName: column[1], GDP: Int(column[3]) ?? -1, area: Int(column[4]) ?? -1, difficulty: 0))
         }
+        
+        flagInfo = flagInfo.sorted(by: { $0.GDP > $1.GDP })
+        for i in 0..<flagInfo.count {
+            flagInfo[i].difficulty = i
+        }
+        flagInfo = flagInfo.sorted(by: { $0.area > $1.area })
+        for i in 0..<flagInfo.count {
+            flagInfo[i].difficulty = flagInfo[i].difficulty + i
+        }
+        flagInfo = flagInfo.sorted(by: { $0.difficulty < $1.difficulty })
         
         buttonArray.append(leftTopButton)
         buttonArray.append(rightTopButton)
