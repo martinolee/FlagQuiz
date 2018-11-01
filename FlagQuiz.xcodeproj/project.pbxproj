@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		724DA447212D9746000A96B2 /* AnimUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724DA446212D9746000A96B2 /* AnimUtils.swift */; };
+		725E7640218B440F00DFBB5C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725E763F218B440F00DFBB5C /* SettingsViewController.swift */; };
 		72686780205E4B45000CD3FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7268677F205E4B45000CD3FB /* AppDelegate.swift */; };
 		72686782205E4B45000CD3FB /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72686781205E4B45000CD3FB /* QuizViewController.swift */; };
 		72686785205E4B45000CD3FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72686783205E4B45000CD3FB /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		724DA446212D9746000A96B2 /* AnimUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimUtils.swift; sourceTree = "<group>"; };
+		725E763F218B440F00DFBB5C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7268677C205E4B45000CD3FB /* FlagQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlagQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7268677F205E4B45000CD3FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72686781205E4B45000CD3FB /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			children = (
 				7268677F205E4B45000CD3FB /* AppDelegate.swift */,
 				72686781205E4B45000CD3FB /* QuizViewController.swift */,
+				725E763F218B440F00DFBB5C /* SettingsViewController.swift */,
 				72D35BD320D4EB7200E7F1B6 /* CountryInfoViewController.swift */,
 				72D35BD520D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift */,
 				72C2572B213D71F9008C95CA /* PopUpViewController.swift */,
@@ -167,6 +170,7 @@
 				72D35BD420D4EB7200E7F1B6 /* CountryInfoViewController.swift in Sources */,
 				72686792205E5820000CD3FB /* CountryList.swift in Sources */,
 				72686780205E4B45000CD3FB /* AppDelegate.swift in Sources */,
+				725E7640218B440F00DFBB5C /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
