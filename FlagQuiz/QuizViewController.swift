@@ -156,13 +156,25 @@ class QuizViewController: UIViewController {
         var example: Array<Int> = Array<Int>()
         let quizCount = 20
         
+        func selectCountryByDifficulty() -> Int {
+            var indexSelectedCountry: Int = 0
+            
+            if (score / 10 + 1) * 50 > flagInfo.count {
+                indexSelectedCountry = Int(arc4random_uniform(UInt32(flagInfo.count)))
+            } else {
+                indexSelectedCountry = Int(arc4random_uniform(UInt32((score / 10 + 1) * 50)))
+            }
+            
+            return indexSelectedCountry
+        }
+        
         for i in 0...3 {
             var newNumber:Int
             var isDuplicated:Bool
             repeat {
                 repeat {
                     isDuplicated = false
-                    newNumber = Int(arc4random_uniform(UInt32(flagInfo.count)))
+                    newNumber = selectCountryByDifficulty()
                     for j in 0 ..< example.count {
                         if example[j] == newNumber {
                             isDuplicated = true
@@ -242,6 +254,10 @@ class QuizViewController: UIViewController {
             flagInfo[i].difficulty = flagInfo[i].difficulty + i
         }
         flagInfo = flagInfo.sorted(by: { $0.difficulty < $1.difficulty })
+        
+//        for i in 0..<flagInfo.count {
+//            print("\(i + 1). \( flagInfo[i].name)")
+//        }
         
         buttonArray.append(leftTopButton)
         buttonArray.append(rightTopButton)
