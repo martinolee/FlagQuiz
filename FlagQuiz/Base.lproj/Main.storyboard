@@ -189,6 +189,9 @@
                                 </constraints>
                                 <state key="normal" image="settings"/>
                                 <state key="highlighted" image="selectedSettings"/>
+                                <connections>
+                                    <segue destination="3et-2e-ert" kind="presentation" id="dQf-iK-Lhd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
