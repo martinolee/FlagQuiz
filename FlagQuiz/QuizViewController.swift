@@ -11,6 +11,66 @@ import AudioToolbox
 
 class QuizViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let path = Bundle.main.path(forResource: "CountryList", ofType: "csv")
+        let url = URL(fileURLWithPath: path!)
+        let countryList = try! NSString(contentsOf: url, encoding: String.Encoding.utf8.rawValue)
+        var lines = countryList.components(separatedBy: "\n")
+        
+        // csv 파일 열 제목 삭제
+        lines.remove(at: 0)
+        
+        for line in lines {
+            let column = line.components(separatedBy: ",")
+            flagInfo.append(FlagInfo(name: column[0], imageName: column[1], GDP: Int(column[3]) ?? -1, area: Int(column[4]) ?? -1, difficulty: 0))
+        }
+        
+        flagInfo = flagInfo.sorted(by: { $0.GDP > $1.GDP })
+        for i in 0..<flagInfo.count {
+            flagInfo[i].difficulty = i
+        }
+        flagInfo = flagInfo.sorted(by: { $0.area > $1.area })
+        for i in 0..<flagInfo.count {
+            flagInfo[i].difficulty = flagInfo[i].difficulty + i
+        }
+        flagInfo = flagInfo.sorted(by: { $0.difficulty < $1.difficulty })
+        
+        buttonArray.append(leftTopButton)
+        buttonArray.append(rightTopButton)
+        buttonArray.append(leftBottomButton)
+        buttonArray.append(rightBottomButton)
+        
+        lifeArray.append(firstLife)
+        lifeArray.append(secondLife)
+        lifeArray.append(thirdLife)
+        lifeArray.append(fourthLife)
+        lifeArray.append(fifthLife)
+        
+        correctOrIncorrectView.alpha = 0
+        
+        self.life = lifeArray.count
+        
+        makeQuestion()
+        textFitInButton()
+        setDefaultButtonStyle()
+        
+        UIView.appearance().isExclusiveTouch = true
+        
+        for i in 0...3 {
+            buttonArray[i].setTitleColor(UIColor.black, for: .normal)
+            buttonArray[i].titleLabel?.textAlignment = NSTextAlignment.center
+        }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animateAlongsideTransition(in: nil, animation: nil) { _ in
+            self.textFitInButton()
+        }
+    }
+    
     @IBOutlet weak var flagImageView: UIImageView!
     
     @IBOutlet weak var leftTopButton: UIButton!
@@ -220,82 +280,6 @@ class QuizViewController: UIViewController {
                 } while UIScreen.main.bounds.size.width/2 - 40 < (title as NSString).size(withAttributes: attr).width && fontSize > 24
             }
         }
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        coordinator.animateAlongsideTransition(in: nil, animation: nil) { _ in
-            self.textFitInButton()
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let path = Bundle.main.path(forResource: "CountryList", ofType: "csv")
-        let url = URL(fileURLWithPath: path!)
-        let countryList = try! NSString(contentsOf: url, encoding: String.Encoding.utf8.rawValue)
-        var lines = countryList.components(separatedBy: "\n")
-        
-        // csv 파일 열 제목 삭제
-        lines.remove(at: 0)
-        
-        for line in lines {
-            let column = line.components(separatedBy: ",")
-            flagInfo.append(FlagInfo(name: column[0], imageName: column[1], GDP: Int(column[3]) ?? -1, area: Int(column[4]) ?? -1, difficulty: 0))
-        }
-        
-        flagInfo = flagInfo.sorted(by: { $0.GDP > $1.GDP })
-        for i in 0..<flagInfo.count {
-            flagInfo[i].difficulty = i
-        }
-        flagInfo = flagInfo.sorted(by: { $0.area > $1.area })
-        for i in 0..<flagInfo.count {
-            flagInfo[i].difficulty = flagInfo[i].difficulty + i
-        }
-        flagInfo = flagInfo.sorted(by: { $0.difficulty < $1.difficulty })
-        
-//        for i in 0..<flagInfo.count {
-//            print("\(i + 1). \( flagInfo[i].name)")
-//        }
-        
-        buttonArray.append(leftTopButton)
-        buttonArray.append(rightTopButton)
-        buttonArray.append(leftBottomButton)
-        buttonArray.append(rightBottomButton)
-        
-        lifeArray.append(firstLife)
-        lifeArray.append(secondLife)
-        lifeArray.append(thirdLife)
-        lifeArray.append(fourthLife)
-        lifeArray.append(fifthLife)
-        
-        correctOrIncorrectView.alpha = 0
-        
-        self.life = lifeArray.count
-        
-        makeQuestion()
-        textFitInButton()
-        setDefaultButtonStyle()
-        
-        UIView.appearance().isExclusiveTouch = true
-        
-        for i in 0...3 {
-            buttonArray[i].setTitleColor(UIColor.black, for: .normal)
-            buttonArray[i].titleLabel?.textAlignment = NSTextAlignment.center
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        self.navigationController?.navigationBar.prefersLargeTitles = false
     }
     
 }
