@@ -277,18 +277,27 @@
         <!--Settings-->
         <scene sceneID="2LJ-mo-OzK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zah-tJ-sRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="3et-2e-ert" customClass="SettingsViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qbc-71-Bg8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Difficality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFT-Dt-DA7">
+                                <rect key="frame" x="16" y="67" width="72" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KWC-bz-W5n"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="0jN-kL-kip"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zah-tJ-sRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="898"/>
+            <point key="canvasLocation" x="1016.8" y="897.30134932533736"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gzk-2b-wV9">
