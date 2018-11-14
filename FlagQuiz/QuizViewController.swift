@@ -93,6 +93,8 @@ class QuizViewController: UIViewController {
     private var currentQuizIndex: Int = 0
     private var score: Int = 0
     private var life: Int = 5
+    let difficulty = [[30, 20], [40, 30], [50, 40]]
+    var difficultyLevel = 0
     
     func initQuiz() {
         self.quizList.removeAll()
@@ -219,10 +221,12 @@ class QuizViewController: UIViewController {
         func selectCountryByDifficulty() -> Int {
             var indexSelectedCountry: Int = 0
             
-            if (score / 10 + 1) * 50 > flagInfo.count {
-                indexSelectedCountry = Int(arc4random_uniform(UInt32(flagInfo.count)))
-            } else {
-                indexSelectedCountry = Int(arc4random_uniform(UInt32((score / 10 + 1) * 50)))
+            if difficultyLevel == 0 {
+                indexSelectedCountry = Int(arc4random_uniform(UInt32(difficulty[difficultyLevel][0] + difficulty[difficultyLevel][1] * score / 10)))
+            } else if difficultyLevel == 1 {
+                indexSelectedCountry = Int(arc4random_uniform(UInt32(difficulty[difficultyLevel][0] + difficulty[difficultyLevel][1] * score / 10)))
+            } else if difficultyLevel == 2 {
+                indexSelectedCountry = Int(arc4random_uniform(UInt32(difficulty[difficultyLevel][0] + difficulty[difficultyLevel][1] * score / 10)))
             }
             
             return indexSelectedCountry
@@ -263,6 +267,13 @@ class QuizViewController: UIViewController {
         for i in 0...3 {
             buttonArray[i].setTitle(NSLocalizedString(flagInfo[quizList[currentQuizIndex].example[i]].name, comment: ""), for: .normal)
             buttonArray[i].setTitle(NSLocalizedString(flagInfo[quizList[currentQuizIndex].example[i]].name, comment: ""), for: .disabled)
+        }
+        
+        for i in 0...3 {
+            print("\(quizList[currentQuizIndex].example[i]). \(flagInfo[quizList[currentQuizIndex].example[i]].name)")
+            if i == 3 {
+                print("")
+            }
         }
     }
     
