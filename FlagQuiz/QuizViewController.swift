@@ -221,11 +221,9 @@ class QuizViewController: UIViewController {
         func selectCountryByDifficulty() -> Int {
             var indexSelectedCountry: Int = 0
             
-            if difficultyLevel == 0 {
-                indexSelectedCountry = Int(arc4random_uniform(UInt32(difficulty[difficultyLevel][0] + difficulty[difficultyLevel][1] * score / 10)))
-            } else if difficultyLevel == 1 {
-                indexSelectedCountry = Int(arc4random_uniform(UInt32(difficulty[difficultyLevel][0] + difficulty[difficultyLevel][1] * score / 10)))
-            } else if difficultyLevel == 2 {
+            if difficulty[difficultyLevel][0] + difficulty[difficultyLevel][1] * score / 10 > flagInfo.count {
+                indexSelectedCountry = Int(arc4random_uniform(UInt32(flagInfo.count)))
+            } else {
                 indexSelectedCountry = Int(arc4random_uniform(UInt32(difficulty[difficultyLevel][0] + difficulty[difficultyLevel][1] * score / 10)))
             }
             
