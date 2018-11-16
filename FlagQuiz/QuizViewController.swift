@@ -29,7 +29,7 @@ class QuizViewController: UIViewController {
         
         flagInfo = flagInfo.sorted(by: { $0.GDP > $1.GDP })
         for i in 0..<flagInfo.count {
-            flagInfo[i].difficulty = i
+            flagInfo[i].difficulty = i * 10
         }
         flagInfo = flagInfo.sorted(by: { $0.area > $1.area })
         for i in 0..<flagInfo.count {
