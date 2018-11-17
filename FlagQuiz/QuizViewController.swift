@@ -50,6 +50,7 @@ class QuizViewController: UIViewController {
         
         correctOrIncorrectView.alpha = 0
         
+        scoreLabel.text = "\(score)"
         self.life = lifeArray.count
         
         makeQuestion()
@@ -84,6 +85,8 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var fourthLife: UIImageView!
     @IBOutlet weak var fifthLife: UIImageView!
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     @IBOutlet weak var correctOrIncorrectView: UIView!
     @IBOutlet weak var correctOrIncorrectLabel: UILabel!
     
@@ -103,6 +106,7 @@ class QuizViewController: UIViewController {
     
     func initScore() {
         self.score = 0
+        self.scoreLabel.text = "\(score)"
     }
     
     func getScore() -> Int {
@@ -152,6 +156,8 @@ class QuizViewController: UIViewController {
             AudioServicesPlaySystemSound(1520)
             
             score += 1
+            
+            scoreLabel.text = "\(score)"
             
             showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor(red: 80/255, green: 80/255, blue: 255/255, alpha: 1), message: NSLocalizedString("Correct", comment: ""))
             

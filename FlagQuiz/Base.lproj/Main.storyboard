@@ -181,6 +181,13 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdC-48-hRV">
+                                <rect key="frame" x="287" y="25" width="72" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -213,13 +220,14 @@
                         <outlet property="leftTopButton" destination="pC1-nd-XqD" id="JGS-dg-IHi"/>
                         <outlet property="rightBottomButton" destination="Nbz-eW-Oep" id="EaH-ND-jbX"/>
                         <outlet property="rightTopButton" destination="prm-1p-ikg" id="vmq-kd-Znf"/>
+                        <outlet property="scoreLabel" destination="VdC-48-hRV" id="mLO-hO-7Q2"/>
                         <outlet property="secondLife" destination="CHr-sE-kAn" id="BXL-Ox-SO7"/>
                         <outlet property="thirdLife" destination="qui-8t-meu" id="i9c-tU-mXn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="-603"/>
+            <point key="canvasLocation" x="1017" y="-240"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="Ztb-7H-9Rx">
@@ -272,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jH-CQ-pVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1854" y="-603"/>
+            <point key="canvasLocation" x="1854" y="-241"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gzk-2b-wV9">
@@ -375,7 +383,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1855" y="131"/>
+            <point key="canvasLocation" x="1854" y="504"/>
         </scene>
         <!--Flag Search-->
         <scene sceneID="6PO-Hf-duH">
@@ -394,7 +402,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSZ-aN-SoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="131"/>
+            <point key="canvasLocation" x="1017" y="505"/>
         </scene>
     </scenes>
     <resources>
