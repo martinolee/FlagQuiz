@@ -96,8 +96,8 @@ class QuizViewController: UIViewController {
     private var currentQuizIndex: Int = 0
     private var score: Int = 0
     private var life: Int = 5
-    let difficulty = [[30, 20], [40, 30], [50, 40]]
-    var difficultyLevel = 0
+    private let difficulty = [[30, 20], [40, 30], [50, 40]]
+    private var difficultyLevel = 0
     
     func initQuiz() {
         self.quizList.removeAll()
