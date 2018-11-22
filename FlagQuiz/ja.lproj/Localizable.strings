@@ -16,7 +16,7 @@
 "Algeria" = "アルジェリア";
 "Andorra" = "アンドラ";
 "Angola" = "アンゴラ";
-"Antigua and Barbuda" = "アンティグアバーブーダ";
+"Antigua and Barbuda" = "アンティグア・バーブーダ";
 "Argentina" = "アルゼンチン";
 "Armenia" = "アルメニア";
 "Australia" = "オーストラリア";
@@ -73,7 +73,7 @@
 "France" = "フランス";
 "Gabon" = "ガボン";
 "Gambia" = "ガンビア";
-"Georgia" = "ジョージア州";
+"Georgia" = "ジョージア";
 "Germany" = "ドイツ";
 "Ghana" = "ガーナ";
 "Greece" = "ギリシャ";
@@ -161,7 +161,7 @@
 "Rwanda" = "ルワンダ";
 "Samoa" = "サモア";
 "San Marino" = "サンマリノ";
-"Sao Tome and Principe" = "サントメプリンシペ";
+"Sao Tome and Principe" = "サントメ・プリンシペ";
 "Saudi Arabia" = "サウジアラビア";
 "Senegal" = "セネガル";
 "Serbia" = "セルビア";
@@ -179,7 +179,7 @@
 "Sri Lanka" = "スリランカ";
 "St. Kitts and Nevis" = "セントクリストファー・ネイビス";
 "St. Lucia" = "セントルシア";
-"St. Vincent and the Grenadines" = "セントビンセントとグレナディーン";
+"St. Vincent and the Grenadines" = "セントビンセント・グレナディーン";
 "Sudan" = "スーダン";
 "Suriname" = "スリナム";
 "Swaziland" = "スワジランド";
@@ -190,11 +190,11 @@
 "Tajikistan" = "タジキスタン";
 "Tanzania" = "タンザニア";
 "Thailand" = "タイ";
-"Togo" = "行く";
+"Togo" = "トーゴ";
 "Tonga" = "トンガ";
 "Trinidad and Tobago" = "トリニダード・トバゴ";
 "Tunisia" = "チュニジア";
-"Turkey" = "七面鳥";
+"Turkey" = "トルコ";
 "Turkmenistan" = "トルクメニスタン";
 "Tuvalu" = "ツバル";
 "Uganda" = "ウガンダ";
@@ -205,7 +205,7 @@
 "Uruguay" = "ウルグアイ";
 "Uzbekistan" = "ウズベキスタン";
 "Vanuatu" = "バヌアツ";
-"Vatican City" = "バチカン市";
+"Vatican City" = "バチカン市国";
 "Venezuela" = "ベネズエラ";
 "Vietnam" = "ベトナム";
 "Yemen" = "イエメン";
