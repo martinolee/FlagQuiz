@@ -157,6 +157,13 @@ class QuizViewController: UIViewController {
             
             score += 1
             
+            if score % 10 == 0 {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let popUpView = storyboard.instantiateViewController(withIdentifier: "difficultyRise") as! DifficultyViewController
+                
+                self.present(popUpView, animated: true, completion: nil)
+            }
+            
             scoreLabel.text = "\(score)"
             
             showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor(red: 80/255, green: 80/255, blue: 255/255, alpha: 1), message: NSLocalizedString("Correct", comment: ""))
