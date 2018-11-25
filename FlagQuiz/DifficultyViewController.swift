@@ -9,11 +9,17 @@
 import UIKit
 
 class DifficultyViewController: UIViewController {
-
+    @IBOutlet var difficultyRiseLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        difficultyRiseLabel.text = NSLocalizedString("Level Up", comment: "")
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.closePopup()
+        }
+        
     }
     
     func closePopup() {
