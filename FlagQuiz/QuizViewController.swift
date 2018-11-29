@@ -153,7 +153,8 @@ class QuizViewController: UIViewController {
             }
             btn.setTitleColor(UIColor.blue, for: .disabled)
             
-            AudioServicesPlaySystemSound(1520)
+            Vibration.success.vibrate()
+//            AudioServicesPlaySystemSound(1520)
             
             score += 1
             
@@ -178,7 +179,8 @@ class QuizViewController: UIViewController {
             btn.isEnabled = false
             btn.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.4), for: .disabled)
             
-            AudioServicesPlaySystemSound(1521)
+            Vibration.error.vibrate()
+//            AudioServicesPlaySystemSound(1521)
             
             life -= 1
             
