@@ -8,6 +8,7 @@
 
 import UIKit
 import AudioToolbox
+import GoogleMobileAds
 
 class QuizViewController: UIViewController {
     
@@ -63,6 +64,12 @@ class QuizViewController: UIViewController {
             buttonArray[i].setTitleColor(UIColor.black, for: .normal)
             buttonArray[i].titleLabel?.textAlignment = NSTextAlignment.center
         }
+        
+//        bannerView.adUnitID = adUnitID
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        
+        bannerView.load(GADRequest())
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -89,6 +96,8 @@ class QuizViewController: UIViewController {
     
     @IBOutlet weak var correctOrIncorrectView: UIView!
     @IBOutlet weak var correctOrIncorrectLabel: UILabel!
+    
+    @IBOutlet var bannerView: GADBannerView!
     
     var buttonArray: Array<UIButton> = []
     var lifeArray: Array<UIImageView> = []
