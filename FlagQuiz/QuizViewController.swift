@@ -65,8 +65,7 @@ class QuizViewController: UIViewController {
             buttonArray[i].titleLabel?.textAlignment = NSTextAlignment.center
         }
         
-//        bannerView.adUnitID = adUnitID
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = adUnitID
         bannerView.rootViewController = self
         
         bannerView.load(GADRequest())
