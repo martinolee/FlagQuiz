@@ -23,7 +23,7 @@ class PopUpViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         rewardBaseAd = GADRewardBasedVideoAd.sharedInstance()
         rewardBaseAd.delegate = self
         
-        rewardBaseAd.load(GADRequest(), withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
+        rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +39,7 @@ class PopUpViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
         print("Reward received with currency: \(reward.type), amount \(reward.amount).")
+        self.viewController?.earnLife(life: Int(truncating: reward.amount))
     }
     
     func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd:GADRewardBasedVideoAd) {
@@ -60,9 +61,7 @@ class PopUpViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
         print("Reward based video ad is closed.")
         
-        dismiss(animated: true) {
-            self.viewController?.continueGame()
-        }
+        dismiss(animated: true, completion: nil)
     }
     
     func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {

@@ -129,10 +129,12 @@ class QuizViewController: UIViewController {
         }
     }
     
-    func continueGame() {
-        self.life = 1
+    func earnLife(life: Int) {
+        self.life = life
         
-        lifeArray[0].alpha = 1
+        for i in 0..<life {
+            lifeArray[i].alpha = 1
+        }
     }
     
     func setDefaultButtonStyle() {
