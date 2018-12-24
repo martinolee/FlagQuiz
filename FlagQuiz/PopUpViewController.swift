@@ -7,22 +7,70 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class PopUpViewController: UIViewController {
+class PopUpViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     
     @IBOutlet weak var scoreLabel: UILabel!
+    
+    var rewardBaseAd: GADRewardBasedVideoAd!
     
     var viewController: QuizViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        rewardBaseAd = GADRewardBasedVideoAd.sharedInstance()
+        rewardBaseAd.delegate = self
+        
+        rewardBaseAd.load(GADRequest(), withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         scoreLabel.text = ("\(viewController?.getScore() ?? -1) ") + NSLocalizedString("Point", comment: "")
+    }
+    
+    @IBAction func continueGame(_ sender: Any) {
+        if rewardBaseAd.isReady == true {
+            rewardBaseAd.present(fromRootViewController: self)
+        }
+    }
+    
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
+        print("Reward received with currency: \(reward.type), amount \(reward.amount).")
+    }
+    
+    func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd:GADRewardBasedVideoAd) {
+        print("Reward based video ad is received.")
+    }
+    
+    func rewardBasedVideoAdDidOpen(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Opened reward based video ad.")
+    }
+    
+    func rewardBasedVideoAdDidStartPlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad started playing.")
+    }
+    
+    func rewardBasedVideoAdDidCompletePlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad has completed.")
+    }
+    
+    func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad is closed.")
+        
+        dismiss(animated: true) {
+            self.viewController?.continueGame()
+        }
+    }
+    
+    func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad will leave application.")
+    }
+    
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
+        print("Reward based video ad failed to load.")
     }
     
     @IBAction func closePopUp(_ sender: Any) {

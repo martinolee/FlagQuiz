@@ -12,6 +12,35 @@ import GoogleMobileAds
 
 class QuizViewController: UIViewController {
     
+    @IBOutlet weak var flagImageView: UIImageView!
+    
+    @IBOutlet weak var leftTopButton: UIButton!
+    @IBOutlet weak var rightTopButton: UIButton!
+    @IBOutlet weak var leftBottomButton: UIButton!
+    @IBOutlet weak var rightBottomButton: UIButton!
+    
+    @IBOutlet weak var firstLife: UIImageView!
+    @IBOutlet weak var secondLife: UIImageView!
+    @IBOutlet weak var thirdLife: UIImageView!
+    @IBOutlet weak var fourthLife: UIImageView!
+    @IBOutlet weak var fifthLife: UIImageView!
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    @IBOutlet weak var correctOrIncorrectView: UIView!
+    @IBOutlet weak var correctOrIncorrectLabel: UILabel!
+    
+    @IBOutlet var bannerView: GADBannerView!
+    
+    var buttonArray: Array<UIButton> = []
+    var lifeArray: Array<UIImageView> = []
+    private var quizList: Array<Quiz> = Array<Quiz>()
+    private var currentQuizIndex: Int = 0
+    private var score: Int = 0
+    private var life: Int = 5
+    private let difficulty = [[30, 20], [40, 30], [50, 40]]
+    private var difficultyLevel = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -78,35 +107,6 @@ class QuizViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var flagImageView: UIImageView!
-    
-    @IBOutlet weak var leftTopButton: UIButton!
-    @IBOutlet weak var rightTopButton: UIButton!
-    @IBOutlet weak var leftBottomButton: UIButton!
-    @IBOutlet weak var rightBottomButton: UIButton!
-    
-    @IBOutlet weak var firstLife: UIImageView!
-    @IBOutlet weak var secondLife: UIImageView!
-    @IBOutlet weak var thirdLife: UIImageView!
-    @IBOutlet weak var fourthLife: UIImageView!
-    @IBOutlet weak var fifthLife: UIImageView!
-    
-    @IBOutlet weak var scoreLabel: UILabel!
-    
-    @IBOutlet weak var correctOrIncorrectView: UIView!
-    @IBOutlet weak var correctOrIncorrectLabel: UILabel!
-    
-    @IBOutlet var bannerView: GADBannerView!
-    
-    var buttonArray: Array<UIButton> = []
-    var lifeArray: Array<UIImageView> = []
-    private var quizList: Array<Quiz> = Array<Quiz>()
-    private var currentQuizIndex: Int = 0
-    private var score: Int = 0
-    private var life: Int = 5
-    private let difficulty = [[30, 20], [40, 30], [50, 40]]
-    private var difficultyLevel = 0
-    
     func initQuiz() {
         self.quizList.removeAll()
         self.currentQuizIndex = 0
@@ -127,6 +127,12 @@ class QuizViewController: UIViewController {
         for i in 0..<lifeArray.count {
             lifeArray[i].alpha = 1
         }
+    }
+    
+    func continueGame() {
+        self.life = 1
+        
+        lifeArray[0].alpha = 1
     }
     
     func setDefaultButtonStyle() {
