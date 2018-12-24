@@ -209,8 +209,6 @@ class QuizViewController: UIViewController {
             let isDie = life == 0 ? true : false
             
             if isDie {
-                scoreLabel.text = ""
-                
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let popUpView = storyboard.instantiateViewController(withIdentifier: "popUp") as! PopUpViewController
                 popUpView.viewController = self
