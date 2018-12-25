@@ -10,7 +10,7 @@ import UIKit
 import AudioToolbox
 import GoogleMobileAds
 
-class QuizViewController: UIViewController {
+class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     
     @IBOutlet weak var flagImageView: UIImageView!
     
@@ -31,6 +31,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var correctOrIncorrectLabel: UILabel!
     
     @IBOutlet var bannerView: GADBannerView!
+    var rewardBaseAd: GADRewardBasedVideoAd!
     
     var buttonArray: Array<UIButton> = []
     var lifeArray: Array<UIImageView> = []
@@ -98,6 +99,12 @@ class QuizViewController: UIViewController {
         bannerView.rootViewController = self
         
         bannerView.load(GADRequest())
+        
+        rewardBaseAd = GADRewardBasedVideoAd.sharedInstance()
+        rewardBaseAd.delegate = self
+        
+        rewardBaseAd.load(GADRequest(), withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
+        // test id "ca-app-pub-3940256099942544/1712485313"
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -130,9 +137,9 @@ class QuizViewController: UIViewController {
     }
     
     func earnLife(life: Int) {
-        self.life = life
+        self.life = life/10
         
-        for i in 0..<life {
+        for i in 0..<life/10 {
             lifeArray[i].alpha = 1
         }
     }
@@ -320,6 +327,48 @@ class QuizViewController: UIViewController {
                 } while UIScreen.main.bounds.size.width/2 - 40 < (title as NSString).size(withAttributes: attr).width && fontSize > 24
             }
         }
+    }
+    
+}
+
+extension QuizViewController {
+    
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
+        print("Reward received with currency: \(reward.type), amount \(reward.amount).")
+        
+        earnLife(life: Int(truncating: reward.amount))
+    }
+    
+    func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd:GADRewardBasedVideoAd) {
+        print("Reward based video ad is received.")
+    }
+    
+    func rewardBasedVideoAdDidOpen(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Opened reward based video ad.")
+    }
+    
+    func rewardBasedVideoAdDidStartPlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad started playing.")
+    }
+    
+    func rewardBasedVideoAdDidCompletePlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad has completed.")
+    }
+    
+    func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad is closed.")
+        
+        rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad will leave application.")
+    }
+    
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
+        print("Reward based video ad failed to load.")
     }
     
 }
