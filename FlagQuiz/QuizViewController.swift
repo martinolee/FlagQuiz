@@ -103,8 +103,7 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         rewardBaseAd = GADRewardBasedVideoAd.sharedInstance()
         rewardBaseAd.delegate = self
         
-        rewardBaseAd.load(GADRequest(), withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
-        // test id "ca-app-pub-3940256099942544/1712485313"
+        rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -137,9 +136,9 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     }
     
     func earnLife(life: Int) {
-        self.life = life/10
+        self.life = life
         
-        for i in 0..<life/10 {
+        for i in 0..<life {
             lifeArray[i].alpha = 1
         }
     }
