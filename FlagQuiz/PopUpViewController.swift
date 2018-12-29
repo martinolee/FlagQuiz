@@ -13,10 +13,16 @@ class PopUpViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
+    @IBOutlet var restartButton: UIButton!
+    @IBOutlet var continueButton: UIButton!
+    
     var viewController: QuizViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        restartButton.setTitle(NSLocalizedString("Restart", comment: ""), for: .normal)
+        continueButton.setTitle(NSLocalizedString("Continue", comment: ""), for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
