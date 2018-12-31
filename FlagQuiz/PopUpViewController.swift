@@ -29,6 +29,7 @@ class PopUpViewController: UIViewController {
         super.viewWillAppear(animated)
         
         scoreLabel.text = ("\(viewController?.getScore() ?? -1) ") + NSLocalizedString("Point", comment: "")
+        // 전달되지 않음
     }
     
     @IBAction func continueGame(_ sender: Any) {
