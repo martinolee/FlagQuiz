@@ -21,8 +21,6 @@ class PopUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        restartButton.setTitle(NSLocalizedString("Restart", comment: ""), for: .normal)
-        continueButton.setTitle(NSLocalizedString("Continue", comment: ""), for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +28,9 @@ class PopUpViewController: UIViewController {
         
         scoreLabel.text = ("\(viewController?.getScore() ?? -1) ") + NSLocalizedString("Point", comment: "")
         // 전달되지 않음
+        
+        restartButton.setTitle(NSLocalizedString("Restart", comment: ""), for: .normal)
+        continueButton.setTitle(NSLocalizedString("Continue", comment: ""), for: .normal)
     }
     
     @IBAction func continueGame(_ sender: Any) {
