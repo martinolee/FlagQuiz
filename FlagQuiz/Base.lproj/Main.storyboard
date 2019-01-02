@@ -257,7 +257,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Restart"/>
                                         <connections>
-                                            <action selector="closePopUp:" destination="6Dx-c5-Std" eventType="touchUpInside" id="pbz-Tc-x7F"/>
+                                            <action selector="closePopUp:" destination="6Dx-c5-Std" eventType="touchUpInside" id="d2I-XR-Ji4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -282,7 +282,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
-                                    <action selector="continueGame:" destination="6Dx-c5-Std" eventType="touchUpInside" id="zOg-ch-81V"/>
+                                    <action selector="continueGame:" destination="6Dx-c5-Std" eventType="touchUpInside" id="V1e-Ea-Re9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -299,7 +299,7 @@
                         <viewLayoutGuide key="safeArea" id="yyp-HI-m1N"/>
                     </view>
                     <connections>
-                        <outlet property="continueButton" destination="5Sb-EH-8Gj" id="sdC-dq-AA9"/>
+                        <outlet property="continueButton" destination="5Sb-EH-8Gj" id="UKK-Bj-oXk"/>
                         <outlet property="restartButton" destination="8M0-Q1-hT5" id="gtk-7g-ew4"/>
                         <outlet property="scoreLabel" destination="205-XV-u8a" id="k24-xl-OfK"/>
                     </connections>

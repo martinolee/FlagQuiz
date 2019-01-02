@@ -16,7 +16,7 @@ class PopUpViewController: UIViewController {
     @IBOutlet var restartButton: UIButton!
     @IBOutlet var continueButton: UIButton!
     
-    var viewController: QuizViewController?
+    var viewController: QuizViewController! =  QuizViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,6 @@ class PopUpViewController: UIViewController {
         super.viewWillAppear(animated)
         
         scoreLabel.text = ("\(viewController?.getScore() ?? -1) ") + NSLocalizedString("Point", comment: "")
-        // 전달되지 않음
         
         restartButton.setTitle(NSLocalizedString("Restart", comment: ""), for: .normal)
         continueButton.setTitle(NSLocalizedString("Continue", comment: ""), for: .normal)
