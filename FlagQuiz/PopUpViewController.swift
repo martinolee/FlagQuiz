@@ -35,6 +35,17 @@ class PopUpViewController: UIViewController {
     @IBAction func continueGame(_ sender: Any) {
         if viewController?.rewardBaseAd.isReady == true {
             viewController?.rewardBaseAd.present(fromRootViewController: self)
+        } else {
+            let alertController = UIAlertController(title: "Error", message: "Ad did not load", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
+                UIAlertAction in
+                
+            }
+            
+            alertController.addAction(okAction)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
