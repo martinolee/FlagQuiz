@@ -38,10 +38,7 @@ class PopUpViewController: UIViewController {
         } else {
             let alertController = UIAlertController(title: "Error", message: "Ad did not load", preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
-                UIAlertAction in
-                
-            }
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
             
             alertController.addAction(okAction)
             
