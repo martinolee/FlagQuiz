@@ -253,7 +253,7 @@
                                 <rect key="frame" x="87.5" y="303.5" width="200" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8M0-Q1-hT5">
-                                        <rect key="frame" x="75" y="108" width="50" height="30"/>
+                                        <rect key="frame" x="75" y="102" width="50" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Restart"/>
                                         <connections>
@@ -277,10 +277,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sb-EH-8Gj">
-                                <rect key="frame" x="147.5" y="367.5" width="80" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Continue"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Sb-EH-8Gj">
+                                <rect key="frame" x="136" y="367.5" width="103" height="30"/>
+                                <state key="normal" image="play">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Continue">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="ArialMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <action selector="continueGame:" destination="6Dx-c5-Std" eventType="touchUpInside" id="V1e-Ea-Re9"/>
                                 </connections>
@@ -480,6 +487,7 @@
     <resources>
         <image name="flagListIcon_28" width="28" height="28"/>
         <image name="life" width="100" height="100"/>
+        <image name="play" width="30" height="30"/>
         <image name="quizIcon_28" width="28" height="28"/>
     </resources>
 </document>
