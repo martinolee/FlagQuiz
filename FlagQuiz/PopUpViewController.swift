@@ -29,7 +29,7 @@ class PopUpViewController: UIViewController {
         scoreLabel.text = ("\(viewController?.getScore() ?? -1) ") + NSLocalizedString("Point", comment: "")
         
         restartButton.setTitle(NSLocalizedString("Restart", comment: ""), for: .normal)
-        continueButton.setTitle(NSLocalizedString("Continue", comment: ""), for: .normal)
+        continueButton.setAttributedTitle(NSAttributedString(string: NSLocalizedString("Continue", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
     }
     
     @IBAction func continueGame(_ sender: Any) {
