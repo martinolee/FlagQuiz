@@ -36,9 +36,9 @@ class PopUpViewController: UIViewController {
         if viewController?.rewardBaseAd.isReady == true {
             viewController?.rewardBaseAd.present(fromRootViewController: self)
         } else {
-            let alertController = UIAlertController(title: "Error", message: "Ad did not load", preferredStyle: .alert)
+            let alertController = UIAlertController(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Ad did not load", comment: ""), preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: UIAlertAction.Style.default)
             
             alertController.addAction(okAction)
             
