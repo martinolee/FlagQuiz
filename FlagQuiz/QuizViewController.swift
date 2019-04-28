@@ -30,6 +30,8 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     @IBOutlet weak var correctOrIncorrectView: UIView!
     @IBOutlet weak var correctOrIncorrectLabel: UILabel!
     
+    @IBOutlet var difficultyNotificationView: UIView!
+    
     @IBOutlet var bannerView: GADBannerView!
     var rewardBaseAd: GADRewardBasedVideoAd!
     
@@ -80,6 +82,8 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         lifeArray.append(fifthLife)
         
         correctOrIncorrectView.alpha = 0
+        
+        difficultyNotificationView.alpha = 0
         
         scoreLabel.text = "\(score)"
         self.life = lifeArray.count
@@ -184,10 +188,16 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
             showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor(red: 80/255, green: 80/255, blue: 255/255, alpha: 1), message: NSLocalizedString("Correct", comment: ""))
             
             if score % 10 == 0 {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let popUpView = storyboard.instantiateViewController(withIdentifier: "difficultyRise") as! DifficultyViewController
                 
-                self.present(popUpView, animated: true, completion: nil)
+                UIView.animate(withDuration: 0.3) {
+                    self.difficultyNotificationView.alpha = 1
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self.difficultyNotificationView.alpha = 0
+                    })
+                }
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {

@@ -195,6 +195,28 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-dn-pyd">
+                                <rect key="frame" x="52.5" y="193" width="270" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cV-wh-MmV">
+                                        <rect key="frame" x="38" y="17" width="194" height="66"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5cV-wh-MmV" secondAttribute="bottom" constant="17" id="H4e-ZB-Trm"/>
+                                    <constraint firstAttribute="height" constant="100" id="LTn-OM-C6E"/>
+                                    <constraint firstAttribute="width" constant="270" id="Z0o-ek-9xI"/>
+                                    <constraint firstItem="5cV-wh-MmV" firstAttribute="top" secondItem="gdP-dn-pyd" secondAttribute="top" constant="17" id="p56-2b-Jxa"/>
+                                    <constraint firstItem="5cV-wh-MmV" firstAttribute="centerX" secondItem="gdP-dn-pyd" secondAttribute="centerX" id="qb2-3X-SkV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -210,11 +232,13 @@
                             <constraint firstItem="z0j-VE-mPf" firstAttribute="top" secondItem="Ttb-c9-IF9" secondAttribute="bottom" constant="8" id="LgW-S9-CLD"/>
                             <constraint firstItem="qxw-tA-MTY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PPe-C0-RS5"/>
                             <constraint firstItem="qxw-tA-MTY" firstAttribute="top" secondItem="juO-cl-qr9" secondAttribute="bottom" id="Qgx-fy-fVi"/>
+                            <constraint firstItem="gdP-dn-pyd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RdM-il-yZW"/>
                             <constraint firstItem="z0j-VE-mPf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Y9b-3N-Wed"/>
                             <constraint firstItem="brt-5H-chr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="3" id="iv2-Zd-KGN"/>
                             <constraint firstItem="juO-cl-qr9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="mHb-04-pS0"/>
                             <constraint firstItem="Ttb-c9-IF9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="oUb-FY-Q50"/>
                             <constraint firstItem="VdC-48-hRV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="vZl-Uh-DRn"/>
+                            <constraint firstItem="gdP-dn-pyd" firstAttribute="top" secondItem="8gU-nR-yJi" secondAttribute="bottom" constant="10" id="vzZ-b3-KYY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VdC-48-hRV" secondAttribute="trailing" constant="16" id="z2w-ey-Fnr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -224,6 +248,7 @@
                         <outlet property="bannerView" destination="qxw-tA-MTY" id="7OH-CN-3Ji"/>
                         <outlet property="correctOrIncorrectLabel" destination="6Jx-8N-Zu3" id="NXh-es-ZyN"/>
                         <outlet property="correctOrIncorrectView" destination="8gU-nR-yJi" id="wFJ-y3-O35"/>
+                        <outlet property="difficultyNotificationView" destination="gdP-dn-pyd" id="yit-2X-z2V"/>
                         <outlet property="fifthLife" destination="r8J-ea-nMO" id="qGN-kJ-nFb"/>
                         <outlet property="firstLife" destination="Abw-pj-8ZX" id="0dM-nU-Qqh"/>
                         <outlet property="flagImageView" destination="Ttb-c9-IF9" id="oIg-dF-eac"/>
@@ -239,81 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="-240"/>
-        </scene>
-        <!--Pop Up View Controller-->
-        <scene sceneID="Ztb-7H-9Rx">
-            <objects>
-                <viewController storyboardIdentifier="popUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="6Dx-c5-Std" customClass="PopUpViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LQ4-cr-nYh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBy-To-rzI">
-                                <rect key="frame" x="87.5" y="303.5" width="200" height="150"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8M0-Q1-hT5">
-                                        <rect key="frame" x="75" y="102" width="50" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Restart"/>
-                                        <connections>
-                                            <action selector="closePopUp:" destination="6Dx-c5-Std" eventType="touchUpInside" id="d2I-XR-Ji4"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="11M-Ng-xGN"/>
-                                    <constraint firstItem="8M0-Q1-hT5" firstAttribute="centerX" secondItem="rBy-To-rzI" secondAttribute="centerX" id="RIK-AB-UzA"/>
-                                    <constraint firstAttribute="width" constant="200" id="sb9-e9-N3C"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 Point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="205-XV-u8a">
-                                <rect key="frame" x="134" y="323.5" width="107" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Sb-EH-8Gj">
-                                <rect key="frame" x="136" y="367.5" width="103" height="30"/>
-                                <state key="normal" image="play">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Continue">
-                                            <attributes>
-                                                <font key="NSFont" size="18" name="ArialMT"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="continueGame:" destination="6Dx-c5-Std" eventType="touchUpInside" id="V1e-Ea-Re9"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.69590111301369861" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="205-XV-u8a" firstAttribute="top" secondItem="rBy-To-rzI" secondAttribute="top" constant="20" id="0LH-Zm-B2V"/>
-                            <constraint firstItem="205-XV-u8a" firstAttribute="centerX" secondItem="LQ4-cr-nYh" secondAttribute="centerX" id="ZiK-lz-U12"/>
-                            <constraint firstItem="5Sb-EH-8Gj" firstAttribute="top" secondItem="205-XV-u8a" secondAttribute="bottom" constant="8" id="eib-dY-EVH"/>
-                            <constraint firstItem="5Sb-EH-8Gj" firstAttribute="centerX" secondItem="LQ4-cr-nYh" secondAttribute="centerX" id="gLD-DR-IPR"/>
-                            <constraint firstItem="rBy-To-rzI" firstAttribute="centerX" secondItem="LQ4-cr-nYh" secondAttribute="centerX" id="jV2-yb-hFG"/>
-                            <constraint firstItem="rBy-To-rzI" firstAttribute="centerY" secondItem="LQ4-cr-nYh" secondAttribute="centerY" constant="45" id="kYP-F9-6oZ"/>
-                            <constraint firstItem="8M0-Q1-hT5" firstAttribute="top" secondItem="5Sb-EH-8Gj" secondAttribute="bottom" constant="8" id="lF8-k8-z9L"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="yyp-HI-m1N"/>
-                    </view>
-                    <connections>
-                        <outlet property="continueButton" destination="5Sb-EH-8Gj" id="UKK-Bj-oXk"/>
-                        <outlet property="restartButton" destination="8M0-Q1-hT5" id="gtk-7g-ew4"/>
-                        <outlet property="scoreLabel" destination="205-XV-u8a" id="k24-xl-OfK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0jH-CQ-pVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1853.5999999999999" y="-241.52923538230885"/>
+            <point key="canvasLocation" x="1016.8" y="-240.62968515742131"/>
         </scene>
         <!--Difficulty View Controller-->
         <scene sceneID="yr8-OS-oKX">
@@ -487,7 +438,6 @@
     <resources>
         <image name="flagListIcon_28" width="28" height="28"/>
         <image name="life" width="100" height="100"/>
-        <image name="play" width="30" height="30"/>
         <image name="quizIcon_28" width="28" height="28"/>
     </resources>
 </document>
