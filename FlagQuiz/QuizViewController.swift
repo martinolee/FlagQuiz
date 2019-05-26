@@ -167,6 +167,18 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         }
     }
     
+    func popupShowAfterHide(popupView: UIView, duration: Double) {
+        UIView.animate(withDuration: duration) {
+            popupView.alpha = 1
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+            UIView.animate(withDuration: 0.3, animations: {
+                popupView.alpha = 0
+            })
+        }
+    }
+    
     @IBAction func checkAnswer(_ btn: UIButton) {
         let isCorrect = quizList[currentQuizIndex].correctAnswerIndex == btn.tag ? true : false
         
@@ -188,16 +200,7 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
             showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor(red: 80/255, green: 80/255, blue: 255/255, alpha: 1), message: NSLocalizedString("Correct", comment: ""))
             
             if score % 10 == 0 {
-                
-                UIView.animate(withDuration: 0.3) {
-                    self.difficultyNotificationView.alpha = 1
-                }
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    UIView.animate(withDuration: 0.3, animations: {
-                        self.difficultyNotificationView.alpha = 0
-                    })
-                }
+                popupShowAfterHide(popupView: difficultyNotificationView, duration: 0.3)
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
