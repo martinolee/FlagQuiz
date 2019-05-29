@@ -266,52 +266,6 @@
             </objects>
             <point key="canvasLocation" x="1016.8" y="-240.62968515742131"/>
         </scene>
-        <!--Difficulty View Controller-->
-        <scene sceneID="yr8-OS-oKX">
-            <objects>
-                <viewController storyboardIdentifier="difficultyRise" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="HkP-lh-BMA" customClass="DifficultyViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5mV-31-Row">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLR-9s-v0s">
-                                <rect key="frame" x="52.5" y="169" width="270" height="100"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1m-1j-wAn">
-                                        <rect key="frame" x="38.5" y="17" width="193" height="66"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="f1m-1j-wAn" firstAttribute="centerX" secondItem="jLR-9s-v0s" secondAttribute="centerX" id="5H7-G4-37g"/>
-                                    <constraint firstAttribute="width" constant="270" id="IEr-7A-V8i"/>
-                                    <constraint firstItem="f1m-1j-wAn" firstAttribute="top" secondItem="jLR-9s-v0s" secondAttribute="top" constant="17" id="TAs-GM-7bX"/>
-                                    <constraint firstAttribute="height" constant="100" id="p2b-9q-Pud"/>
-                                    <constraint firstAttribute="bottom" secondItem="f1m-1j-wAn" secondAttribute="bottom" constant="17" id="q2M-0W-GOJ"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="jLR-9s-v0s" firstAttribute="top" secondItem="FFT-8N-Hw0" secondAttribute="top" constant="149" id="A8l-nO-Koh"/>
-                            <constraint firstItem="jLR-9s-v0s" firstAttribute="centerX" secondItem="5mV-31-Row" secondAttribute="centerX" id="pS8-bp-Zgk"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="FFT-8N-Hw0"/>
-                    </view>
-                    <connections>
-                        <outlet property="difficultyRiseLabel" destination="f1m-1j-wAn" id="eMj-v7-rNp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EsV-UM-oUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2660.625" y="-241.90140845070422"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gzk-2b-wV9">
             <objects>
