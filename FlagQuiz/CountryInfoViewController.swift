@@ -23,10 +23,15 @@ class CountryInfoViewController: UIViewController {
         
         searchController.obscuresBackgroundDuringPresentation = false
         
+        searchController.searchBar.autocapitalizationType = .none
+        
+        searchController.searchBar.delegate = self
+        
         self.navigationItem.searchController = searchController
+        
         self.navigationItem.hidesSearchBarWhenScrolling = false
+        
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.searchController?.searchBar.delegate = self
     }
 }
 
