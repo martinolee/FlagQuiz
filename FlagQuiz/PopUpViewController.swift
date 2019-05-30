@@ -21,6 +21,8 @@ class PopUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.modalTransitionStyle = .crossDissolve
+        self.modalPresentationStyle = .overCurrentContext
     }
     
     override func viewWillAppear(_ animated: Bool) {
