@@ -98,9 +98,9 @@
 			children = (
 				7268677F205E4B45000CD3FB /* AppDelegate.swift */,
 				72686781205E4B45000CD3FB /* QuizViewController.swift */,
+				72C2572B213D71F9008C95CA /* PopUpViewController.swift */,
 				72D35BD320D4EB7200E7F1B6 /* CountryInfoViewController.swift */,
 				72D35BD520D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift */,
-				72C2572B213D71F9008C95CA /* PopUpViewController.swift */,
 				72686783205E4B45000CD3FB /* Main.storyboard */,
 				72686786205E4B45000CD3FB /* Assets.xcassets */,
 				72686788205E4B45000CD3FB /* LaunchScreen.storyboard */,
