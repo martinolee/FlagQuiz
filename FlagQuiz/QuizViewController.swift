@@ -99,6 +99,8 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
             buttonArray[i].titleLabel?.textAlignment = NSTextAlignment.center
         }
         
+        GADRewardBasedVideoAd.sharedInstance().delegate = self
+        
         bannerView.adUnitID = bannerAdUnitID
         bannerView.rootViewController = self
         
