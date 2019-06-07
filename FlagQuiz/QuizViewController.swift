@@ -99,8 +99,6 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
             buttonArray[i].titleLabel?.textAlignment = NSTextAlignment.center
         }
         
-        GADRewardBasedVideoAd.sharedInstance().delegate = self
-        
         bannerView.adUnitID = bannerAdUnitID
         bannerView.rootViewController = self
         
@@ -349,6 +347,8 @@ extension QuizViewController {
         print("Reward received with currency: \(reward.type), amount \(reward.amount).")
         
         earnLife(life: Int(truncating: reward.amount))
+        
+        dismiss(animated: false, completion: nil)
     }
     
     func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd:GADRewardBasedVideoAd) {
@@ -371,8 +371,6 @@ extension QuizViewController {
         print("Reward based video ad is closed.")
         
         rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
-        
-        dismiss(animated: true, completion: nil)
     }
     
     func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {

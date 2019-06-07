@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class PopUpViewController: UIViewController, GADRewardBasedVideoAdDelegate {
+class PopUpViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
@@ -52,14 +52,6 @@ class PopUpViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         dismiss(animated: true) {
             self.initQuiz()
         }
-    }
-    
-    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
-//        what is the purpose of this func? why I should use this func?
-    }
-    
-    func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-        initQuiz()
     }
     
     func initQuiz() {
