@@ -44,6 +44,8 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     private let difficulty = [[30, 20], [40, 30], [50, 40]]
     private var difficultyLevel = 0
     
+    private var isEarnReward: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -348,7 +350,7 @@ extension QuizViewController {
         
         earnLife(life: Int(truncating: reward.amount))
         
-        dismiss(animated: false, completion: nil)
+        isEarnReward = true
     }
     
     func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd:GADRewardBasedVideoAd) {
@@ -371,6 +373,12 @@ extension QuizViewController {
         print("Reward based video ad is closed.")
         
         rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
+        
+        if isEarnReward {
+            dismiss(animated: true, completion: nil)
+            
+            isEarnReward = false
+        }
     }
     
     func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
