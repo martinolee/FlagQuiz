@@ -22,7 +22,7 @@ class CountryInfoTableViewCell: UITableViewCell {
             flagImageViewHeight.constant = 100
             flagImageViewWidth.constant = 150
         } else if ( UIDevice.current.userInterfaceIdiom == .pad ) {
-            flagImageViewHeight.constant = 150
+            flagImageViewHeight.constant = 200
             flagImageViewWidth.constant = 300
         }
     }
