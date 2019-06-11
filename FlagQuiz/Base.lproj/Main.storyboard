@@ -253,6 +253,10 @@
                         <outlet property="firstLife" destination="Abw-pj-8ZX" id="0dM-nU-Qqh"/>
                         <outlet property="flagImageView" destination="Ttb-c9-IF9" id="oIg-dF-eac"/>
                         <outlet property="fourthLife" destination="3XO-Sr-lNr" id="OJc-X5-cKl"/>
+                        <outlet property="imageViewBottomConstraint" destination="LgW-S9-CLD" id="rLR-GV-C2M"/>
+                        <outlet property="imageViewLeftConstraint" destination="oUb-FY-Q50" id="Yql-PP-2d9"/>
+                        <outlet property="imageViewRightConstraint" destination="7sw-YH-WO8" id="VsA-FG-xWy"/>
+                        <outlet property="imageViewTopConstraint" destination="FMW-KB-NbR" id="uxC-wI-PT9"/>
                         <outlet property="leftBottomButton" destination="HgM-ff-OIW" id="OQD-0N-N21"/>
                         <outlet property="leftTopButton" destination="pC1-nd-XqD" id="JGS-dg-IHi"/>
                         <outlet property="rightBottomButton" destination="Nbz-eW-Oep" id="EaH-ND-jbX"/>

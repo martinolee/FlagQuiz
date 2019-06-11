@@ -14,6 +14,11 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     
     @IBOutlet weak var flagImageView: UIImageView!
     
+    @IBOutlet var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet var imageViewLeftConstraint: NSLayoutConstraint!
+    @IBOutlet var imageViewRightConstraint: NSLayoutConstraint!
+    @IBOutlet var imageViewBottomConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var leftTopButton: UIButton!
     @IBOutlet weak var rightTopButton: UIButton!
     @IBOutlet weak var leftBottomButton: UIButton!
@@ -89,6 +94,18 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         
         scoreLabel.text = "\(score)"
         self.life = lifeArray.count
+        
+        if ( UIDevice.current.userInterfaceIdiom == .phone ) {
+            imageViewTopConstraint.constant = 30
+            imageViewBottomConstraint.constant = 30
+            imageViewLeftConstraint.constant = 40
+            imageViewRightConstraint.constant = 40
+        } else if ( UIDevice.current.userInterfaceIdiom == .pad ) {
+            imageViewTopConstraint.constant = 80
+            imageViewBottomConstraint.constant = 80
+            imageViewLeftConstraint.constant = 100
+            imageViewRightConstraint.constant = 100
+        }
         
         makeQuestion()
         textFitInButton()
