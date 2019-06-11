@@ -12,9 +12,19 @@ class CountryInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var countryNameLabel: UILabel!
     
+    @IBOutlet var flagImageViewHeight: NSLayoutConstraint!
+    @IBOutlet var flagImageViewWidth: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        if ( UIDevice.current.userInterfaceIdiom == .phone ) {
+            flagImageViewHeight.constant = 100
+            flagImageViewWidth.constant = 150
+        } else if ( UIDevice.current.userInterfaceIdiom == .pad ) {
+            flagImageViewHeight.constant = 150
+            flagImageViewWidth.constant = 300
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

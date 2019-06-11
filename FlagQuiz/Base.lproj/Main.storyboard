@@ -415,6 +415,8 @@
                                         <connections>
                                             <outlet property="countryNameLabel" destination="RJj-ej-ToN" id="6YG-zh-iCG"/>
                                             <outlet property="flagImageView" destination="Itn-Ph-GCv" id="eCA-bi-npB"/>
+                                            <outlet property="flagImageViewHeight" destination="IOs-WM-vSh" id="1Fw-3j-lO6"/>
+                                            <outlet property="flagImageViewWidth" destination="O3a-pt-sHL" id="45N-YJ-VyI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
