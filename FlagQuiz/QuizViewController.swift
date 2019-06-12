@@ -127,6 +127,8 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         rewardBaseAd.delegate = self
         
         rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
+        
+        UpdateModule.run(updateType: .normal)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
