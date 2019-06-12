@@ -13,6 +13,15 @@
 "Level Up" = "难度上升";
 "Continue" = "继续";
 
+"Error" = "错误";
+"Ad did not load" = "广告没有加载";
+"OK" = "确认";
+
+"Update Available" = "可用更新";
+"A new version Application is available." = "新版应用程序可用。";
+"Update" = "更新";
+"Next Time" = "下次";
+
 "Afghanistan" = "阿富汗";
 "Albania" = "阿尔巴尼亚";
 "Algeria" = "阿尔及利亚";

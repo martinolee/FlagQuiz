@@ -13,6 +13,15 @@
 "Level Up" = "レベルアップ";
 "Continue" = "続行する";
 
+"Error" = "エラー";
+"Ad did not load" = "広告が読み込まれませんでした";
+"OK" = "確認";
+
+"Update Available" = "利用可能なアップデート";
+"A new version Application is available." = "新しいバージョンのアプリケーションが利用可能です。";
+"Update" = "更新";
+"Next Time" = "次回";
+
 "Afghanistan" = "アフガニスタン";
 "Albania" = "アルバニア";
 "Algeria" = "アルジェリア";
