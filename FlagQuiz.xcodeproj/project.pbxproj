@@ -164,6 +164,7 @@
 				Base,
 				ja,
 				"zh-Hans",
+				ko,
 			);
 			mainGroup = 72686773205E4B45000CD3FB;
 			productRefGroup = 7268677D205E4B45000CD3FB /* Products */;
