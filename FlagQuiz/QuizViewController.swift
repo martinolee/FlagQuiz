@@ -82,12 +82,10 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         
         for sensitiveCountry in sensitiveCountrys {
             if sensitiveCountry.key == currentLanguage {
-                print("\(sensitiveCountry.key): \(sensitiveCountry.value)")
-                
-                for exclusionCountry in sensitiveCountry.value {
+                for exceptionCountry in sensitiveCountry.value {
                     for flag in flagInfo {
-                        if flag.name == exclusionCountry {
-                            
+                        if flag.name == exceptionCountry {
+                            flagInfo = flagInfo.filter { $0 != flag }
                         }
                     }
                 }
