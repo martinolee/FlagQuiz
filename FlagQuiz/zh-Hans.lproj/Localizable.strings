@@ -7,18 +7,18 @@
 */
 
 "Restart" = "重新开始";
-"Correct" = "答案";
-"Wrong" = "错误的答案";
-"Point" = "点";
-"Level Up" = "难度上升";
+"Correct" = "正确";
+"Wrong" = "错误";
+"Point" = "分";
+"Level Up" = "升级";
 "Continue" = "继续";
 
-"Error" = "错误";
-"Ad did not load" = "广告没有加载";
+"Error" = "出错";
+"Ad did not load" = "不能加载广告";
 "OK" = "确认";
 
-"Update Available" = "可用更新";
-"A new version Application is available." = "新版应用程序可用。";
+"Update Available" = "可以更新";
+"A new version Application is available." = "有新版本的应用程序可用。";
 "Update" = "更新";
 "Next Time" = "下次";
 
@@ -205,7 +205,7 @@
 "Tonga" = "汤加";
 "Trinidad and Tobago" = "特立尼达和多巴哥";
 "Tunisia" = "突尼斯";
-"Turkey" = "火鸡";
+"Turkey" = "土耳其";
 "Turkmenistan" = "土库曼斯坦";
 "Tuvalu" = "图瓦卢";
 "Uganda" = "乌干达";
