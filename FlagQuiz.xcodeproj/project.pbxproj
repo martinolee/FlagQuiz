@@ -39,6 +39,8 @@
 		72686789205E4B45000CD3FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7268678B205E4B45000CD3FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72686791205E5820000CD3FB /* CountryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryList.swift; sourceTree = "<group>"; };
+		728974E422C2497B003704C8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		728974E522C2498D003704C8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		729746A622BD065700ADE2B4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		72AA056721C14E4C00439151 /* AdvertisingIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisingIdentifier.swift; sourceTree = "<group>"; };
 		72AF36A82153B90C00A40B55 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -167,6 +169,8 @@
 				"zh-Hans",
 				ko,
 				ar,
+				"zh-Hant",
+				ru,
 			);
 			mainGroup = 72686773205E4B45000CD3FB;
 			productRefGroup = 7268677D205E4B45000CD3FB /* Products */;
@@ -257,6 +261,8 @@
 				720738A22197256C008004FE /* ja */,
 				722B7AF82198612200826012 /* zh-Hans */,
 				729746A622BD065700ADE2B4 /* ar */,
+				728974E422C2497B003704C8 /* zh-Hant */,
+				728974E522C2498D003704C8 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
