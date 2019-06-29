@@ -92,6 +92,8 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
             }
         }
         
+        print(currentLanguage)
+        
         buttonArray.append(leftTopButton)
         buttonArray.append(rightTopButton)
         buttonArray.append(leftBottomButton)
