@@ -66,6 +66,9 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         // csv 파일 열 제목 삭제
         lines.remove(at: 0)
         
+        // 마지막 빈 배열 삭제
+        lines.remove(at: lines.count - 1)
+        
         for line in lines {
             let column = line.components(separatedBy: ",")
             flagInfo.append(FlagInfo(name: column[0], imageName: column[1], GDP: Int(column[3]) ?? -1, area: Int(column[4]) ?? -1, difficulty: 0))
