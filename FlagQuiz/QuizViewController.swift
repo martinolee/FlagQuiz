@@ -36,6 +36,7 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     @IBOutlet weak var correctOrIncorrectLabel: UILabel!
     
     @IBOutlet var difficultyNotificationView: UIView!
+    @IBOutlet var difficultyLabel: UILabel!
     
     @IBOutlet var bannerView: GADBannerView!
     var rewardBaseAd: GADRewardBasedVideoAd!
@@ -107,6 +108,7 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         
         correctOrIncorrectView.alpha = 0
         
+        difficultyLabel.text = NSLocalizedString("Level Up", comment: "")
         difficultyNotificationView.alpha = 0
         
         scoreLabel.text = "\(score)"
