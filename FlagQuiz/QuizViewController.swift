@@ -55,7 +55,7 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     private let currentLanguage = Locale.current.languageCode
     private let sensitiveCountrys = ["": [""]]
     
-//    "zh": ["Taiwan", "Hong Kong", "Macau"], "ar": ["Israel"] hold back
+//    "zh": ["Hong Kong", "Macau"], "ar": ["Israel"] hold back
     
     override func viewDidLoad() {
         super.viewDidLoad()
