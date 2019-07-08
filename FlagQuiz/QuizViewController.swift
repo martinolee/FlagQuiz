@@ -52,11 +52,6 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     
     private var isEarnReward: Bool = false
     
-    private let currentLanguage = Locale.current.languageCode
-    private let sensitiveCountrys = ["": [""]]
-    
-//    "zh": ["Hong Kong", "Macau"], "ar": ["Israel"] hold back
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,18 +80,6 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
             flagInfo[i].difficulty = flagInfo[i].difficulty + i
         }
         flagInfo = flagInfo.sorted(by: { $0.difficulty < $1.difficulty })
-        
-        for sensitiveCountry in sensitiveCountrys {
-            if sensitiveCountry.key == currentLanguage {
-                for exceptionCountry in sensitiveCountry.value {
-                    for flag in flagInfo {
-                        if flag.name == exceptionCountry {
-                            flagInfo = flagInfo.filter { $0 != flag }
-                        }
-                    }
-                }
-            }
-        }
         
         buttonArray.append(leftTopButton)
         buttonArray.append(rightTopButton)
