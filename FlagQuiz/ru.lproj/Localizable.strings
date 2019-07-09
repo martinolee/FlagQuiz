@@ -7,9 +7,9 @@
 */
 
 "Restart" = "Запустить снова";
-"Correct" = "Правильный";
+"Correct" = "Правильно";
 "Wrong" = "Неправильно";
-"Point" = "точка";
+"Point" = "Точка";
 "Level Up" = "Уровень повышен";
 "Continue" = "Продолжить";
 
@@ -25,7 +25,7 @@
 "Afghanistan" = "Афганистан";
 "Albania" = "Албания";
 "Algeria" = "Алжир";
-"Andorra" = "андорра";
+"Andorra" = "Андорра";
 "Angola" = "Ангола";
 "Antigua and Barbuda" = "Антигуа и Барбуда";
 "Argentina" = "Аргентина";
@@ -185,7 +185,7 @@
 "Somalia" = "Сомали";
 "South Africa" = "Южная Африка";
 "South Korea" = "Южная Корея";
-"South Sudan" = "южный Судан";
+"South Sudan" = "Южный Судан";
 "Spain" = "Испания";
 "Sri Lanka" = "Шри-Ланка";
 "St. Kitts and Nevis" = "Сент-Китс и Невис";
@@ -211,7 +211,7 @@
 "Uganda" = "Уганда";
 "Ukraine" = "Украина";
 "United Arab Emirates" = "Объединенные Арабские Эмираты";
-"United Kingdom" = "Объединенное Королевство";
+"United Kingdom" = "Объединенное Королевство Великобритании";
 "United States" = "Соединенные Штаты";
 "Uruguay" = "Уругвай";
 "Uzbekistan" = "Узбекистан";
