@@ -52,6 +52,8 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     
     private var isEarnReward: Bool = false
     
+    private let currentLanguage = Locale.current.languageCode!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
