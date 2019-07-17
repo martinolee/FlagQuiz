@@ -52,8 +52,6 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     
     private var isEarnReward: Bool = false
     
-    private let languageList = ["ko", "zh-Hant", "ja", "zh-Hans", "ar", "ru"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,6 +80,28 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
             flagInfo[i].difficulty = flagInfo[i].difficulty + i
         }
         flagInfo = flagInfo.sorted(by: { $0.difficulty < $1.difficulty })
+        
+        let languageList = ["ko": "South Korea",
+                            "zh-Hant": "Taiwan",
+                            "ja": "Japan",
+                            "zh-Hans": "China",
+                            "ar": "Saudi Arabia",
+                            "ru": "Russia"]
+        
+        for language in languageList {
+            if getCurrentLanguage() == language.key {
+                for i in 0 ..< flagInfo.count {
+                    if flagInfo[i].name == language.value {
+                        flagInfo.insert(flagInfo[i], at: 0)
+                        flagInfo.remove(at: i + 1)
+                    }
+                }
+            }
+        }
+        
+        for i in 0 ..< flagInfo.count {
+            print("\(i). \(flagInfo[i].name)")
+        }
         
         buttonArray.append(leftTopButton)
         buttonArray.append(rightTopButton)
