@@ -99,10 +99,6 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
             }
         }
         
-        for i in 0 ..< flagInfo.count {
-            print("\(i). \(flagInfo[i].name)")
-        }
-        
         buttonArray.append(leftTopButton)
         buttonArray.append(rightTopButton)
         buttonArray.append(leftBottomButton)
