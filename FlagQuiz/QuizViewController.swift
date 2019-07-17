@@ -52,7 +52,7 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     
     private var isEarnReward: Bool = false
     
-    private let currentLanguage = Locale.current.languageCode!
+    private let languageList = ["ko", "zh-Hant", "ja", "zh-Hans", "ar", "ru"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -143,6 +143,12 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         coordinator.animateAlongsideTransition(in: nil, animation: nil) { _ in
             self.textFitInButton()
         }
+    }
+    
+    func getCurrentLanguage() -> String {
+        let languages = NSLocale.preferredLanguages
+        let currentLanguage = languages[0]
+        return currentLanguage
     }
     
     func initQuiz() {
