@@ -23,7 +23,7 @@ class CountryInfoViewController: UIViewController {
         
         searchController.obscuresBackgroundDuringPresentation = false
         
-        searchController.searchBar.autocapitalizationType = .none
+        searchController.searchBar.autocapitalizationType = .sentences
         
         searchController.searchBar.delegate = self
         
