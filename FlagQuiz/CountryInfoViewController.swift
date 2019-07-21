@@ -85,7 +85,7 @@ extension CountryInfoViewController: UISearchBarDelegate {
         for i in 0..<countrys.count {
             let countryName = countrys[i].trimmingCharacters(in: .whitespaces).lowercased()
             
-            tempFlagInfo = flagInfo.filter { $0.name.lowercased().contains(countryName) || NSLocalizedString($0.name, comment: "").contains(countryName) }
+            tempFlagInfo = flagInfo.filter { $0.name.lowercased().contains(countryName) || NSLocalizedString($0.name, comment: "").lowercased().contains(countryName) }
             
             if !tempFlagInfo.isEmpty {
                 for j in 0..<tempFlagInfo.count {
