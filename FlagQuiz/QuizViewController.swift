@@ -115,6 +115,10 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         difficultyLabel.text = NSLocalizedString("Level Up", comment: "")
         difficultyNotificationView.alpha = 0
         
+        if getCurrentLanguage() == "ru" {
+            difficultyLabel.font = difficultyLabel.font.withSize(35)
+        }
+        
         scoreLabel.text = "\(score)"
         self.life = lifeArray.count
         

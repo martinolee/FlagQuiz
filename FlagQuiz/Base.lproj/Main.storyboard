@@ -196,10 +196,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-dn-pyd">
-                                <rect key="frame" x="52.666666666666657" y="217" width="270" height="100"/>
+                                <rect key="frame" x="71.000000000000014" y="217" width="233.33333333333337" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cV-wh-MmV">
-                                        <rect key="frame" x="38" y="17" width="194" height="66"/>
+                                        <rect key="frame" x="20" y="10" width="193.33333333333334" height="60"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -207,11 +207,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="5cV-wh-MmV" secondAttribute="bottom" constant="17" id="H4e-ZB-Trm"/>
-                                    <constraint firstAttribute="height" constant="100" id="LTn-OM-C6E"/>
-                                    <constraint firstAttribute="width" constant="270" id="Z0o-ek-9xI"/>
-                                    <constraint firstItem="5cV-wh-MmV" firstAttribute="top" secondItem="gdP-dn-pyd" secondAttribute="top" constant="17" id="p56-2b-Jxa"/>
+                                    <constraint firstAttribute="bottom" secondItem="5cV-wh-MmV" secondAttribute="bottom" constant="10" id="H4e-ZB-Trm"/>
+                                    <constraint firstItem="5cV-wh-MmV" firstAttribute="leading" secondItem="gdP-dn-pyd" secondAttribute="leading" constant="20" id="Kea-Qc-PtL"/>
+                                    <constraint firstItem="5cV-wh-MmV" firstAttribute="top" secondItem="gdP-dn-pyd" secondAttribute="top" constant="10" id="p56-2b-Jxa"/>
                                     <constraint firstItem="5cV-wh-MmV" firstAttribute="centerX" secondItem="gdP-dn-pyd" secondAttribute="centerX" id="qb2-3X-SkV"/>
+                                    <constraint firstAttribute="trailing" secondItem="5cV-wh-MmV" secondAttribute="trailing" constant="20" id="zmB-P0-e5K"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
