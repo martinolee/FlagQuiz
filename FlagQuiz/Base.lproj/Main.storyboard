@@ -310,7 +310,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvh-ci-ywz">
-                                        <rect key="frame" x="55" y="36.5" width="130" height="67"/>
+                                        <rect key="frame" x="8" y="36.5" width="224" height="67"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="56"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -320,6 +320,8 @@
                                 <constraints>
                                     <constraint firstItem="B45-1M-3FY" firstAttribute="centerX" secondItem="lRm-om-o0k" secondAttribute="centerX" id="Fq2-m9-I4Q"/>
                                     <constraint firstItem="Vvh-ci-ywz" firstAttribute="centerY" secondItem="lRm-om-o0k" secondAttribute="centerY" constant="-40" id="FtO-Rz-ZA4"/>
+                                    <constraint firstItem="Vvh-ci-ywz" firstAttribute="leading" secondItem="lRm-om-o0k" secondAttribute="leading" constant="8" id="H2n-i0-Zct"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vvh-ci-ywz" secondAttribute="trailing" constant="8" id="IvH-QR-H7P"/>
                                     <constraint firstItem="Vvh-ci-ywz" firstAttribute="centerX" secondItem="lRm-om-o0k" secondAttribute="centerX" id="Ugx-q8-vNx"/>
                                     <constraint firstItem="9PW-Rm-Dgg" firstAttribute="centerY" secondItem="lRm-om-o0k" secondAttribute="centerY" constant="30" id="VbO-1Q-k6q"/>
                                     <constraint firstItem="9PW-Rm-Dgg" firstAttribute="centerX" secondItem="lRm-om-o0k" secondAttribute="centerX" id="axC-CT-iJh"/>
@@ -397,7 +399,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJj-ej-ToN">
-                                                    <rect key="frame" x="173" y="54.5" width="218" height="20.5"/>
+                                                    <rect key="frame" x="173" y="54.5" width="179" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
