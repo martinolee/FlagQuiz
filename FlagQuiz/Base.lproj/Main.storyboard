@@ -343,6 +343,7 @@
                     </view>
                     <connections>
                         <outlet property="continueButton" destination="9PW-Rm-Dgg" id="yWm-vs-CXH"/>
+                        <outlet property="popupViewWidth" destination="l32-fH-ERr" id="q22-wJ-xEw"/>
                         <outlet property="restartButton" destination="B45-1M-3FY" id="WPU-9m-z7L"/>
                         <outlet property="scoreLabel" destination="Vvh-ci-ywz" id="nkC-2r-FIJ"/>
                     </connections>

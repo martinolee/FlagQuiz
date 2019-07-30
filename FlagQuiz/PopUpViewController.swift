@@ -16,6 +16,8 @@ class PopUpViewController: UIViewController {
     @IBOutlet var restartButton: UIButton!
     @IBOutlet var continueButton: UIButton!
     
+    @IBOutlet var popupViewWidth: NSLayoutConstraint!
+    
     var viewController: QuizViewController! =  QuizViewController()
 
     override func viewDidLoad() {
@@ -32,6 +34,11 @@ class PopUpViewController: UIViewController {
         
         restartButton.setTitle(NSLocalizedString("Restart", comment: ""), for: .normal)
         continueButton.setAttributedTitle(NSAttributedString(string: NSLocalizedString("Continue", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
+        
+//        print("label width: \(), popup width: \(popupViewWidth.constant)")
+//        fitTextInLabel()
+//        print("label width: \(), popup width: \(popupViewWidth.constant)")
+        
     }
     
     @IBAction func continueGame(_ sender: Any) {
@@ -61,6 +68,21 @@ class PopUpViewController: UIViewController {
         self.viewController?.makeQuestion()
         self.viewController?.textFitInButton()
         self.viewController?.setDefaultButtonStyle()
+    }
+    
+    func fitTextInLabel() {
+        if let title = scoreLabel.text, var font = scoreLabel.font {
+            var fontSize: CGFloat = 56
+            var attr = [NSAttributedString.Key.font: font]
+            repeat {
+                fontSize = fontSize - 1
+                scoreLabel.font = UIFont.systemFont(ofSize: fontSize, weight: .ultraLight)
+                font = (scoreLabel.font)!
+                attr = [NSAttributedString.Key.font: font]
+                
+            } while title.size(withAttributes: attr).width > popupViewWidth.constant
+        }
+        
     }
     
 }

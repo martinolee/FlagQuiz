@@ -388,7 +388,7 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
                     font = (buttonArray[i].titleLabel?.font)!
                     attr = [NSAttributedString.Key.font: font]
                     
-                } while UIScreen.main.bounds.size.width/2 - 40 < (title as NSString).size(withAttributes: attr).width && fontSize > 24
+                } while (UIScreen.main.bounds.size.width/2 - 40) < ((title as NSString).size(withAttributes: attr).width) && (fontSize > 24)
             }
         }
     }
