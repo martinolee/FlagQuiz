@@ -210,7 +210,6 @@
                                     <constraint firstAttribute="bottom" secondItem="5cV-wh-MmV" secondAttribute="bottom" constant="10" id="H4e-ZB-Trm"/>
                                     <constraint firstItem="5cV-wh-MmV" firstAttribute="leading" secondItem="gdP-dn-pyd" secondAttribute="leading" constant="20" id="Kea-Qc-PtL"/>
                                     <constraint firstItem="5cV-wh-MmV" firstAttribute="top" secondItem="gdP-dn-pyd" secondAttribute="top" constant="10" id="p56-2b-Jxa"/>
-                                    <constraint firstItem="5cV-wh-MmV" firstAttribute="centerX" secondItem="gdP-dn-pyd" secondAttribute="centerX" id="qb2-3X-SkV"/>
                                     <constraint firstAttribute="trailing" secondItem="5cV-wh-MmV" secondAttribute="trailing" constant="20" id="zmB-P0-e5K"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
