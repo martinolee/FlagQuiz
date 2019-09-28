@@ -18,7 +18,7 @@ class PopUpViewController: UIViewController {
     
     @IBOutlet var popupViewWidth: NSLayoutConstraint!
     
-    var viewController: QuizViewController! =  QuizViewController()
+    var viewController: FlagQuizViewController! =  FlagQuizViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +66,7 @@ class PopUpViewController: UIViewController {
         self.viewController?.initLife()
         self.viewController?.initQuiz()
         self.viewController?.makeQuestion()
+        self.viewController?.displayQuestion()
         self.viewController?.textFitInButton()
         self.viewController?.setDefaultButtonStyle()
     }
