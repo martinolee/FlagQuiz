@@ -10,21 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="6n4-qB-2Vy">
-            <objects>
-                <viewController id="ssv-Oc-9Nq" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aBb-Z4-ZRo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="D7T-Sq-8Sr"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jUL-yk-J67" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1623" y="-237"/>
-        </scene>
         <!--Quiz-->
         <scene sceneID="tne-QT-ifu">
             <objects>

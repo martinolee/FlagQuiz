@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4D5A7DC06DA7BFFB69A8496C /* Pods_FlagQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01DE727CED756C46749E530 /* Pods_FlagQuiz.framework */; };
+		720FD22A233E241C004DD93C /* FlagQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720FD229233E241C004DD93C /* FlagQuizViewController.swift */; };
+		720FD22C233E24A0004DD93C /* NameQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720FD22B233E24A0004DD93C /* NameQuizViewController.swift */; };
 		724DA447212D9746000A96B2 /* AnimUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724DA446212D9746000A96B2 /* AnimUtils.swift */; };
 		7258696E22AFECB200552DBA /* UpdatePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7258696D22AFECB200552DBA /* UpdatePopup.swift */; };
 		72686780205E4B45000CD3FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7268677F205E4B45000CD3FB /* AppDelegate.swift */; };
@@ -28,6 +30,8 @@
 		41B78FC6E82EA0E00A0913D8 /* Pods-FlagQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlagQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlagQuiz/Pods-FlagQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		622D8E8EB3158074DA7CCCB6 /* Pods-FlagQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlagQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlagQuiz/Pods-FlagQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		720738A22197256C008004FE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		720FD229233E241C004DD93C /* FlagQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagQuizViewController.swift; sourceTree = "<group>"; };
+		720FD22B233E24A0004DD93C /* NameQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizViewController.swift; sourceTree = "<group>"; };
 		722B7AF82198612200826012 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		724DA446212D9746000A96B2 /* AnimUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimUtils.swift; sourceTree = "<group>"; };
 		7258696D22AFECB200552DBA /* UpdatePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePopup.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 			children = (
 				7268677F205E4B45000CD3FB /* AppDelegate.swift */,
 				72686781205E4B45000CD3FB /* QuizViewController.swift */,
+				720FD229233E241C004DD93C /* FlagQuizViewController.swift */,
+				720FD22B233E24A0004DD93C /* NameQuizViewController.swift */,
 				72C2572B213D71F9008C95CA /* PopUpViewController.swift */,
 				72D35BD320D4EB7200E7F1B6 /* CountryInfoViewController.swift */,
 				72D35BD520D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift */,
@@ -223,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720FD22C233E24A0004DD93C /* NameQuizViewController.swift in Sources */,
 				7258696E22AFECB200552DBA /* UpdatePopup.swift in Sources */,
 				724DA447212D9746000A96B2 /* AnimUtils.swift in Sources */,
 				72686782205E4B45000CD3FB /* QuizViewController.swift in Sources */,
+				720FD22A233E241C004DD93C /* FlagQuizViewController.swift in Sources */,
 				72C2572C213D71F9008C95CA /* PopUpViewController.swift in Sources */,
 				72D35BD620D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift in Sources */,
 				72D35BD420D4EB7200E7F1B6 /* CountryInfoViewController.swift in Sources */,
