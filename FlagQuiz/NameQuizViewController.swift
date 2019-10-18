@@ -14,10 +14,10 @@ class NameQuizViewController: QuizViewController {
     
     @IBOutlet weak var countryNameLabel: UILabel!
     
-    @IBOutlet weak var leftTopButton: UIButton!
-    @IBOutlet weak var rightTopButton: UIButton!
-    @IBOutlet weak var leftBottomButton: UIButton!
-    @IBOutlet weak var rightBottomButton: UIButton!
+    @IBOutlet weak var flagLeftTopButton: UIButton!
+    @IBOutlet weak var flagRightTopButton: UIButton!
+    @IBOutlet weak var flagLeftBottomButton: UIButton!
+    @IBOutlet weak var flagRightBottomButton: UIButton!
     
     @IBOutlet weak var firstLife: UIImageView!
     @IBOutlet weak var secondLife: UIImageView!
