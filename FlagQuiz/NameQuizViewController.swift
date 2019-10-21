@@ -38,16 +38,27 @@ class NameQuizViewController: QuizViewController {
     
     @IBOutlet var bannerView: GADBannerView!
     
-    override func displayQuestion() {
-        print("NameQuizViewController.displayQuestion()")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        buttonArray.append(flagLeftTopButton)
+        buttonArray.append(flagRightTopButton)
+        buttonArray.append(flagLeftBottomButton)
+        buttonArray.append(flagRightBottomButton)
+        
+        displayQuestion()
         
         bannerView.adUnitID = bannerAdUnitID
         bannerView.rootViewController = self
         
         bannerView.load(GADRequest())
+    }
+    
+    override func displayQuestion() {
+        print("NameQuizViewController.displayQuestion()")
+        
+        for i in 0...3 {
+            buttonArray[i].imageView?.image = UIImage(named: flagInfo[quizList[currentQuizIndex].example[i]].imageName)
+        }
     }
 }
