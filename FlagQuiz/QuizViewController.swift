@@ -11,6 +11,7 @@ import AudioToolbox
 import GoogleMobileAds
 
 private let maxLifeCount = 5
+var isConfiged:Bool = false
 
 class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {   
     
@@ -27,6 +28,37 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setConfig()
+        
+        makeQuestion()
+        
+        UIView.appearance().isExclusiveTouch = true
+    }
+    
+    func setConfig() {
+        
+        if(!isConfiged) {
+
+            initFlagInfo()
+            
+            makeLangaugeList()
+            
+            rewardBaseAd = GADRewardBasedVideoAd.sharedInstance()
+            rewardBaseAd.delegate = self
+            
+            rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
+            
+            isConfiged = !isConfiged
+        }
+    }
+    
+    func getCurrentLanguage() -> String {
+        let languages = NSLocale.preferredLanguages
+        let currentLanguage = languages[0]
+        return currentLanguage
+    }
+    
+    func initFlagInfo() {
         let path = Bundle.main.path(forResource: "CountryList", ofType: "csv")
         let url = URL(fileURLWithPath: path!)
         let countryList = try! NSString(contentsOf: url, encoding: String.Encoding.utf8.rawValue)
@@ -52,39 +84,6 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
             flagInfo[i].difficulty = flagInfo[i].difficulty + i
         }
         flagInfo = flagInfo.sorted(by: { $0.difficulty < $1.difficulty })
-        
-        let languageList = ["ko": "South Korea",
-                            "zh-Hant": "Taiwan",
-                            "ja": "Japan",
-                            "zh-Hans": "China",
-                            "ar": "Saudi Arabia",
-                            "ru": "Russia"]
-        
-        for language in languageList {
-            if getCurrentLanguage() == language.key {
-                for i in 0 ..< flagInfo.count {
-                    if flagInfo[i].name == language.value {
-                        flagInfo.insert(flagInfo[i], at: 0)
-                        flagInfo.remove(at: i + 1)
-                    }
-                }
-            }
-        }
-        
-        rewardBaseAd = GADRewardBasedVideoAd.sharedInstance()
-        rewardBaseAd.delegate = self
-        
-        rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
-        
-        makeQuestion()
-        
-        UIView.appearance().isExclusiveTouch = true
-    }
-    
-    func getCurrentLanguage() -> String {
-        let languages = NSLocale.preferredLanguages
-        let currentLanguage = languages[0]
-        return currentLanguage
     }
     
     func initQuiz() {
@@ -106,6 +105,26 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     
     func earnLife(life: Int) {
         self.life = life
+    }
+    
+    func makeLangaugeList() {
+        let languageList = ["ko": "South Korea",
+                            "zh-Hant": "Taiwan",
+                            "ja": "Japan",
+                            "zh-Hans": "China",
+                            "ar": "Saudi Arabia",
+                            "ru": "Russia"]
+        
+        for language in languageList {
+            if getCurrentLanguage() == language.key {
+                for i in 0 ..< flagInfo.count {
+                    if flagInfo[i].name == language.value {
+                        flagInfo.insert(flagInfo[i], at: 0)
+                        flagInfo.remove(at: i + 1)
+                    }
+                }
+            }
+        }
     }
     
 
