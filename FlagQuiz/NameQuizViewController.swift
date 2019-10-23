@@ -46,6 +46,10 @@ class NameQuizViewController: QuizViewController {
         buttonArray.append(flagLeftBottomButton)
         buttonArray.append(flagRightBottomButton)
         
+        for i in 0...3 {
+            buttonArray[i].imageView?.contentMode = UIView.ContentMode.scaleAspectFit
+        }
+        
         displayQuestion()
         
         bannerView.adUnitID = bannerAdUnitID
@@ -57,8 +61,12 @@ class NameQuizViewController: QuizViewController {
     override func displayQuestion() {
         print("NameQuizViewController.displayQuestion()")
         
+        countryNameLabel.text = flagInfo[quizList[currentQuizIndex].example[quizList[currentQuizIndex].correctAnswerIndex]].name
+        
         for i in 0...3 {
-            buttonArray[i].imageView?.image = UIImage(named: flagInfo[quizList[currentQuizIndex].example[i]].imageName)
+            buttonArray[i].setImage(UIImage(named: flagInfo[quizList[currentQuizIndex].example[i]].imageName), for: .normal)
         }
+        
+        
     }
 }
