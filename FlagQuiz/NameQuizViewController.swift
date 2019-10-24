@@ -46,6 +46,21 @@ class NameQuizViewController: QuizViewController {
         buttonArray.append(flagLeftBottomButton)
         buttonArray.append(flagRightBottomButton)
         
+        lifeArray.append(fifthLife)
+        lifeArray.append(secondLife)
+        lifeArray.append(thirdLife)
+        lifeArray.append(fourthLife)
+        lifeArray.append(fifthLife)
+        
+        correctOrIncorrectView.alpha = 0
+        
+        difficultyLabel.text = NSLocalizedString("Level Up", comment: "")
+        difficultyNotificationView.alpha = 0
+        
+        self.life = lifeArray.count
+        
+        scoreLabel.text = "\(score)"
+        
         for i in 0...3 {
             buttonArray[i].imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         }
@@ -66,7 +81,81 @@ class NameQuizViewController: QuizViewController {
         for i in 0...3 {
             buttonArray[i].setImage(UIImage(named: flagInfo[quizList[currentQuizIndex].example[i]].imageName), for: .normal)
         }
-        
-        
     }
+    
+    override func showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor, message: String) {
+        correctOrIncorrectLabel.text = message
+        correctOrIncorrectView.backgroundColor = backgroundColor
+        UIView.animate(withDuration: 0.3) {
+            self.correctOrIncorrectView.alpha = 1
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.correctOrIncorrectView.alpha = 0
+            })
+        }
+    }
+    
+    func setDefaultButtonStyle() {
+        for i in 0...3 {
+            buttonArray[i].isEnabled = true
+        }
+    }
+    
+    @IBAction func onTouchUpInside(_ btn: UIButton) {
+        let isCorrect = checkAnswer(selectedButtonTag: btn.tag)
+        
+        if isCorrect {
+            for i in 0...3 {
+                buttonArray[i].isEnabled = false
+            }
+            for i in 0...3 {
+                buttonArray[i].setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.4), for: .disabled)
+            }
+            btn.setTitleColor(UIColor.blue, for: .disabled)
+            
+            Vibration.success.vibrate()
+            
+            score += 1
+            
+            scoreLabel.text = "\(score)"
+            
+            showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor(red: 80/255, green: 80/255, blue: 255/255, alpha: 1), message: NSLocalizedString("Correct", comment: ""))
+            
+            if score % 10 == 0 {
+                popupShowAfterHide(popupView: difficultyNotificationView, duration: 0.3)
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.makeQuestion()
+                self.displayQuestion()
+                self.setDefaultButtonStyle()
+            }
+            
+        } else {
+            btn.isEnabled = false
+            btn.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.4), for: .disabled)
+            
+            Vibration.error.vibrate()
+            
+            life -= 1
+            
+            showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor(red: 255/255, green: 80/255, blue: 80/255, alpha: 1), message: NSLocalizedString("Wrong", comment: ""))
+            
+            UIView.animate(withDuration: 0.3) {
+                self.lifeArray[self.life].alpha = 0
+            }
+            
+            let isDie = life == 0 ? true : false
+            
+            if isDie {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let popUpView = storyboard.instantiateViewController(withIdentifier: "popUp") as! PopUpViewController
+                
+                self.present(popUpView, animated: true, completion: nil)
+            }
+        }
+    }
+    
 }

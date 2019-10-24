@@ -596,18 +596,30 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B31-g4-7fa">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="122"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTouchUpInside:" destination="zkE-vG-AIB" eventType="touchUpInside" id="GMH-1g-S2O"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1B-PK-2uf">
+                                    <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1B-PK-2uf">
                                         <rect key="frame" x="0.0" y="122" width="187.5" height="121.5"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTouchUpInside:" destination="zkE-vG-AIB" eventType="touchUpInside" id="RpJ-cr-MEg"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHL-oZ-Ihd">
+                                    <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHL-oZ-Ihd">
                                         <rect key="frame" x="187.5" y="122" width="187.5" height="121.5"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTouchUpInside:" destination="zkE-vG-AIB" eventType="touchUpInside" id="3Sm-K1-8nz"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZv-OQ-dtf">
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZv-OQ-dtf">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="122"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTouchUpInside:" destination="zkE-vG-AIB" eventType="touchUpInside" id="fSX-gF-654"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHz-R2-VSP">
                                         <rect key="frame" x="0.0" y="122" width="375" height="0.0"/>
