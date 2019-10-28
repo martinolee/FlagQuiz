@@ -93,6 +93,7 @@ class PopUpViewController: UIViewController {
             self.nameViewController?.initQuiz()
             self.nameViewController?.makeQuestion()
             self.nameViewController?.displayQuestion()
+            self.nameViewController.fitTextInButton()
             self.nameViewController.initButtons(array: nameViewController.buttonArray)
         }
 

@@ -66,6 +66,7 @@ class NameQuizViewController: QuizViewController {
         }
         
         displayQuestion()
+        fitTextInButton()
         
         bannerView.adUnitID = bannerAdUnitID
         bannerView.rootViewController = self
@@ -134,6 +135,7 @@ class NameQuizViewController: QuizViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.makeQuestion()
                 self.displayQuestion()
+                self.fitTextInButton()
                 self.initButtons(array: self.buttonArray)
             }
             
@@ -161,6 +163,15 @@ class NameQuizViewController: QuizViewController {
                 self.present(popUpView, animated: true, completion: nil)
             }
         }
+    }
+    
+    func fitTextInButton() {
+        var fontSize: CGFloat = 100
+        let border: CGFloat = 40
+        repeat {
+            fontSize -= 1
+            countryNameLabel.font = countryNameLabel.font.withSize(fontSize)
+        } while countryNameLabel.textWidth() + border > UIScreen.main.bounds.width
     }
     
 }
