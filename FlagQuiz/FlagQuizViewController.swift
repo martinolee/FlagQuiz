@@ -106,8 +106,6 @@ class FlagQuizViewController: QuizViewController {
     }
     
     override func displayQuestion() {
-        print("FlagQuizViewController.displayQuestion()")
-        
         flagImageView.image = UIImage(named: flagInfo[quizList[currentQuizIndex].example[quizList[currentQuizIndex].correctAnswerIndex]].imageName)
         
         for i in 0...3 {

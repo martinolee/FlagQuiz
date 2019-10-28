@@ -74,8 +74,6 @@ class NameQuizViewController: QuizViewController {
     }
     
     override func displayQuestion() {
-        print("NameQuizViewController.displayQuestion()")
-        
         countryNameLabel.text = flagInfo[quizList[currentQuizIndex].example[quizList[currentQuizIndex].correctAnswerIndex]].name
         
         for i in 0...3 {
