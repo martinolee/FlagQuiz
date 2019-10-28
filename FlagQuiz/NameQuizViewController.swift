@@ -46,7 +46,7 @@ class NameQuizViewController: QuizViewController {
         buttonArray.append(flagLeftBottomButton)
         buttonArray.append(flagRightBottomButton)
         
-        lifeArray.append(fifthLife)
+        lifeArray.append(firstLife)
         lifeArray.append(secondLife)
         lifeArray.append(thirdLife)
         lifeArray.append(fourthLife)
@@ -97,10 +97,16 @@ class NameQuizViewController: QuizViewController {
         }
     }
     
-    func setDefaultButtonStyle() {
-        for i in 0...3 {
-            buttonArray[i].isEnabled = true
+    override func initLife() {
+        super.initLife()
+        
+        for i in 0..<lifeArray.count {
+            lifeArray[i].alpha = 1
         }
+    }
+    
+    override func initButtons(array buttonArray: Array<UIButton>) {
+        super.initButtons(array: buttonArray)
     }
     
     @IBAction func onTouchUpInside(_ btn: UIButton) {
@@ -130,7 +136,7 @@ class NameQuizViewController: QuizViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.makeQuestion()
                 self.displayQuestion()
-                self.setDefaultButtonStyle()
+                self.initButtons(array: self.buttonArray)
             }
             
         } else {
@@ -152,6 +158,7 @@ class NameQuizViewController: QuizViewController {
             if isDie {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let popUpView = storyboard.instantiateViewController(withIdentifier: "popUp") as! PopUpViewController
+                popUpView.nameViewController = self
                 
                 self.present(popUpView, animated: true, completion: nil)
             }

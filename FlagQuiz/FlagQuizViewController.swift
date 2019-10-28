@@ -91,12 +91,10 @@ class FlagQuizViewController: QuizViewController {
         
         bannerView.load(GADRequest())
         
-
-        
         UpdateModule.run(updateType: .normal)
         
         displayQuestion()
-        setDefaultButtonStyle()
+        initButtons(array: buttonArray)
         textFitInButton()
     }
     
@@ -141,10 +139,8 @@ class FlagQuizViewController: QuizViewController {
         }
     }
     
-    func setDefaultButtonStyle() {
-        for i in 0...3 {
-            buttonArray[i].isEnabled = true
-        }
+    override func initButtons(array: Array<UIButton>) {
+        super.initButtons(array: buttonArray)
     }
     
     override func showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor, message: String) {
@@ -189,7 +185,7 @@ class FlagQuizViewController: QuizViewController {
                 self.makeQuestion()
                 self.displayQuestion()
                 self.textFitInButton()
-                self.setDefaultButtonStyle()
+                self.initButtons(array: self.buttonArray)
             }
             
         } else {
@@ -211,9 +207,11 @@ class FlagQuizViewController: QuizViewController {
             if isDie {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let popUpView = storyboard.instantiateViewController(withIdentifier: "popUp") as! PopUpViewController
-                popUpView.viewController = self
+                popUpView.flagViewController = self
                 
-                self.present(popUpView, animated: true, completion: nil)
+                self.present(popUpView, animated: true) {
+                    popUpView.isFromFlag = true
+                }
             }
         }
     }

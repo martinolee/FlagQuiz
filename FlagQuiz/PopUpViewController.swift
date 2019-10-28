@@ -18,7 +18,11 @@ class PopUpViewController: UIViewController {
     
     @IBOutlet var popupViewWidth: NSLayoutConstraint!
     
-    var viewController: FlagQuizViewController! =  FlagQuizViewController()
+    var flagViewController: FlagQuizViewController! =  FlagQuizViewController()
+    var nameViewController: NameQuizViewController! = NameQuizViewController()
+    var quizViewController: QuizViewController! = QuizViewController()
+    
+    var isFromFlag: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,29 +33,42 @@ class PopUpViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        scoreLabel.text = ("\(viewController?.getScore() ?? -1) ") + NSLocalizedString("Point", comment: "")
+        if isFromFlag == true {
+            scoreLabel.text = ("\(flagViewController?.getScore() ?? -1) ") + NSLocalizedString("Point", comment: "")
+        } else {
+            scoreLabel.text = ("\(nameViewController?.getScore() ?? -1) ") + NSLocalizedString("Point", comment: "")
+        }
         
         restartButton.setTitle(NSLocalizedString("Restart", comment: ""), for: .normal)
         continueButton.setAttributedTitle(NSAttributedString(string: NSLocalizedString("Continue", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         
-//        print("label width: \(), popup width: \(popupViewWidth.constant)")
-//        fitTextInLabel()
-//        print("label width: \(), popup width: \(popupViewWidth.constant)")
-        
     }
     
     @IBAction func continueGame(_ sender: Any) {
-        if viewController?.rewardBaseAd.isReady == true {
-            viewController?.rewardBaseAd.present(fromRootViewController: self)
+        if isFromFlag == true {
+            if flagViewController.rewardBaseAd.isReady == true {
+                flagViewController?.rewardBaseAd.present(fromRootViewController: self)
+            } else {
+                let alertController = UIAlertController(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Ad did not load", comment: ""), preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: UIAlertAction.Style.default)
+                
+                alertController.addAction(okAction)
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
         } else {
-            let alertController = UIAlertController(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Ad did not load", comment: ""), preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: UIAlertAction.Style.default)
-            
-            alertController.addAction(okAction)
-            
-            self.present(alertController, animated: true, completion: nil)
+            if nameViewController.rewardBaseAd.isReady == true {
+                nameViewController?.rewardBaseAd.present(fromRootViewController: self)
+            } else {
+                let alertController = UIAlertController(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Ad did not load", comment: ""), preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: UIAlertAction.Style.default)
+                
+                alertController.addAction(okAction)
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
     }
     
@@ -62,13 +79,23 @@ class PopUpViewController: UIViewController {
     }
     
     func initQuiz() {
-        self.viewController?.initScore()
-        self.viewController?.initLife()
-        self.viewController?.initQuiz()
-        self.viewController?.makeQuestion()
-        self.viewController?.displayQuestion()
-        self.viewController?.textFitInButton()
-        self.viewController?.setDefaultButtonStyle()
+        if isFromFlag == true {
+            self.flagViewController?.initScore()
+            self.flagViewController?.initLife()
+            self.flagViewController?.initQuiz()
+            self.flagViewController?.makeQuestion()
+            self.flagViewController?.displayQuestion()
+            self.flagViewController?.textFitInButton()
+            self.flagViewController?.initButtons(array: flagViewController.buttonArray)
+        } else {
+            self.nameViewController?.initScore()
+            self.nameViewController?.initLife()
+            self.nameViewController?.initQuiz()
+            self.nameViewController?.makeQuestion()
+            self.nameViewController?.displayQuestion()
+            self.nameViewController.initButtons(array: nameViewController.buttonArray)
+        }
+
     }
     
     func fitTextInLabel() {
