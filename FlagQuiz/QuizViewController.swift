@@ -30,6 +30,8 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         
         setConfig()
         
+        getRewardBaseAd()
+        
         makeQuestion()
         
         UIView.appearance().isExclusiveTouch = true
@@ -43,13 +45,15 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
             
             makeLangaugeList()
             
-            rewardBaseAd = GADRewardBasedVideoAd.sharedInstance()
-            rewardBaseAd.delegate = self
-            
-            rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
-            
             isConfiged = !isConfiged
         }
+    }
+    
+    func getRewardBaseAd() {
+        rewardBaseAd = GADRewardBasedVideoAd.sharedInstance()
+        rewardBaseAd.delegate = self
+        
+        rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
     }
     
     func getCurrentLanguage() -> String {
@@ -105,6 +109,12 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     
     func earnLife(life: Int) {
         self.life = life
+    }
+    
+    func initButtons(array: Array<UIButton>) {
+        for i in 0..<array.count {
+            array[i].isEnabled = true
+        }
     }
     
     func makeLangaugeList() {
