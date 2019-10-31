@@ -75,7 +75,7 @@ class NameQuizViewController: QuizViewController {
     }
     
     override func displayQuestion() {
-        countryNameLabel.text = flagInfo[quizList[currentQuizIndex].example[quizList[currentQuizIndex].correctAnswerIndex]].name
+        countryNameLabel.text = NSLocalizedString(flagInfo[quizList[currentQuizIndex].example[quizList[currentQuizIndex].correctAnswerIndex]].name, comment: "")
         
         for i in 0...3 {
             buttonArray[i].setImage(UIImage(named: flagInfo[quizList[currentQuizIndex].example[i]].imageName), for: .normal)

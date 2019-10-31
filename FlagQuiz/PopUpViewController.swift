@@ -11,6 +11,8 @@ import GoogleMobileAds
 
 class PopUpViewController: UIViewController {
     
+    @IBOutlet weak var popUpView: UIView!
+    
     @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet var restartButton: UIButton!
@@ -99,19 +101,13 @@ class PopUpViewController: UIViewController {
 
     }
     
-    func fitTextInLabel() {
-        if let title = scoreLabel.text, var font = scoreLabel.font {
-            var fontSize: CGFloat = 56
-            var attr = [NSAttributedString.Key.font: font]
-            repeat {
-                fontSize = fontSize - 1
-                scoreLabel.font = UIFont.systemFont(ofSize: fontSize, weight: .ultraLight)
-                font = (scoreLabel.font)!
-                attr = [NSAttributedString.Key.font: font]
-                
-            } while title.size(withAttributes: attr).width > popupViewWidth.constant
-        }
-        
+    func fitTextInButton() {
+        var fontSize: CGFloat = 100
+        let border: CGFloat = 0
+        repeat {
+            fontSize -= 1
+            scoreLabel.font = scoreLabel.font.withSize(fontSize)
+        } while scoreLabel.textWidth() + border > popUpView.bounds.width
     }
     
 }
