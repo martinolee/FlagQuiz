@@ -104,6 +104,12 @@ class NameQuizViewController: QuizViewController {
         }
     }
     
+    override func initScore() {
+        super.initScore()
+        
+        self.scoreLabel.text = "\(score)"
+    }
+    
     override func initButtons(array buttonArray: Array<UIButton>) {
         super.initButtons(array: buttonArray)
     }
