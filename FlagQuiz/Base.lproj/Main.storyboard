@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Quiz-->
+        <!--Flag Quiz-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FlagQuizViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -240,7 +240,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quiz" image="quizIcon_28" selectedImage="quizIcon_28" id="uvj-AF-WNh"/>
+                    <tabBarItem key="tabBarItem" title="Flag Quiz" image="quizIcon_28" selectedImage="quizIcon_28" id="uvj-AF-WNh"/>
                     <connections>
                         <outlet property="bannerView" destination="qxw-tA-MTY" id="7OH-CN-3Ji"/>
                         <outlet property="correctOrIncorrectLabel" destination="6Jx-8N-Zu3" id="NXh-es-ZyN"/>
@@ -348,7 +348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWr-vU-Wzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1028" y="1767"/>
+            <point key="canvasLocation" x="-463" y="1765"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gzk-2b-wV9">
