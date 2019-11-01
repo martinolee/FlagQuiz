@@ -457,7 +457,7 @@
             </objects>
             <point key="canvasLocation" x="1246" y="1766"/>
         </scene>
-        <!--Quiz 2-->
+        <!--Name Quiz-->
         <scene sceneID="Yba-0j-8Fv">
             <objects>
                 <viewController id="zkE-vG-AIB" customClass="NameQuizViewController" customModule="FlagQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -688,7 +688,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fnH-lU-OT0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quiz 2" image="quizIcon_28" id="eHT-9I-QAV"/>
+                    <tabBarItem key="tabBarItem" title="Name Quiz" image="quizIcon_28" id="eHT-9I-QAV"/>
                     <connections>
                         <outlet property="bannerView" destination="HkR-bF-wDK" id="O0t-Mc-oBE"/>
                         <outlet property="correctOrIncorrectLabel" destination="ydR-03-PGG" id="UlS-8a-ZN7"/>
