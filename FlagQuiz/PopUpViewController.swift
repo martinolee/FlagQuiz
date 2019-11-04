@@ -36,9 +36,9 @@ class PopUpViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if isFromFlag == true {
-            scoreLabel.text = ("\(flagViewController?.getScore() ?? -1) ") + NSLocalizedString("Point", comment: "")
+            scoreLabel.text = ("\(flagViewController.getScore()) ") + NSLocalizedString("Point", comment: "")
         } else {
-            scoreLabel.text = ("\(nameViewController?.getScore() ?? -1) ") + NSLocalizedString("Point", comment: "")
+            scoreLabel.text = ("\(nameViewController.getScore()) ") + NSLocalizedString("Point", comment: "")
         }
         
         restartButton.setTitle(NSLocalizedString("Restart", comment: ""), for: .normal)
@@ -49,7 +49,7 @@ class PopUpViewController: UIViewController {
     @IBAction func continueGame(_ sender: Any) {
         if isFromFlag == true {
             if flagViewController.rewardBaseAd.isReady == true {
-                flagViewController?.rewardBaseAd.present(fromRootViewController: self)
+                flagViewController.rewardBaseAd.present(fromRootViewController: self)
             } else {
                 let alertController = UIAlertController(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Ad did not load", comment: ""), preferredStyle: .alert)
                 
@@ -61,7 +61,7 @@ class PopUpViewController: UIViewController {
             }
         } else {
             if nameViewController.rewardBaseAd.isReady == true {
-                nameViewController?.rewardBaseAd.present(fromRootViewController: self)
+                nameViewController.rewardBaseAd.present(fromRootViewController: self)
             } else {
                 let alertController = UIAlertController(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Ad did not load", comment: ""), preferredStyle: .alert)
                 
@@ -82,19 +82,19 @@ class PopUpViewController: UIViewController {
     
     func initQuiz() {
         if isFromFlag == true {
-            self.flagViewController?.initScore()
-            self.flagViewController?.initLife()
-            self.flagViewController?.initQuiz()
-            self.flagViewController?.makeQuestion()
-            self.flagViewController?.displayQuestion()
-            self.flagViewController?.textFitInButton()
-            self.flagViewController?.initButtons(array: flagViewController.buttonArray)
+            self.flagViewController.initScore()
+            self.flagViewController.initLife()
+            self.flagViewController.initQuiz()
+            self.flagViewController.makeQuestion()
+            self.flagViewController.displayQuestion()
+            self.flagViewController.textFitInButton()
+            self.flagViewController.initButtons(array: flagViewController.buttonArray)
         } else {
-            self.nameViewController?.initScore()
-            self.nameViewController?.initLife()
-            self.nameViewController?.initQuiz()
-            self.nameViewController?.makeQuestion()
-            self.nameViewController?.displayQuestion()
+            self.nameViewController.initScore()
+            self.nameViewController.initLife()
+            self.nameViewController.initQuiz()
+            self.nameViewController.makeQuestion()
+            self.nameViewController.displayQuestion()
             self.nameViewController.fitTextInButton()
             self.nameViewController.initButtons(array: nameViewController.buttonArray)
         }
