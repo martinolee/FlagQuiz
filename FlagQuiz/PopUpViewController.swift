@@ -22,7 +22,6 @@ class PopUpViewController: UIViewController {
     
     var flagViewController: FlagQuizViewController! =  FlagQuizViewController()
     var nameViewController: NameQuizViewController! = NameQuizViewController()
-    var quizViewController: QuizViewController! = QuizViewController()
     
     var isFromFlag: Bool = false
 
