@@ -61,12 +61,13 @@ class NameQuizViewController: QuizViewController {
         
         scoreLabel.text = "\(score)"
         
-        for i in 0...3 {
-            buttonArray[i].imageView?.contentMode = UIView.ContentMode.scaleAspectFit
-        }
-        
         displayQuestion()
         fitTextInButton()
+        
+        for button in buttonArray {
+            button.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
+            button.setTitle("", for: .normal)
+        }
         
         bannerView.adUnitID = bannerAdUnitID
         bannerView.rootViewController = self
