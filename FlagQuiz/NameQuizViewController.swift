@@ -62,7 +62,7 @@ class NameQuizViewController: QuizViewController {
         scoreLabel.text = "\(score)"
         
         displayQuestion()
-        fitTextInButton()
+        fitTextInLabel()
         
         for button in buttonArray {
             button.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
@@ -142,7 +142,7 @@ class NameQuizViewController: QuizViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.makeQuestion()
                 self.displayQuestion()
-                self.fitTextInButton()
+                self.fitTextInLabel()
                 self.initButtons(array: self.buttonArray)
             }
             
@@ -172,7 +172,7 @@ class NameQuizViewController: QuizViewController {
         }
     }
     
-    func fitTextInButton() {
+    func fitTextInLabel() {
         var fontSize: CGFloat = 100
         let border: CGFloat = 40
         repeat {
