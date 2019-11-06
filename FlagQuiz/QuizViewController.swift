@@ -236,13 +236,6 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         quizList.append(Quiz(example: makeExample(inQuizList: quizList, correctAnswerIndex: correctAnswerIndex), correctAnswerIndex: correctAnswerIndex))
         currentQuizIndex = quizList.count - 1
         
-//        flagImageView.image = UIImage(named: flagInfo[quizList[currentQuizIndex].example[quizList[currentQuizIndex].correctAnswerIndex]].imageName)
-//        
-//        for i in 0...3 {
-//            buttonArray[i].setTitle(NSLocalizedString(flagInfo[quizList[currentQuizIndex].example[i]].name, comment: ""), for: .normal)
-//            buttonArray[i].setTitle(NSLocalizedString(flagInfo[quizList[currentQuizIndex].example[i]].name, comment: ""), for: .disabled)
-//        }
-        
         for i in 0...3 {
             print("\(quizList[currentQuizIndex].example[i]). \(flagInfo[quizList[currentQuizIndex].example[i]].name)")
             if i == 3 {
