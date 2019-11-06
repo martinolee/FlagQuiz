@@ -32,6 +32,12 @@ class CountryInfoViewController: UIViewController {
         self.navigationItem.hidesSearchBarWhenScrolling = false
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        if #available(iOS 13.0, *) {
+            let app = UINavigationBarAppearance()
+            app.backgroundColor = .systemGray6
+            self.navigationController?.navigationBar.scrollEdgeAppearance = app
+        }
     }
 }
 

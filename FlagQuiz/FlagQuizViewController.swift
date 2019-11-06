@@ -58,9 +58,15 @@ class FlagQuizViewController: QuizViewController {
         
         self.life = lifeArray.count
         
-        for i in 0...3 {
-            buttonArray[i].setTitleColor(UIColor.black, for: .normal)
-            buttonArray[i].titleLabel?.textAlignment = NSTextAlignment.center
+        for button in buttonArray {
+            if #available(iOS 13.0, *) {
+                button.setTitleColor(UIColor.label, for: .normal)
+            } else {
+                // Fallback on earlier versions
+                
+                button.setTitleColor(UIColor.black, for: .normal)
+            }
+            button.titleLabel?.textAlignment = NSTextAlignment.center
         }
         
         correctOrIncorrectView.alpha = 0

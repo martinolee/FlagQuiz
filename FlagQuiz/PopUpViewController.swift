@@ -30,6 +30,14 @@ class PopUpViewController: UIViewController {
         
         self.modalTransitionStyle = .crossDissolve
         self.modalPresentationStyle = .overCurrentContext
+        
+        if #available(iOS 13.0, *) {
+            restartButton.setTitleColor(UIColor.label, for: .normal)
+        } else {
+            // Fallback on earlier versions
+            
+            restartButton.setTitleColor(UIColor.darkText, for: .normal)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
