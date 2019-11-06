@@ -103,6 +103,10 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         self.life = life
     }
     
+    func initIsEarnLife() {
+        self.isEarnReward = false
+    }
+    
     func initButtons(array: Array<UIButton>) {
         for i in 0..<array.count {
             array[i].isEnabled = true
@@ -304,9 +308,9 @@ extension QuizViewController {
         
         if isEarnReward {
             dismiss(animated: true, completion: nil)
-            
-            isEarnReward = false
         }
+        
+        initIsEarnLife()
     }
     
     func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
