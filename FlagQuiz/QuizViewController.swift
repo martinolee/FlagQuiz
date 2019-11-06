@@ -43,8 +43,6 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
 
             initFlagInfo()
             
-            makeLangaugeList()
-            
             isConfiged = !isConfiged
         }
     }
@@ -54,12 +52,6 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         rewardBaseAd.delegate = self
         
         rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
-    }
-    
-    func getCurrentLanguage() -> String {
-        let languages = NSLocale.preferredLanguages
-        let currentLanguage = languages[0]
-        return currentLanguage
     }
     
     func initFlagInfo() {
@@ -116,28 +108,6 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
             array[i].isEnabled = true
         }
     }
-    
-    func makeLangaugeList() {
-        let languageList = ["ko": "South Korea",
-                            "zh-Hant": "Taiwan",
-                            "ja": "Japan",
-                            "zh-Hans": "China",
-                            "ar": "Saudi Arabia",
-                            "ru": "Russia"]
-        
-        for language in languageList {
-            if getCurrentLanguage() == language.key {
-                for i in 0 ..< flagInfo.count {
-                    if flagInfo[i].name == language.value {
-                        flagInfo.insert(flagInfo[i], at: 0)
-                        flagInfo.remove(at: i + 1)
-                    }
-                }
-            }
-        }
-    }
-    
-
     
     func showCorrectOrIncorrectViewAfterHide(backgroundColor: UIColor, message: String) {
         
