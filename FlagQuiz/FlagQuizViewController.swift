@@ -209,9 +209,8 @@ class FlagQuizViewController: QuizViewController {
                 let popUpView = storyboard.instantiateViewController(withIdentifier: "popUp") as! PopUpViewController
                 popUpView.flagViewController = self
                 
-                self.present(popUpView, animated: true) {
-                    popUpView.isFromFlag = true
-                }
+                popUpView.isFromFlag = true
+                self.present(popUpView, animated: true)
             }
         }
     }
