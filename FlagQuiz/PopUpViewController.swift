@@ -41,9 +41,9 @@ class PopUpViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if isFromFlag == true {
-            scoreLabel.text = ("\(flagViewController.getScore()) ") + NSLocalizedString("Point", comment: "")
+            scoreLabel.text = ("\(flagViewController.getScore())") + " " + NSLocalizedString("Point", comment: "")
         } else {
-            scoreLabel.text = ("\(nameViewController.getScore()) ") + NSLocalizedString("Point", comment: "")
+            scoreLabel.text = ("\(nameViewController.getScore())") + " " + NSLocalizedString("Point", comment: "")
         }
         
         restartButton.setTitle(NSLocalizedString("Restart", comment: ""), for: .normal)
