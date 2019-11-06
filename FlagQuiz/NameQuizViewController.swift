@@ -105,6 +105,14 @@ class NameQuizViewController: QuizViewController {
         }
     }
     
+    override func earnLife(life: Int) {
+        super.earnLife(life: life)
+        
+        for i in 0..<life {
+            lifeArray[i].alpha = 1
+        }
+    }
+    
     override func initScore() {
         super.initScore()
         
