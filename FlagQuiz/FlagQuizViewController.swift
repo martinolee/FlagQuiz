@@ -134,8 +134,8 @@ class FlagQuizViewController: QuizViewController {
     override func earnLife(life: Int) {
         super.earnLife(life: life)
         
-        for i in 0..<life {
-            lifeArray[i].alpha = 1
+        for life in lifeArray {
+            life.alpha = 1
         }
     }
     
@@ -215,14 +215,14 @@ class FlagQuizViewController: QuizViewController {
     }
     
     func textFitInButton() {
-        for i in 0..<buttonArray.count {
-            if let title = buttonArray[i].title(for: .normal), var font = buttonArray[i].titleLabel?.font {
+        for button in buttonArray {
+            if let title = button.title(for: .normal), var font = button.titleLabel?.font {
                 var attr = [NSAttributedString.Key.font: font]
                 var fontSize:CGFloat = 31
                 repeat {
                     fontSize = fontSize - 1
-                    buttonArray[i].titleLabel?.font = UIFont.systemFont(ofSize: fontSize, weight: .regular)
-                    font = (buttonArray[i].titleLabel?.font)!
+                    button.titleLabel?.font = UIFont.systemFont(ofSize: fontSize, weight: .regular)
+                    font = (button.titleLabel?.font)!
                     attr = [NSAttributedString.Key.font: font]
                     
                 } while (UIScreen.main.bounds.size.width/2 - 40) < ((title as NSString).size(withAttributes: attr).width) && (fontSize > 24)
