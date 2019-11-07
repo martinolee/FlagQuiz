@@ -161,13 +161,12 @@ class FlagQuizViewController: QuizViewController {
         let isCorrect = checkAnswer(selectedButtonTag: btn.tag)
         
         if isCorrect {
-            for i in 0...3 {
-                buttonArray[i].isEnabled = false
+            for button in buttonArray {
+                button.isEnabled = false
+                
+                button.setTitleColor(.systemRed, for: .disabled)
             }
-            for i in 0...3 {
-                buttonArray[i].setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.4), for: .disabled)
-            }
-            btn.setTitleColor(UIColor.blue, for: .disabled)
+            btn.setTitleColor(.systemBlue, for: .disabled)
             
             Vibration.success.vibrate()
             

@@ -35,6 +35,8 @@ class PopUpViewController: UIViewController {
             restartButton.setTitleColor(UIColor.label, for: .normal)
         } else {
             // Fallback on earlier versions
+            
+            restartButton.setTitleColor(.black, for: .normal)
         }
     }
     
@@ -51,6 +53,8 @@ class PopUpViewController: UIViewController {
             continueButton.setAttributedTitle(NSAttributedString(string: NSLocalizedString("Continue", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.label]), for: .normal)
         } else {
             // Fallback on earlier versions
+            
+            continueButton.setAttributedTitle(NSAttributedString(string: NSLocalizedString("Continue", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]), for: .normal)
         }
         
     }
