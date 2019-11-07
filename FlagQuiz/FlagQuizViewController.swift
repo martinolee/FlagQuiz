@@ -189,7 +189,7 @@ class FlagQuizViewController: QuizViewController {
             
         } else {
             btn.isEnabled = false
-            btn.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.4), for: .disabled)
+            btn.setTitleColor(.systemRed, for: .disabled)
             
             Vibration.error.vibrate()
             
