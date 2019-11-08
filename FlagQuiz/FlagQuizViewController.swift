@@ -58,6 +58,12 @@ class FlagQuizViewController: QuizViewController {
         
         self.life = lifeArray.count
         
+        if #available(iOS 13.0, *) {
+            self.view.backgroundColor = .tertiarySystemGroupedBackground
+        } else {
+            // Fallback on earlier versions
+        }
+        
         for button in buttonArray {
             if #available(iOS 13.0, *) {
                 button.setTitleColor(UIColor.label, for: .normal)
@@ -126,16 +132,16 @@ class FlagQuizViewController: QuizViewController {
     override func initLife() {
         super.initLife()
         
-        for i in 0..<lifeArray.count {
-            lifeArray[i].alpha = 1
+        for life in lifeArray {
+            life.alpha = 1
         }
     }
     
     override func earnLife(life: Int) {
         super.earnLife(life: life)
         
-        for life in lifeArray {
-            life.alpha = 1
+        for i in 0 ..< life {
+            lifeArray[i].alpha = 1
         }
     }
     

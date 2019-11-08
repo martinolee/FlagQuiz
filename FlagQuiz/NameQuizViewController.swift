@@ -52,6 +52,12 @@ class NameQuizViewController: QuizViewController {
         lifeArray.append(fourthLife)
         lifeArray.append(fifthLife)
         
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .tertiarySystemGroupedBackground
+        } else {
+            // Fallback on earlier versions
+        }
+        
         correctOrIncorrectView.alpha = 0
         
         difficultyLabel.text = NSLocalizedString("Level Up", comment: "")
@@ -100,15 +106,15 @@ class NameQuizViewController: QuizViewController {
     override func initLife() {
         super.initLife()
         
-        for i in 0..<lifeArray.count {
-            lifeArray[i].alpha = 1
+        for life in lifeArray {
+            life.alpha = 1
         }
     }
     
     override func earnLife(life: Int) {
         super.earnLife(life: life)
         
-        for i in 0..<life {
+        for i in 0 ..< life {
             lifeArray[i].alpha = 1
         }
     }

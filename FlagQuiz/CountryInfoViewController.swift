@@ -34,11 +34,16 @@ class CountryInfoViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
         if #available(iOS 13.0, *) {
-            let app = UINavigationBarAppearance()
-            app.backgroundColor = .systemGray6
-            self.navigationController?.navigationBar.scrollEdgeAppearance = app
+            let navigationBarAppearance = UINavigationBarAppearance()
+            navigationBarAppearance.backgroundColor = .systemGray6
+            self.navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+            
+            countryTableView.backgroundColor = .tertiarySystemGroupedBackground
+            
         }
     }
+    
+    
 }
 
 extension UIViewController {
@@ -54,6 +59,14 @@ extension UIViewController {
 }
 
 extension CountryInfoViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if #available(iOS 13.0, *) {
+            cell.contentView.backgroundColor = .tertiarySystemGroupedBackground
+        } else {
+            // Fallback on earlier versions
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentFlagInfo.count
