@@ -62,6 +62,7 @@ class FlagQuizViewController: QuizViewController {
             self.view.backgroundColor = .tertiarySystemGroupedBackground
         } else {
             // Fallback on earlier versions
+            self.view.backgroundColor = .darkGray
         }
         
         for button in buttonArray {

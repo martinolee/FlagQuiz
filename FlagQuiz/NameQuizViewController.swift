@@ -56,6 +56,7 @@ class NameQuizViewController: QuizViewController {
             view.backgroundColor = .tertiarySystemGroupedBackground
         } else {
             // Fallback on earlier versions
+            self.view.backgroundColor = .darkGray
         }
         
         correctOrIncorrectView.alpha = 0
