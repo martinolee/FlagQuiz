@@ -60,20 +60,18 @@ class FlagQuizViewController: QuizViewController {
         
         if #available(iOS 13.0, *) {
             self.view.backgroundColor = .tertiarySystemGroupedBackground
+            
+            for button in buttonArray {
+                button.setTitleColor(UIColor.label, for: .normal)
+            }
         } else {
             // Fallback on earlier versions
-            self.view.backgroundColor = .darkGray
-        }
-        
-        for button in buttonArray {
-            if #available(iOS 13.0, *) {
-                button.setTitleColor(UIColor.label, for: .normal)
-            } else {
-                // Fallback on earlier versions
-                
+            
+            self.view.backgroundColor = .gray
+            
+            for button in buttonArray {
                 button.setTitleColor(UIColor.black, for: .normal)
             }
-            button.titleLabel?.textAlignment = NSTextAlignment.center
         }
         
         correctOrIncorrectView.alpha = 0
