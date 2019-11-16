@@ -30,8 +30,6 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         
         setConfig()
         
-        getRewardBaseAd()
-        
         makeQuestion()
         
         UIView.appearance().isExclusiveTouch = true
@@ -39,7 +37,7 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     
     func setConfig() {
         
-        if(!isConfiged) {
+        if !isConfiged {
 
             initFlagInfo()
             
@@ -47,12 +45,6 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         }
     }
     
-    func getRewardBaseAd() {
-        rewardBaseAd = GADRewardBasedVideoAd.sharedInstance()
-        rewardBaseAd.delegate = self
-        
-        rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
-    }
     
     func initFlagInfo() {
         let path = Bundle.main.path(forResource: "CountryList", ofType: "csv")

@@ -38,6 +38,10 @@ class NameQuizViewController: QuizViewController {
     
     @IBOutlet var bannerView: GADBannerView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        rewardBaseAd.delegate = self
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,7 +60,6 @@ class NameQuizViewController: QuizViewController {
             view.backgroundColor = .tertiarySystemGroupedBackground
         } else {
             // Fallback on earlier versions
-            self.view.backgroundColor = .gray
         }
         
         correctOrIncorrectView.alpha = 0
@@ -80,6 +83,8 @@ class NameQuizViewController: QuizViewController {
         bannerView.rootViewController = self
         
         bannerView.load(GADRequest())
+        
+        getRewardBaseAd()
     }
     
     override func displayQuestion() {
@@ -102,6 +107,13 @@ class NameQuizViewController: QuizViewController {
                 self.correctOrIncorrectView.alpha = 0
             })
         }
+    }
+    
+    func getRewardBaseAd() {
+        rewardBaseAd = GADRewardBasedVideoAd.sharedInstance()
+        rewardBaseAd.delegate = self
+        
+        rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
     }
     
     override func initLife() {

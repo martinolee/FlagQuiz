@@ -75,8 +75,6 @@ extension CountryInfoViewController: UITableViewDataSource {
             cell.backgroundColor = .tertiarySystemGroupedBackground
         } else {
             // Fallback on earlier versions
-            
-            cell.contentView.backgroundColor = .gray
         }
         
         return cell

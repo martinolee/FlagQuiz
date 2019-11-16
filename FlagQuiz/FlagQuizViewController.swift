@@ -66,11 +66,9 @@ class FlagQuizViewController: QuizViewController {
             }
         } else {
             // Fallback on earlier versions
-            
-            self.view.backgroundColor = .gray
-            
+
             for button in buttonArray {
-                button.setTitleColor(UIColor.black, for: .normal)
+                button.setTitleColor(.darkText, for: .normal)
             }
         }
         
@@ -103,6 +101,12 @@ class FlagQuizViewController: QuizViewController {
         displayQuestion()
         initButtons(array: buttonArray)
         textFitInButton()
+        
+        getRewardBaseAd()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        rewardBaseAd.delegate = self
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -120,6 +124,14 @@ class FlagQuizViewController: QuizViewController {
             buttonArray[i].setTitle(NSLocalizedString(flagInfo[quizList[currentQuizIndex].example[i]].name, comment: ""), for: .disabled)
         }
         
+    }
+    
+    
+    func getRewardBaseAd() {
+        rewardBaseAd = GADRewardBasedVideoAd.sharedInstance()
+        rewardBaseAd.delegate = self
+        
+        rewardBaseAd.load(GADRequest(), withAdUnitID: rewardAdUnitId)
     }
     
     override func initScore() {
