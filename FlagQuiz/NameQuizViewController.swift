@@ -166,7 +166,7 @@ class NameQuizViewController: QuizViewController {
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.makeQuestion()
+                self.makeQuiz()
                 self.displayQuestion()
                 self.fitTextInLabel()
                 self.initButtons(array: self.buttonArray)

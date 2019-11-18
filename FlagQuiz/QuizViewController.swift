@@ -30,7 +30,7 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         
         setConfig()
         
-        makeQuestion()
+        makeQuiz()
         
         UIView.appearance().isExclusiveTouch = true
     }
@@ -197,7 +197,7 @@ class QuizViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         return example
     }
     
-    func makeQuestion() {
+    func makeQuiz() {
         let correctAnswerIndex = Int(arc4random_uniform(4))
         quizList.append(Quiz(example: makeExample(inQuizList: quizList, correctAnswerIndex: correctAnswerIndex), correctAnswerIndex: correctAnswerIndex))
         currentQuizIndex = quizList.count - 1
