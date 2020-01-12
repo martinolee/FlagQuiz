@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yab-va-LhT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yab-va-LhT">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -441,18 +441,9 @@
                     <navigationItem key="navigationItem" title="Flags" id="CcV-9P-3h8"/>
                     <connections>
                         <outlet property="countryTableView" destination="TFM-Zp-jVK" id="3o8-vz-Ewn"/>
-                        <outlet property="searchDisplayController" destination="xbj-NE-lAf" id="r0x-6F-ffe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMv-2f-lBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="xbj-NE-lAf">
-                    <connections>
-                        <outlet property="delegate" destination="8nd-0n-t3d" id="uEU-0k-Buf"/>
-                        <outlet property="searchContentsController" destination="8nd-0n-t3d" id="hlv-hg-Cmf"/>
-                        <outlet property="searchResultsDataSource" destination="8nd-0n-t3d" id="z9O-MN-Jq1"/>
-                        <outlet property="searchResultsDelegate" destination="8nd-0n-t3d" id="PVQ-JH-Aqb"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1246" y="1766"/>
         </scene>
