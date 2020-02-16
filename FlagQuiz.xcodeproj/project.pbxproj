@@ -8,52 +8,90 @@
 
 /* Begin PBXBuildFile section */
 		4D5A7DC06DA7BFFB69A8496C /* Pods_FlagQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01DE727CED756C46749E530 /* Pods_FlagQuiz.framework */; };
-		720FD22A233E241C004DD93C /* FlagQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720FD229233E241C004DD93C /* FlagQuizViewController.swift */; };
-		720FD22C233E24A0004DD93C /* NameQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720FD22B233E24A0004DD93C /* NameQuizViewController.swift */; };
-		724DA447212D9746000A96B2 /* AnimUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724DA446212D9746000A96B2 /* AnimUtils.swift */; };
 		7258696E22AFECB200552DBA /* UpdatePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7258696D22AFECB200552DBA /* UpdatePopup.swift */; };
-		72686780205E4B45000CD3FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7268677F205E4B45000CD3FB /* AppDelegate.swift */; };
-		72686782205E4B45000CD3FB /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72686781205E4B45000CD3FB /* QuizViewController.swift */; };
-		72686785205E4B45000CD3FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72686783205E4B45000CD3FB /* Main.storyboard */; };
 		72686787205E4B45000CD3FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72686786205E4B45000CD3FB /* Assets.xcassets */; };
 		7268678A205E4B45000CD3FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72686788205E4B45000CD3FB /* LaunchScreen.storyboard */; };
-		72686792205E5820000CD3FB /* CountryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72686791205E5820000CD3FB /* CountryList.swift */; };
+		727F1F6223F7E47900DBF125 /* NameQuizViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F5C23F7E47800DBF125 /* NameQuizViewDelegate.swift */; };
+		727F1F6323F7E47900DBF125 /* GameOverPopupViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F5D23F7E47800DBF125 /* GameOverPopupViewDelegate.swift */; };
+		727F1F6423F7E47900DBF125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F5E23F7E47800DBF125 /* AppDelegate.swift */; };
+		727F1F6523F7E47900DBF125 /* CountryInfoViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F5F23F7E47800DBF125 /* CountryInfoViewDelegate.swift */; };
+		727F1F6623F7E47900DBF125 /* FlagQuizViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F6023F7E47800DBF125 /* FlagQuizViewDelegate.swift */; };
+		727F1F6723F7E47900DBF125 /* QuestionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F6123F7E47900DBF125 /* QuestionViewDelegate.swift */; };
+		727F1F6B23F7E49200DBF125 /* AdvertisingIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F6923F7E49200DBF125 /* AdvertisingIdentifier.swift */; };
+		727F1F6C23F7E49200DBF125 /* CountryList.csv in Resources */ = {isa = PBXBuildFile; fileRef = 727F1F6A23F7E49200DBF125 /* CountryList.csv */; };
+		727F1F7023F7E4D300DBF125 /* FlagData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F6E23F7E4D300DBF125 /* FlagData.swift */; };
+		727F1F7123F7E4D300DBF125 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F6F23F7E4D300DBF125 /* Singleton.swift */; };
+		727F1F7A23F7E4F100DBF125 /* CountryInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F7523F7E4F100DBF125 /* CountryInfoView.swift */; };
+		727F1F7B23F7E4F100DBF125 /* CountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F7623F7E4F100DBF125 /* CountryDetailView.swift */; };
+		727F1F7C23F7E4F100DBF125 /* GameOverPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F7723F7E4F100DBF125 /* GameOverPopupView.swift */; };
+		727F1F7D23F7E4F100DBF125 /* NameQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F7823F7E4F100DBF125 /* NameQuizView.swift */; };
+		727F1F7E23F7E4F100DBF125 /* FlagQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F7923F7E4F100DBF125 /* FlagQuizView.swift */; };
+		727F1F8023F7E4F800DBF125 /* FlagInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F7F23F7E4F800DBF125 /* FlagInfoTableViewCell.swift */; };
+		727F1F8623F7E4FE00DBF125 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F8123F7E4FE00DBF125 /* AnswerButton.swift */; };
+		727F1F8723F7E4FE00DBF125 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F8223F7E4FE00DBF125 /* SeparatorView.swift */; };
+		727F1F8823F7E4FE00DBF125 /* QuizStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F8323F7E4FE00DBF125 /* QuizStatusView.swift */; };
+		727F1F8923F7E4FE00DBF125 /* CorrectOrIncorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F8423F7E4FE00DBF125 /* CorrectOrIncorrectView.swift */; };
+		727F1F8A23F7E4FE00DBF125 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F8523F7E4FE00DBF125 /* QuestionView.swift */; };
+		727F1F9023F7E52900DBF125 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F8C23F7E52900DBF125 /* CountryDetailViewController.swift */; };
+		727F1F9123F7E52900DBF125 /* CountryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F8D23F7E52900DBF125 /* CountryInfoViewController.swift */; };
+		727F1F9223F7E52900DBF125 /* GameOverPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F8E23F7E52900DBF125 /* GameOverPopupViewController.swift */; };
+		727F1F9323F7E52900DBF125 /* QuizTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F8F23F7E52900DBF125 /* QuizTabBarController.swift */; };
+		727F1F9823F7E53D00DBF125 /* NameQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F9523F7E53C00DBF125 /* NameQuizViewController.swift */; };
+		727F1F9923F7E53D00DBF125 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F9623F7E53D00DBF125 /* QuizViewController.swift */; };
+		727F1F9A23F7E53D00DBF125 /* FlagQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F9723F7E53D00DBF125 /* FlagQuizViewController.swift */; };
+		727F1F9E23F7E55C00DBF125 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F9D23F7E55C00DBF125 /* Animation.swift */; };
+		727F1FA123F7E56500DBF125 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F9F23F7E56500DBF125 /* UI.swift */; };
+		727F1FA223F7E56500DBF125 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1FA023F7E56500DBF125 /* Color.swift */; };
 		72858E4C2366E1680070B769 /* UILabelExpand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72858E4B2366E1680070B769 /* UILabelExpand.swift */; };
-		72AA056821C14E4C00439151 /* AdvertisingIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA056721C14E4C00439151 /* AdvertisingIdentifier.swift */; };
 		72AF36A72153B90C00A40B55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72AF36A92153B90C00A40B55 /* Localizable.strings */; };
-		72C2572C213D71F9008C95CA /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2572B213D71F9008C95CA /* PopUpViewController.swift */; };
-		72D35BD420D4EB7200E7F1B6 /* CountryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D35BD320D4EB7200E7F1B6 /* CountryInfoViewController.swift */; };
-		72D35BD620D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D35BD520D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift */; };
-		72FDB0FE2180106B00610D39 /* CountryList.csv in Resources */ = {isa = PBXBuildFile; fileRef = 72FDB0FD2180106A00610D39 /* CountryList.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		41B78FC6E82EA0E00A0913D8 /* Pods-FlagQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlagQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlagQuiz/Pods-FlagQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		622D8E8EB3158074DA7CCCB6 /* Pods-FlagQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlagQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlagQuiz/Pods-FlagQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		720738A22197256C008004FE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		720FD229233E241C004DD93C /* FlagQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagQuizViewController.swift; sourceTree = "<group>"; };
-		720FD22B233E24A0004DD93C /* NameQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuizViewController.swift; sourceTree = "<group>"; };
 		722B7AF82198612200826012 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		724DA446212D9746000A96B2 /* AnimUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimUtils.swift; sourceTree = "<group>"; };
 		7258696D22AFECB200552DBA /* UpdatePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePopup.swift; sourceTree = "<group>"; };
 		7268677C205E4B45000CD3FB /* FlagQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlagQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7268677F205E4B45000CD3FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		72686781205E4B45000CD3FB /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		72686784205E4B45000CD3FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72686786205E4B45000CD3FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72686789205E4B45000CD3FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7268678B205E4B45000CD3FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72686791205E5820000CD3FB /* CountryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryList.swift; sourceTree = "<group>"; };
+		727F1F5C23F7E47800DBF125 /* NameQuizViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameQuizViewDelegate.swift; sourceTree = "<group>"; };
+		727F1F5D23F7E47800DBF125 /* GameOverPopupViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverPopupViewDelegate.swift; sourceTree = "<group>"; };
+		727F1F5E23F7E47800DBF125 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		727F1F5F23F7E47800DBF125 /* CountryInfoViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryInfoViewDelegate.swift; sourceTree = "<group>"; };
+		727F1F6023F7E47800DBF125 /* FlagQuizViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagQuizViewDelegate.swift; sourceTree = "<group>"; };
+		727F1F6123F7E47900DBF125 /* QuestionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewDelegate.swift; sourceTree = "<group>"; };
+		727F1F6923F7E49200DBF125 /* AdvertisingIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisingIdentifier.swift; sourceTree = "<group>"; };
+		727F1F6A23F7E49200DBF125 /* CountryList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CountryList.csv; sourceTree = "<group>"; };
+		727F1F6E23F7E4D300DBF125 /* FlagData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagData.swift; sourceTree = "<group>"; };
+		727F1F6F23F7E4D300DBF125 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		727F1F7523F7E4F100DBF125 /* CountryInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryInfoView.swift; sourceTree = "<group>"; };
+		727F1F7623F7E4F100DBF125 /* CountryDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDetailView.swift; sourceTree = "<group>"; };
+		727F1F7723F7E4F100DBF125 /* GameOverPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverPopupView.swift; sourceTree = "<group>"; };
+		727F1F7823F7E4F100DBF125 /* NameQuizView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameQuizView.swift; sourceTree = "<group>"; };
+		727F1F7923F7E4F100DBF125 /* FlagQuizView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagQuizView.swift; sourceTree = "<group>"; };
+		727F1F7F23F7E4F800DBF125 /* FlagInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagInfoTableViewCell.swift; sourceTree = "<group>"; };
+		727F1F8123F7E4FE00DBF125 /* AnswerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
+		727F1F8223F7E4FE00DBF125 /* SeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		727F1F8323F7E4FE00DBF125 /* QuizStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizStatusView.swift; sourceTree = "<group>"; };
+		727F1F8423F7E4FE00DBF125 /* CorrectOrIncorrectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrectOrIncorrectView.swift; sourceTree = "<group>"; };
+		727F1F8523F7E4FE00DBF125 /* QuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		727F1F8C23F7E52900DBF125 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
+		727F1F8D23F7E52900DBF125 /* CountryInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryInfoViewController.swift; sourceTree = "<group>"; };
+		727F1F8E23F7E52900DBF125 /* GameOverPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverPopupViewController.swift; sourceTree = "<group>"; };
+		727F1F8F23F7E52900DBF125 /* QuizTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizTabBarController.swift; sourceTree = "<group>"; };
+		727F1F9523F7E53C00DBF125 /* NameQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameQuizViewController.swift; sourceTree = "<group>"; };
+		727F1F9623F7E53D00DBF125 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		727F1F9723F7E53D00DBF125 /* FlagQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagQuizViewController.swift; sourceTree = "<group>"; };
+		727F1F9D23F7E55C00DBF125 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		727F1F9F23F7E56500DBF125 /* UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		727F1FA023F7E56500DBF125 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		728341A122E204C9003CF95B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		72858E4B2366E1680070B769 /* UILabelExpand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExpand.swift; sourceTree = "<group>"; };
 		728974E422C2497B003704C8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		729746A622BD065700ADE2B4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		72AA056721C14E4C00439151 /* AdvertisingIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisingIdentifier.swift; sourceTree = "<group>"; };
 		72AF36A82153B90C00A40B55 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
-		72C2572B213D71F9008C95CA /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
-		72D35BD320D4EB7200E7F1B6 /* CountryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoViewController.swift; sourceTree = "<group>"; };
-		72D35BD520D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoTableViewCell.swift; sourceTree = "<group>"; };
-		72FDB0FD2180106A00610D39 /* CountryList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CountryList.csv; sourceTree = "<group>"; };
 		D01DE727CED756C46749E530 /* Pods_FlagQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlagQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,26 +145,125 @@
 		7268677E205E4B45000CD3FB /* FlagQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				7268677F205E4B45000CD3FB /* AppDelegate.swift */,
-				72686781205E4B45000CD3FB /* QuizViewController.swift */,
-				720FD229233E241C004DD93C /* FlagQuizViewController.swift */,
-				720FD22B233E24A0004DD93C /* NameQuizViewController.swift */,
-				72C2572B213D71F9008C95CA /* PopUpViewController.swift */,
-				72D35BD320D4EB7200E7F1B6 /* CountryInfoViewController.swift */,
-				72D35BD520D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift */,
-				72686783205E4B45000CD3FB /* Main.storyboard */,
+				727F1F9C23F7E55000DBF125 /* Animation */,
+				727F1F6823F7E48800DBF125 /* Data */,
+				727F1F5B23F7E44600DBF125 /* Delegate */,
+				727F1F6D23F7E4CB00DBF125 /* Model */,
+				727F1F7223F7E4DA00DBF125 /* View */,
+				727F1F8B23F7E50600DBF125 /* Controller */,
+				727F1F9B23F7E54800DBF125 /* UI */,
 				72686786205E4B45000CD3FB /* Assets.xcassets */,
 				72686788205E4B45000CD3FB /* LaunchScreen.storyboard */,
 				7268678B205E4B45000CD3FB /* Info.plist */,
-				72FDB0FD2180106A00610D39 /* CountryList.csv */,
-				72686791205E5820000CD3FB /* CountryList.swift */,
-				724DA446212D9746000A96B2 /* AnimUtils.swift */,
 				72AF36A92153B90C00A40B55 /* Localizable.strings */,
-				72AA056721C14E4C00439151 /* AdvertisingIdentifier.swift */,
 				7258696D22AFECB200552DBA /* UpdatePopup.swift */,
 				72858E4B2366E1680070B769 /* UILabelExpand.swift */,
 			);
 			path = FlagQuiz;
+			sourceTree = "<group>";
+		};
+		727F1F5B23F7E44600DBF125 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				727F1F5E23F7E47800DBF125 /* AppDelegate.swift */,
+				727F1F6023F7E47800DBF125 /* FlagQuizViewDelegate.swift */,
+				727F1F5C23F7E47800DBF125 /* NameQuizViewDelegate.swift */,
+				727F1F5F23F7E47800DBF125 /* CountryInfoViewDelegate.swift */,
+				727F1F6123F7E47900DBF125 /* QuestionViewDelegate.swift */,
+				727F1F5D23F7E47800DBF125 /* GameOverPopupViewDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		727F1F6823F7E48800DBF125 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				727F1F6923F7E49200DBF125 /* AdvertisingIdentifier.swift */,
+				727F1F6A23F7E49200DBF125 /* CountryList.csv */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		727F1F6D23F7E4CB00DBF125 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				727F1F6E23F7E4D300DBF125 /* FlagData.swift */,
+				727F1F6F23F7E4D300DBF125 /* Singleton.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		727F1F7223F7E4DA00DBF125 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				727F1F7923F7E4F100DBF125 /* FlagQuizView.swift */,
+				727F1F7823F7E4F100DBF125 /* NameQuizView.swift */,
+				727F1F7723F7E4F100DBF125 /* GameOverPopupView.swift */,
+				727F1F7523F7E4F100DBF125 /* CountryInfoView.swift */,
+				727F1F7623F7E4F100DBF125 /* CountryDetailView.swift */,
+				727F1F7423F7E4E900DBF125 /* Cell */,
+				727F1F7323F7E4E300DBF125 /* SubView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		727F1F7323F7E4E300DBF125 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				727F1F8123F7E4FE00DBF125 /* AnswerButton.swift */,
+				727F1F8423F7E4FE00DBF125 /* CorrectOrIncorrectView.swift */,
+				727F1F8523F7E4FE00DBF125 /* QuestionView.swift */,
+				727F1F8323F7E4FE00DBF125 /* QuizStatusView.swift */,
+				727F1F8223F7E4FE00DBF125 /* SeparatorView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		727F1F7423F7E4E900DBF125 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				727F1F7F23F7E4F800DBF125 /* FlagInfoTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		727F1F8B23F7E50600DBF125 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				727F1F8F23F7E52900DBF125 /* QuizTabBarController.swift */,
+				727F1F9423F7E52B00DBF125 /* QuizController */,
+				727F1F8C23F7E52900DBF125 /* CountryDetailViewController.swift */,
+				727F1F8D23F7E52900DBF125 /* CountryInfoViewController.swift */,
+				727F1F8E23F7E52900DBF125 /* GameOverPopupViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		727F1F9423F7E52B00DBF125 /* QuizController */ = {
+			isa = PBXGroup;
+			children = (
+				727F1F9723F7E53D00DBF125 /* FlagQuizViewController.swift */,
+				727F1F9523F7E53C00DBF125 /* NameQuizViewController.swift */,
+				727F1F9623F7E53D00DBF125 /* QuizViewController.swift */,
+			);
+			path = QuizController;
+			sourceTree = "<group>";
+		};
+		727F1F9B23F7E54800DBF125 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				727F1FA023F7E56500DBF125 /* Color.swift */,
+				727F1F9F23F7E56500DBF125 /* UI.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		727F1F9C23F7E55000DBF125 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				727F1F9D23F7E55C00DBF125 /* Animation.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,11 +334,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72FDB0FE2180106B00610D39 /* CountryList.csv in Resources */,
 				7268678A205E4B45000CD3FB /* LaunchScreen.storyboard in Resources */,
+				727F1F6C23F7E49200DBF125 /* CountryList.csv in Resources */,
 				72AF36A72153B90C00A40B55 /* Localizable.strings in Resources */,
 				72686787205E4B45000CD3FB /* Assets.xcassets in Resources */,
-				72686785205E4B45000CD3FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,32 +389,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				720FD22C233E24A0004DD93C /* NameQuizViewController.swift in Sources */,
+				727F1F6723F7E47900DBF125 /* QuestionViewDelegate.swift in Sources */,
+				727F1F6B23F7E49200DBF125 /* AdvertisingIdentifier.swift in Sources */,
+				727F1F6423F7E47900DBF125 /* AppDelegate.swift in Sources */,
+				727F1F8723F7E4FE00DBF125 /* SeparatorView.swift in Sources */,
+				727F1F7023F7E4D300DBF125 /* FlagData.swift in Sources */,
+				727F1FA223F7E56500DBF125 /* Color.swift in Sources */,
+				727F1F7B23F7E4F100DBF125 /* CountryDetailView.swift in Sources */,
+				727F1F9223F7E52900DBF125 /* GameOverPopupViewController.swift in Sources */,
+				727F1F8623F7E4FE00DBF125 /* AnswerButton.swift in Sources */,
 				7258696E22AFECB200552DBA /* UpdatePopup.swift in Sources */,
-				724DA447212D9746000A96B2 /* AnimUtils.swift in Sources */,
-				72686782205E4B45000CD3FB /* QuizViewController.swift in Sources */,
-				720FD22A233E241C004DD93C /* FlagQuizViewController.swift in Sources */,
-				72C2572C213D71F9008C95CA /* PopUpViewController.swift in Sources */,
-				72D35BD620D4EBCD00E7F1B6 /* CountryInfoTableViewCell.swift in Sources */,
-				72D35BD420D4EB7200E7F1B6 /* CountryInfoViewController.swift in Sources */,
+				727F1F8923F7E4FE00DBF125 /* CorrectOrIncorrectView.swift in Sources */,
+				727F1F9123F7E52900DBF125 /* CountryInfoViewController.swift in Sources */,
+				727F1F9A23F7E53D00DBF125 /* FlagQuizViewController.swift in Sources */,
+				727F1F9023F7E52900DBF125 /* CountryDetailViewController.swift in Sources */,
+				727F1F9323F7E52900DBF125 /* QuizTabBarController.swift in Sources */,
+				727F1F6323F7E47900DBF125 /* GameOverPopupViewDelegate.swift in Sources */,
+				727F1F7123F7E4D300DBF125 /* Singleton.swift in Sources */,
+				727F1F9923F7E53D00DBF125 /* QuizViewController.swift in Sources */,
+				727F1F7A23F7E4F100DBF125 /* CountryInfoView.swift in Sources */,
+				727F1F8823F7E4FE00DBF125 /* QuizStatusView.swift in Sources */,
+				727F1F6523F7E47900DBF125 /* CountryInfoViewDelegate.swift in Sources */,
+				727F1F8023F7E4F800DBF125 /* FlagInfoTableViewCell.swift in Sources */,
+				727F1F7D23F7E4F100DBF125 /* NameQuizView.swift in Sources */,
+				727F1F7E23F7E4F100DBF125 /* FlagQuizView.swift in Sources */,
+				727F1F6223F7E47900DBF125 /* NameQuizViewDelegate.swift in Sources */,
+				727F1FA123F7E56500DBF125 /* UI.swift in Sources */,
+				727F1F8A23F7E4FE00DBF125 /* QuestionView.swift in Sources */,
+				727F1F7C23F7E4F100DBF125 /* GameOverPopupView.swift in Sources */,
+				727F1F9823F7E53D00DBF125 /* NameQuizViewController.swift in Sources */,
 				72858E4C2366E1680070B769 /* UILabelExpand.swift in Sources */,
-				72686792205E5820000CD3FB /* CountryList.swift in Sources */,
-				72686780205E4B45000CD3FB /* AppDelegate.swift in Sources */,
-				72AA056821C14E4C00439151 /* AdvertisingIdentifier.swift in Sources */,
+				727F1F9E23F7E55C00DBF125 /* Animation.swift in Sources */,
+				727F1F6623F7E47900DBF125 /* FlagQuizViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		72686783205E4B45000CD3FB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72686784205E4B45000CD3FB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		72686788205E4B45000CD3FB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
