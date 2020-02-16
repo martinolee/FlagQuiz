@@ -1,6 +1,10 @@
 # Custom
 .DS_Store
 
+# id file
+
+AdvertisingIdentifier.swift
+
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
