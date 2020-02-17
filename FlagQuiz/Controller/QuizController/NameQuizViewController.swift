@@ -35,6 +35,9 @@ final class NameQuizViewController: QuizViewController {
     showQuestion()
     
     nameQuizView.setScoreLabel(text: "\(Singleton.shared.nameQuiz.score)")
+    
+    nameQuizView.setRootViewControllerForBannerView(self)
+    nameQuizView.loadBannerViewAD()
   }
   
   // MARK: -

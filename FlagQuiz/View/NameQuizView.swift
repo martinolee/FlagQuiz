@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class NameQuizView: UIView {
   
@@ -26,6 +27,18 @@ class NameQuizView: UIView {
     let view = SeparatorView()
     
     view.translatesAutoresizingMaskIntoConstraints = false
+    
+    return view
+  }()
+  
+  private lazy var bannerView: GADBannerView = {
+    let view = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+    
+    view.translatesAutoresizingMaskIntoConstraints = false
+    
+    view.adUnitID = AdvertisingIdentifier.testBannerADUnitID
+    view.delegate = self
+    view.backgroundColor = .clear
     
     return view
   }()
@@ -82,6 +95,7 @@ class NameQuizView: UIView {
   private func addAllView() {
     self.addSubview(quizStatusView)
     self.addSubview(separatorView)
+    self.addSubview(bannerView)
     self.addSubview(correctOrIncorrectView)
     self.addSubview(countryNameLabel)
     self.addSubview(questionView)
@@ -90,6 +104,7 @@ class NameQuizView: UIView {
   private func setupAllAutoLayout() {
     setupLifeScoreViewAutoLayout()
     setupSeparatorViewAutoLayout()
+    setupBannerViewAutoLayout()
     setupCorrectOrIncorrectViewAutoLayout()
     setupCountryNameLabelAutoLayout()
     setupQuestionViewAutoLayout()
@@ -116,9 +131,16 @@ class NameQuizView: UIView {
     ])
   }
   
+  private func setupBannerViewAutoLayout() {
+    NSLayoutConstraint.activate([
+      bannerView.topAnchor    .constraint(equalTo: separatorView.bottomAnchor),
+      bannerView.centerXAnchor.constraint(equalTo: separatorView.centerXAnchor)
+    ])
+  }
+  
   private func setupCorrectOrIncorrectViewAutoLayout() {
     NSLayoutConstraint.activate([
-      correctOrIncorrectView.topAnchor    .constraint(equalTo: separatorView.bottomAnchor, constant: UI.Spacing.Top.forCorrectOrIncorrectView),
+      correctOrIncorrectView.topAnchor    .constraint(equalTo:bannerView.bottomAnchor, constant: UI.Spacing.Top.forCorrectOrIncorrectView),
       correctOrIncorrectView.centerXAnchor.constraint(equalTo: separatorView.centerXAnchor),
     ])
   }
@@ -146,6 +168,14 @@ class NameQuizView: UIView {
   }
   
   // MARK: - Element Control
+  
+  func setRootViewControllerForBannerView(_ viewController: UIViewController) {
+    bannerView.rootViewController = viewController
+  }
+  
+  func loadBannerViewAD() {
+    bannerView.load(GADRequest())
+  }
   
   func setCountryNameLabel(text: String) {
     countryNameLabel.text = text
@@ -212,5 +242,49 @@ class NameQuizView: UIView {
 extension NameQuizView: QuestionViewDelegate {
   func button(_ button: AnswerButton, didTouchUpInsideAt location: ButtonLocation) {
     delegate?.button(button, didTouchUpInsideAt: location)
+  }
+}
+
+// MARK: - Google AD Banner View Delegate
+
+extension NameQuizView: GADBannerViewDelegate {
+  /// Tells the delegate an ad request loaded an ad.
+  func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+    print("adViewDidReceiveAd")
+    
+    bannerView.alpha = 0
+    UIView.animate(withDuration: 1, animations: {
+      bannerView.alpha = 1
+    })
+    
+    bringSubviewToFront(correctOrIncorrectView)
+  }
+
+  /// Tells the delegate an ad request failed.
+  func adView(_ bannerView: GADBannerView,
+      didFailToReceiveAdWithError error: GADRequestError) {
+    print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+  }
+
+  /// Tells the delegate that a full-screen view will be presented in response
+  /// to the user clicking on an ad.
+  func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+    print("adViewWillPresentScreen")
+  }
+
+  /// Tells the delegate that the full-screen view will be dismissed.
+  func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+    print("adViewWillDismissScreen")
+  }
+
+  /// Tells the delegate that the full-screen view has been dismissed.
+  func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+    print("adViewDidDismissScreen")
+  }
+
+  /// Tells the delegate that a user click will open another app (such as
+  /// the App Store), backgrounding the current app.
+  func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+    print("adViewWillLeaveApplication")
   }
 }

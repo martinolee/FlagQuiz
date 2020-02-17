@@ -130,7 +130,6 @@ class FlagQuizView: UIView {
       bannerView.topAnchor    .constraint(equalTo: separatorView.bottomAnchor),
       bannerView.centerXAnchor.constraint(equalTo: separatorView.centerXAnchor)
     ])
-    
   }
   
   private func setupCorrectOrIncorrectViewAutoLayout() {
