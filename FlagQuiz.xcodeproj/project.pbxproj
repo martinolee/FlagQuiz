@@ -17,7 +17,6 @@
 		727F1F6523F7E47900DBF125 /* CountryInfoViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F5F23F7E47800DBF125 /* CountryInfoViewDelegate.swift */; };
 		727F1F6623F7E47900DBF125 /* FlagQuizViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F6023F7E47800DBF125 /* FlagQuizViewDelegate.swift */; };
 		727F1F6723F7E47900DBF125 /* QuestionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F6123F7E47900DBF125 /* QuestionViewDelegate.swift */; };
-		727F1F6B23F7E49200DBF125 /* AdvertisingIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F6923F7E49200DBF125 /* AdvertisingIdentifier.swift */; };
 		727F1F6C23F7E49200DBF125 /* CountryList.csv in Resources */ = {isa = PBXBuildFile; fileRef = 727F1F6A23F7E49200DBF125 /* CountryList.csv */; };
 		727F1F7023F7E4D300DBF125 /* FlagData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F6E23F7E4D300DBF125 /* FlagData.swift */; };
 		727F1F7123F7E4D300DBF125 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F6F23F7E4D300DBF125 /* Singleton.swift */; };
@@ -62,7 +61,6 @@
 		727F1F5F23F7E47800DBF125 /* CountryInfoViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryInfoViewDelegate.swift; sourceTree = "<group>"; };
 		727F1F6023F7E47800DBF125 /* FlagQuizViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagQuizViewDelegate.swift; sourceTree = "<group>"; };
 		727F1F6123F7E47900DBF125 /* QuestionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewDelegate.swift; sourceTree = "<group>"; };
-		727F1F6923F7E49200DBF125 /* AdvertisingIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisingIdentifier.swift; sourceTree = "<group>"; };
 		727F1F6A23F7E49200DBF125 /* CountryList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CountryList.csv; sourceTree = "<group>"; };
 		727F1F6E23F7E4D300DBF125 /* FlagData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagData.swift; sourceTree = "<group>"; };
 		727F1F6F23F7E4D300DBF125 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 		727F1F6823F7E48800DBF125 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				727F1F6923F7E49200DBF125 /* AdvertisingIdentifier.swift */,
 				727F1F6A23F7E49200DBF125 /* CountryList.csv */,
 			);
 			path = Data;
@@ -390,7 +387,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				727F1F6723F7E47900DBF125 /* QuestionViewDelegate.swift in Sources */,
-				727F1F6B23F7E49200DBF125 /* AdvertisingIdentifier.swift in Sources */,
 				727F1F6423F7E47900DBF125 /* AppDelegate.swift in Sources */,
 				727F1F8723F7E4FE00DBF125 /* SeparatorView.swift in Sources */,
 				727F1F7023F7E4D300DBF125 /* FlagData.swift in Sources */,
