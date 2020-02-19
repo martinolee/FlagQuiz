@@ -67,9 +67,10 @@ extension CountryInfoViewController {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: FlagInfoTableViewCell.identifier, for: indexPath) as! FlagInfoTableViewCell
     let country = shownCountryList[indexPath.row]
+    let localizedCountryName = NSLocalizedString(country.name, comment: "Country Name")
     guard let flagImage = UIImage(named: country.flagImageName) else { return cell }
     
-    cell.set(flagImage: flagImage, countryName: country.name)
+    cell.set(flagImage: flagImage, countryName: localizedCountryName)
     
     return cell
   }

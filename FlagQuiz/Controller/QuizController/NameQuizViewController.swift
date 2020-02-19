@@ -86,15 +86,23 @@ final class NameQuizViewController: QuizViewController {
     nameQuizView.setLeftBottomButton (image: leftBottomButtonnameImage)
     nameQuizView.setRightBottomButton(image: rightBottomButtonnameImage)
     
-    nameQuizView.setCountryNameLabel(text: countryName)
+    let localizedCountryName = NSLocalizedString(countryName, comment: "Country name")
+    nameQuizView.setCountryNameLabel(text: localizedCountryName)
   }
   
-  func initLifeImageView() {
-      nameQuizView.hideFifithLifeImageView(false)
-      nameQuizView.hideFourthLifeImageView(false)
-      nameQuizView.hideThirdLifeImageView (false)
-      nameQuizView.hideSecondLifeImageView(false)
-      nameQuizView.hideFirstLifeImageView (false)
+  func initLifeImageView(_ count: Int) {
+    switch count {
+    case 4: nameQuizView.hideFifithLifeImageView(false)
+      fallthrough
+    case 3: nameQuizView.hideFourthLifeImageView(false)
+      fallthrough
+    case 2: nameQuizView.hideThirdLifeImageView (false)
+      fallthrough
+    case 1: nameQuizView.hideSecondLifeImageView(false)
+      fallthrough
+    case 0: nameQuizView.hideFirstLifeImageView (false)
+    default: break
+    }
   }
   
   func makeAllButtonsEnable() {

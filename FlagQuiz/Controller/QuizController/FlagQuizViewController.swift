@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 final class FlagQuizViewController: QuizViewController {
   
@@ -28,8 +29,6 @@ final class FlagQuizViewController: QuizViewController {
     super.viewDidLoad()
     
     initFlagQuizViewController()
-    flagQuizView.setRootViewControllerForBannerView(self)
-    flagQuizView.loadBannerViewAD()
   }
   
   // MARK: - Configuration
@@ -39,6 +38,9 @@ final class FlagQuizViewController: QuizViewController {
     showQuestion()
     
     flagQuizView.setScoreLabel(text: "\(Singleton.shared.flagQuiz.score)")
+    
+    flagQuizView.setRootViewControllerForBannerView(self)
+    flagQuizView.loadBannerViewAD()
   }
   
   // MARK: - 
@@ -67,6 +69,27 @@ final class FlagQuizViewController: QuizViewController {
     let rightTopButtonCountry    = Singleton.shared.countryInfo[countryIndex[ButtonLocation.rightTop   .key]]
     let leftBottomButtonCountry  = Singleton.shared.countryInfo[countryIndex[ButtonLocation.leftBottom .key]]
     let rightBottomButtonCountry = Singleton.shared.countryInfo[countryIndex[ButtonLocation.rightBottom.key]]
+    
+    let localizedLeftTopButtonCountryName = NSLocalizedString(
+      leftTopButtonCountry.name,
+      comment: "Left top button country name"
+    )
+    
+    let localizedRightTopButtonCountryName = NSLocalizedString(
+      rightTopButtonCountry.name,
+      comment: "Right top button country name"
+    )
+    
+    let localizedLeftBottomButtonCountryName = NSLocalizedString(
+      leftBottomButtonCountry.name,
+      comment: "Left bottom button country name"
+    )
+    
+    let localizedRightBottomButtonCountryName = NSLocalizedString(
+      rightBottomButtonCountry.name,
+      comment: "Right bottom button country name"
+    )
+    
     let flagImage: UIImage!
     
     switch currentQuestion.correctAnswerLocation {
@@ -76,20 +99,33 @@ final class FlagQuizViewController: QuizViewController {
     case .rightBottom: flagImage = UIImage(named: rightBottomButtonCountry.flagImageName)
     }
     
-    flagQuizView.setLeftTopButton    (text: leftTopButtonCountry    .name)
-    flagQuizView.setRightTopButton   (text: rightTopButtonCountry   .name)
-    flagQuizView.setLeftBottomButton (text: leftBottomButtonCountry .name)
-    flagQuizView.setRightBottomButton(text: rightBottomButtonCountry.name)
+    flagQuizView.setLeftTopButton    (text: localizedLeftTopButtonCountryName)
+    flagQuizView.setRightTopButton   (text: localizedRightTopButtonCountryName)
+    flagQuizView.setLeftBottomButton (text: localizedLeftBottomButtonCountryName)
+    flagQuizView.setRightBottomButton(text: localizedRightBottomButtonCountryName)
     
     flagQuizView.setFlagImageView(flagImage)
   }
   
-  func initLifeImageView() {
+  func initLifeImageView(_ count: Int) {
+    switch count {
+    case 4:
       flagQuizView.hideFifithLifeImageView(false)
+      fallthrough
+    case 3:
       flagQuizView.hideFourthLifeImageView(false)
+      fallthrough
+    case 2:
       flagQuizView.hideThirdLifeImageView (false)
+      fallthrough
+    case 1:
       flagQuizView.hideSecondLifeImageView(false)
+      fallthrough
+    case 0:
       flagQuizView.hideFirstLifeImageView (false)
+    default:
+      break
+    }
   }
   
   func makeAllButtonsEnable() {
