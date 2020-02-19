@@ -11,6 +11,7 @@
 		7258696E22AFECB200552DBA /* UpdatePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7258696D22AFECB200552DBA /* UpdatePopup.swift */; };
 		72686787205E4B45000CD3FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72686786205E4B45000CD3FB /* Assets.xcassets */; };
 		7268678A205E4B45000CD3FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72686788205E4B45000CD3FB /* LaunchScreen.storyboard */; };
+		727C719323FA32830030A82C /* AdvertisingIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727C719223FA32830030A82C /* AdvertisingIdentifier.swift */; };
 		727F1F6223F7E47900DBF125 /* NameQuizViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F5C23F7E47800DBF125 /* NameQuizViewDelegate.swift */; };
 		727F1F6323F7E47900DBF125 /* GameOverPopupViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F5D23F7E47800DBF125 /* GameOverPopupViewDelegate.swift */; };
 		727F1F6423F7E47900DBF125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F1F5E23F7E47800DBF125 /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 		72686786205E4B45000CD3FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72686789205E4B45000CD3FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7268678B205E4B45000CD3FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		727C719223FA32830030A82C /* AdvertisingIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisingIdentifier.swift; sourceTree = "<group>"; };
 		727F1F5C23F7E47800DBF125 /* NameQuizViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameQuizViewDelegate.swift; sourceTree = "<group>"; };
 		727F1F5D23F7E47800DBF125 /* GameOverPopupViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverPopupViewDelegate.swift; sourceTree = "<group>"; };
 		727F1F5E23F7E47800DBF125 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				727F1F6A23F7E49200DBF125 /* CountryList.csv */,
+				727C719223FA32830030A82C /* AdvertisingIdentifier.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -229,8 +232,8 @@
 			children = (
 				727F1F8F23F7E52900DBF125 /* QuizTabBarController.swift */,
 				727F1F9423F7E52B00DBF125 /* QuizController */,
-				727F1F8C23F7E52900DBF125 /* CountryDetailViewController.swift */,
 				727F1F8D23F7E52900DBF125 /* CountryInfoViewController.swift */,
+				727F1F8C23F7E52900DBF125 /* CountryDetailViewController.swift */,
 				727F1F8E23F7E52900DBF125 /* GameOverPopupViewController.swift */,
 			);
 			path = Controller;
@@ -297,7 +300,7 @@
 				TargetAttributes = {
 					7268677B205E4B45000CD3FB = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -411,6 +414,7 @@
 				727F1F7E23F7E4F100DBF125 /* FlagQuizView.swift in Sources */,
 				727F1F6223F7E47900DBF125 /* NameQuizViewDelegate.swift in Sources */,
 				727F1FA123F7E56500DBF125 /* UI.swift in Sources */,
+				727C719323FA32830030A82C /* AdvertisingIdentifier.swift in Sources */,
 				727F1F8A23F7E4FE00DBF125 /* QuestionView.swift in Sources */,
 				727F1F7C23F7E4F100DBF125 /* GameOverPopupView.swift in Sources */,
 				727F1F9823F7E53D00DBF125 /* NameQuizViewController.swift in Sources */,
@@ -570,7 +574,7 @@
 				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.soohan.QuizFlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -589,7 +593,7 @@
 				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.soohan.QuizFlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

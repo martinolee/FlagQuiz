@@ -32,7 +32,7 @@ class FlagQuizView: UIView {
     
     view.translatesAutoresizingMaskIntoConstraints = false
     
-    view.adUnitID = AdvertisingIdentifier.testBannerADUnitID
+    view.adUnitID = AdvertisingIdentifier.flagBannerADUnitID
     view.delegate = self
     view.backgroundColor = .clear
     

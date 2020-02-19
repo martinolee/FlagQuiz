@@ -36,7 +36,7 @@ class NameQuizView: UIView {
     
     view.translatesAutoresizingMaskIntoConstraints = false
     
-    view.adUnitID = AdvertisingIdentifier.testBannerADUnitID
+    view.adUnitID = AdvertisingIdentifier.nameBannerADUnitID
     view.delegate = self
     view.backgroundColor = .clear
     
