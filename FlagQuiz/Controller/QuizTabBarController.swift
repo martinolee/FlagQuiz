@@ -16,6 +16,7 @@ class QuizTabBarController: UITabBarController {
     let viewController = FlagQuizViewController()
     
     viewController.tabBarItem.title = "Flag Quiz"
+    viewController.tabBarItem.image = UIImage(named: "quizIcon_28")
     
     return viewController
   }()
@@ -24,6 +25,7 @@ class QuizTabBarController: UITabBarController {
     let viewController = NameQuizViewController()
     
     viewController.tabBarItem.title = "Name Quiz"
+    viewController.tabBarItem.image = UIImage(named: "quizIcon_28")
     
     return viewController
   }()
@@ -31,7 +33,8 @@ class QuizTabBarController: UITabBarController {
   let flagInfoViewController: UINavigationController = {
     let navigationController = UINavigationController(rootViewController: CountryInfoViewController())
     
-    navigationController.tabBarItem.title = "Search"
+    navigationController.viewControllers.first?.tabBarItem.title = "Search"
+    navigationController.viewControllers.first?.tabBarItem.image = UIImage(named: "flagListIcon_28")
     
     return navigationController
   }()
