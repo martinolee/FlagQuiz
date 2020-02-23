@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let population = Double(column[5]) ?? -1.0
       let gdpPriority = 1.0
       let areaPriority = 0.2
-      let populationPriority = 0.5
+      let populationPriority = 0.3
       let difficulty = gdp * gdpPriority + area * areaPriority + population * populationPriority
       
       Singleton.shared.countryInfo.append(
