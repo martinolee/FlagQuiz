@@ -17,8 +17,6 @@ final class NameQuizViewController: QuizViewController {
   // MARK: Life Cycle
   
   override func loadView() {
-    super.loadView()
-    
     nameQuizView.delegate = self
     
     view = nameQuizView

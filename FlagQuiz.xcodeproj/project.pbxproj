@@ -242,9 +242,9 @@
 		727F1F9423F7E52B00DBF125 /* QuizController */ = {
 			isa = PBXGroup;
 			children = (
+				727F1F9623F7E53D00DBF125 /* QuizViewController.swift */,
 				727F1F9723F7E53D00DBF125 /* FlagQuizViewController.swift */,
 				727F1F9523F7E53C00DBF125 /* NameQuizViewController.swift */,
-				727F1F9623F7E53D00DBF125 /* QuizViewController.swift */,
 			);
 			path = QuizController;
 			sourceTree = "<group>";

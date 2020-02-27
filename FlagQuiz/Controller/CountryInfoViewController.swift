@@ -19,8 +19,6 @@ class CountryInfoViewController: UIViewController, CountryInfoViewDelegate {
   // MARK: - Life Cycle
   
   override func loadView() {
-    super.loadView()
-    
     countryInfoView.delegate = self
     
     view = countryInfoView

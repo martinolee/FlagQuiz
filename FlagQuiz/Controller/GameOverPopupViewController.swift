@@ -26,8 +26,6 @@ class GameOverPopupViewController: UIViewController {
   // MARK: - Life Cycle
   
   override func loadView() {
-    super.loadView()
-    
     gameOverPopupView.delegate = self
     
     view = gameOverPopupView
