@@ -152,6 +152,7 @@
 				727F1F7223F7E4DA00DBF125 /* View */,
 				727F1F8B23F7E50600DBF125 /* Controller */,
 				727F1F9B23F7E54800DBF125 /* UI */,
+				726B0A4C2407AE8B007A584A /* Extension */,
 				72686786205E4B45000CD3FB /* Assets.xcassets */,
 				72686788205E4B45000CD3FB /* LaunchScreen.storyboard */,
 				7268678B205E4B45000CD3FB /* Info.plist */,
@@ -160,6 +161,13 @@
 				72858E4B2366E1680070B769 /* UILabelExpand.swift */,
 			);
 			path = FlagQuiz;
+			sourceTree = "<group>";
+		};
+		726B0A4C2407AE8B007A584A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		727F1F5B23F7E44600DBF125 /* Delegate */ = {
