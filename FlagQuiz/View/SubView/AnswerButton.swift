@@ -16,7 +16,7 @@ class AnswerButton: UIButton {
   
   // MARK: - Initialization
   
-  override init(frame: CGRect) {
+  private override init(frame: CGRect) {
     super.init(frame: frame)
     
     configureButton()
@@ -24,6 +24,11 @@ class AnswerButton: UIButton {
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  convenience init(location: ButtonLocation) {
+    self.init()
+    self.location = location
   }
   
   // MARK: - Configuration

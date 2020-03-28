@@ -17,9 +17,7 @@ class QuestionView: UIView {
   var buttonType: UIButton.ButtonType!
   
   private lazy var leftTopButton: AnswerButton = {
-    let button = AnswerButton(type: buttonType)
-    
-    button.location = .leftTop
+    let button = AnswerButton(location: .leftTop)
     
     button.addTarget(self, action: #selector(whenButtonDidTouchUpInsideAt(_:)), for: .touchUpInside)
     
@@ -27,9 +25,7 @@ class QuestionView: UIView {
   }()
   
   private lazy var rightTopButton: AnswerButton = {
-    let button = AnswerButton(type: buttonType)
-    
-    button.location = .rightTop
+    let button = AnswerButton(location: .rightTop)
     
     button.addTarget(self, action: #selector(whenButtonDidTouchUpInsideAt(_:)), for: .touchUpInside)
     
@@ -37,9 +33,7 @@ class QuestionView: UIView {
   }()
   
   private lazy var leftBottomButton: AnswerButton = {
-    let button = AnswerButton(type: buttonType)
-    
-    button.location = .leftBottom
+    let button = AnswerButton(location: .leftBottom)
     
     button.addTarget(self, action: #selector(whenButtonDidTouchUpInsideAt(_:)), for: .touchUpInside)
     
@@ -47,9 +41,7 @@ class QuestionView: UIView {
   }()
   
   private lazy var rightBottomButton: AnswerButton = {
-    let button = AnswerButton(type: buttonType)
-    
-    button.location = .rightBottom
+    let button = AnswerButton(location: .rightBottom)
     
     button.addTarget(self, action: #selector(whenButtonDidTouchUpInsideAt(_:)), for: .touchUpInside)
     
