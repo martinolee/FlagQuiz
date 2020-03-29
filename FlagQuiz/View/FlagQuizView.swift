@@ -56,7 +56,7 @@ class FlagQuizView: UIView {
   }()
   
   private lazy var questionView: QuestionView = {
-    let view = QuestionView(buttonType: .system)
+    let view = QuestionView()
     
     view.translatesAutoresizingMaskIntoConstraints = false
     view.delegate = self

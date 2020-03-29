@@ -62,7 +62,7 @@ class NameQuizView: UIView {
   }()
   
   private lazy var questionView: QuestionView = {
-    let view = QuestionView(buttonType: .custom)
+    let view = QuestionView()
     
     view.translatesAutoresizingMaskIntoConstraints = false
     view.delegate = self

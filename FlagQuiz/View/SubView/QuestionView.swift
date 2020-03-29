@@ -14,8 +14,6 @@ class QuestionView: UIView {
   
   var delegate: QuestionViewDelegate?
   
-  var buttonType: UIButton.ButtonType!
-  
   private lazy var leftTopButton: AnswerButton = {
     let button = AnswerButton(location: .leftTop)
     
@@ -63,17 +61,6 @@ class QuestionView: UIView {
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
-  }
-  
-  init(buttonType: UIButton.ButtonType) {
-    self.buttonType = buttonType
-    
-    super.init(frame: .zero)
-    
-    configureView()
-    configureButtonList()
-    addAllView()
-    setupAllAutoLayout()
   }
   
   // MARK: - Configuration
