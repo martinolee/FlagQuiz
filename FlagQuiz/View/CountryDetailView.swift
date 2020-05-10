@@ -7,10 +7,19 @@
 //
 
 import UIKit
+import MapKit
 
 class CountryDetailView: UIView {
   
   // MARK: - Properties
+  
+  let mapView: MKMapView = {
+    let mapView = MKMapView()
+    
+    mapView.translatesAutoresizingMaskIntoConstraints = false
+    
+    return mapView
+  }()
   
   // MARK: - Initialization
   
@@ -18,6 +27,8 @@ class CountryDetailView: UIView {
     super.init(frame: frame)
     
     configureView()
+    addAllSubviews()
+    setUpAutoLayout()
   }
   
   required init?(coder: NSCoder) {
@@ -28,6 +39,21 @@ class CountryDetailView: UIView {
   
   private func configureView() {
     self.backgroundColor = Color.tertiarySystemGroupedBackground
+  }
+  
+  private func addAllSubviews() {
+    self.addSubview(mapView)
+  }
+  
+  private func setUpAutoLayout() {
+    let safeArea = self.safeAreaLayoutGuide
+    
+    NSLayoutConstraint.activate([
+      mapView.topAnchor.constraint(equalTo: safeArea.topAnchor),
+      mapView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
+      mapView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
+      mapView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
+    ])
   }
   
 }
