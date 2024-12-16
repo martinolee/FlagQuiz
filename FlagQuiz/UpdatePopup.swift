@@ -9,7 +9,7 @@
 import UIKit
 
 private var topViewController: UIViewController? {
-  guard var topViewController = UIApplication.shared.keyWindow?.rootViewController else { return nil }
+  guard var topViewController = UIApplication.shared.windows.filter(\.isKeyWindow).first?.rootViewController else { return nil }
   while let presentedViewController = topViewController.presentedViewController {
     topViewController = presentedViewController
   }
