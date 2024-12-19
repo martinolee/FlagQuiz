@@ -46,8 +46,6 @@ class GameOverPopupView: UIView {
     button.setTitleColor(Color.label, for: .normal)
     button.setTitle("Continue", for: .normal)
     
-    button.addTarget(self, action: #selector(whenContinueButtonDidTouchUpInside(_:)), for: .touchUpInside)
-    
     return button
   }()
   
@@ -58,8 +56,6 @@ class GameOverPopupView: UIView {
     
     button.setTitleColor(Color.label, for: .normal)
     button.setTitle("Restart", for: .normal)
-    
-    button.addTarget(self, action: #selector(whenRestartButtonDidTouchUpInside(_:)), for: .touchUpInside)
     
     return button
   }()
@@ -85,6 +81,9 @@ class GameOverPopupView: UIView {
   
   private func configureView() {
     self.backgroundColor = Color.dim
+    
+    restartButton.addTarget(self, action: #selector(whenRestartButtonDidTouchUpInside(_:)), for: .touchUpInside)
+    continueButton.addTarget(self, action: #selector(whenContinueButtonDidTouchUpInside(_:)), for: .touchUpInside)
   }
   
   // MARK: - Setup UI
